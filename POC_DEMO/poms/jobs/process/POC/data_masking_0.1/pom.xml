@@ -6,12 +6,12 @@
     <groupId>org.example.poc_demo</groupId>
     <artifactId>code.Master</artifactId>
     <version>7.3.1</version>
-    <relativePath>../../../</relativePath>
+    <relativePath>../../../../</relativePath>
   </parent>
   <groupId>org.example.poc_demo.job</groupId>
-  <artifactId>Data_Generation_Customer</artifactId>
+  <artifactId>Data_Masking</artifactId>
   <version>0.1.0</version>
-  <name>POC_DEMO Data_Generation_Customer-0.1.0 (0.1,Job Designs)</name>
+  <name>POC_DEMO Data_Masking-0.1.0 (0.1,Job Designs)</name>
   <properties>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
@@ -24,7 +24,7 @@
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
     <talend.project.name>POC_DEMO</talend.project.name>
     <talend.product.version>7.3.1.20200219_1130</talend.product.version>
-    <talend.job.finalName>data_generation_customer_0_1</talend.job.finalName>
+    <talend.job.finalName>data_masking_0_1</talend.job.finalName>
     <talend.pigudf.groupid>org.example.poc_demo.pigudf</talend.pigudf.groupid>
     <talend.routine.groupid>org.example.poc_demo.code</talend.routine.groupid>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
@@ -33,10 +33,10 @@
     <talend.job.context>Default</talend.job.context>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
     <current.resources.dir>${basedir}/src/main/ext-resources</current.resources.dir>
-    <talend.job.name>Data_Generation_Customer</talend.job.name>
-    <talend.job.id>_DaKXEKuJEeq2_fH8dztAFg</talend.job.id>
+    <talend.job.name>Data_Masking</talend.job.name>
+    <talend.job.id>_bn6HIKvOEeqreoAQPG92zw</talend.job.id>
     <talend.project.id>0</talend.project.id>
-    <talend.job.folder></talend.job.folder>
+    <talend.job.folder>poc/</talend.job.folder>
     <talend.job.framework></talend.job.framework>
     <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
     <talend.job.type>Standard</talend.job.type>
@@ -68,9 +68,19 @@
       <version>1.8.0</version>
     </dependency>
     <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.4</version>
+    </dependency>
+    <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
       <version>3.8.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.3.2</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -78,9 +88,19 @@
       <version>6.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
+      <groupId>org.talend.daikon</groupId>
+      <artifactId>daikon</artifactId>
+      <version>0.31.10</version>
+    </dependency>
+    <dependency>
       <groupId>org.dom4j</groupId>
       <artifactId>dom4j</artifactId>
       <version>2.1.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.idealista</groupId>
+      <artifactId>format-preserving-encryption</artifactId>
+      <version>1.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -91,6 +111,11 @@
       <groupId>net.minidev</groupId>
       <artifactId>json-smart</artifactId>
       <version>2.2.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-1.2-api</artifactId>
+      <version>2.12.1</version>
     </dependency>
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
@@ -114,6 +139,21 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
+      <artifactId>mssql-jdbc</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.dataquality</groupId>
+      <artifactId>org.talend.dataquality.common</artifactId>
+      <version>8.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.dataquality</groupId>
+      <artifactId>org.talend.dataquality.datamasking</artifactId>
+      <version>7.4.8</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
       <artifactId>org.talend.dataquality.parser</artifactId>
       <version>7.3.1</version>
     </dependency>
@@ -123,13 +163,13 @@
       <version>1.7.25</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>talend_file_enhanced_20070724</artifactId>
-      <version>6.0.0</version>
+      <groupId>org.talend.components.lib</groupId>
+      <artifactId>talend_DB_mssqlUtil</artifactId>
+      <version>1.4</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>talendcsv</artifactId>
+      <artifactId>talend_file_enhanced_20070724</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
