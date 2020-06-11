@@ -2,7 +2,7 @@
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="MSSQL_Data_Source_Schema" prompt="MSSQL_Data_Source_Schema?" promptNeeded="false" repositoryContextId="_H7e0EKuzEeqG1pglOA4kSg" type="id_String" value=""/>
     <contextParameter comment="" name="MSSQL_Data_Source_Database" prompt="MSSQL_Data_Source_Database?" promptNeeded="false" repositoryContextId="_H7e0EKuzEeqG1pglOA4kSg" type="id_String" value="POC"/>
-    <contextParameter comment="" name="MSSQL_Data_Source_Password" prompt="MSSQL_Data_Source_Password?" promptNeeded="false" repositoryContextId="_H7e0EKuzEeqG1pglOA4kSg" type="id_Password" value="enc:system.encryption.key.v1:RdG5Hdz4BsYe+mmW44/8I0BS4+XEMyg1WM6pnMBi3dRizLs5"/>
+    <contextParameter comment="" name="MSSQL_Data_Source_Password" prompt="MSSQL_Data_Source_Password?" promptNeeded="false" repositoryContextId="_H7e0EKuzEeqG1pglOA4kSg" type="id_Password" value="enc:system.encryption.key.v1:HwQus2NBwUU0PxfVWXiVDenMpKSrf5Dx8TwS5PP1jiyyBI0r"/>
     <contextParameter comment="" name="MSSQL_Data_Source_AdditionalParams" prompt="MSSQL_Data_Source_AdditionalParams?" promptNeeded="false" repositoryContextId="_H7e0EKuzEeqG1pglOA4kSg" type="id_String" value=""/>
     <contextParameter comment="" name="MSSQL_Data_Source_Login" prompt="MSSQL_Data_Source_Login?" promptNeeded="false" repositoryContextId="_H7e0EKuzEeqG1pglOA4kSg" type="id_String" value="marvin.teh"/>
     <contextParameter comment="" name="MSSQL_Data_Source_Port" prompt="MSSQL_Data_Source_Port?" promptNeeded="false" repositoryContextId="_H7e0EKuzEeqG1pglOA4kSg" type="id_String" value="1433"/>
@@ -50,7 +50,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:JnKbKxDHnBQyVAvYrvjy7WXmPqgWr9fB/gCN4aLW"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:AZki8z/nRft5BJdO0WtrYOaxG1kbIn9/TWmZ2oD3"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -85,7 +85,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:PJYoYv84khN1hj1T/sbPcTnpziKxdazto0LJbTMe"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:35RKss3U37GIbWxl2tQFJKDURqZMIg3VWYnGaQ4p"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -154,8 +154,6 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Address"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="No"/>
-      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
     <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
@@ -174,8 +172,6 @@
       <elementValue elementRef="DECODE" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Address"/>
       <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="No"/>
-      <elementValue elementRef="DECODE" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="DESTINATION" show="false" value=""/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
@@ -193,7 +189,6 @@
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
       <column comment="" key="false" length="100" name="Address" nullable="true" originalLength="100" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="No" nullable="true" originalLength="3" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="10" name="Cust_ID" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
@@ -207,7 +202,6 @@
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
       <column comment="" key="false" length="100" name="Address" nullable="true" originalLength="100" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="No" nullable="true" originalLength="3" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -225,9 +219,9 @@
     <elementParameter field="TEXT" name="DBNAME" value="context.MSSQL_Data_Source_Database"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="context.MSSQL_Data_Source_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:8g1Orkj2GehQVogpXfLm4ughUFtCCym1PeomI6ef7mSTTNjiyKw8/DAgAt2VP/xArBWtAuHxYxbdir93HL4="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:q9eizuwgsy/oIh0YiVgAJ6KFaSp4VH9WA/s9QxnR1lRQ+ZvfZqi6l4cOsX62X+U3ZG2vX+LjMOK7l9J3m8s="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;Customer&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
@@ -274,11 +268,6 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="No"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
     <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
@@ -288,7 +277,7 @@
     <elementParameter field="TEXT" name="LABEL" value="MSSQL_Data_Source"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_1">
-      <column comment="" key="false" length="10" name="Cust_ID" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="true" length="10" name="Cust_ID" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;9999 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
       </column>
       <column comment="" key="false" length="50" name="Name" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -299,10 +288,9 @@
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
       <column comment="" key="false" length="100" name="Address" nullable="true" originalLength="100" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="No" nullable="true" originalLength="3" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="10" name="Cust_ID" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="true" length="10" name="Cust_ID" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;9999 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
       </column>
       <column comment="" key="false" length="50" name="Name" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -313,7 +301,6 @@
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
       </column>
       <column comment="" key="false" length="100" name="Address" nullable="true" originalLength="100" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="No" nullable="true" originalLength="3" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -322,7 +309,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_1"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Xxe/Documents/Projects/POC/Milicon Steel/inventory.xlsx&quot;"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:YG6RnE33whhA3IsUWls8amwBGVp+uLvI6K4wItqe"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:feBvPhry62DF7ztZFhGHdFyamr6lGDgl/mRmEzBI"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="true"/>
     <elementParameter field="TABLE" name="SHEETLIST" show="false"/>
     <elementParameter field="TEXT" name="HEADER" value="1"/>
@@ -345,8 +332,6 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Price"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="No"/>
-      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="CONVERTDATETOSTRING" value="false"/>
     <elementParameter field="TABLE" name="DATESELECT" show="false">
@@ -360,9 +345,6 @@
       <elementValue elementRef="CONVERTDATE" value="false"/>
       <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Price"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="No"/>
       <elementValue elementRef="CONVERTDATE" value="false"/>
       <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
     </elementParameter>
@@ -381,14 +363,12 @@
       <column comment="" key="false" length="100" name="Product_Name" nullable="true" originalLength="100" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="Type" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="Price" nullable="true" originalLength="10" pattern="" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="No" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="5" name="Product_ID" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="Product_Name" nullable="true" originalLength="100" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="Type" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="Price" nullable="true" originalLength="10" pattern="" precision="2" sourceType="" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="No" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -406,9 +386,9 @@
     <elementParameter field="TEXT" name="DBNAME" value="context.MSSQL_Data_Source_Database"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="context.MSSQL_Data_Source_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:AHXKtZshuhZnbi8m6nBVSGikVuIq2IHH6vUHHLeDzDWJ84ForgfxPNpoRIleBQebZE4weOymNk+HNopht30="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Mtq1zRGsJ/lL+m5bYErQJCIco7iZ0eDfmTTTumjLI2rRLY0qiOYt5k8Ezu0hWeNOmNkgJ6BL+ZyUKMeO2Dw="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;Product&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
@@ -450,11 +430,6 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="No"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
     <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
@@ -464,18 +439,16 @@
     <elementParameter field="TEXT" name="LABEL" value="MSSQL_Data_Source"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_3">
-      <column comment="" key="false" length="5" name="Product_ID" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="true" length="5" name="Product_ID" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="Product_Name" nullable="true" originalLength="100" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="Type" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="Price" nullable="true" originalLength="10" pattern="" precision="2" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="No" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="5" name="Product_ID" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="true" length="5" name="Product_ID" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="Product_Name" nullable="true" originalLength="100" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="Type" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="Price" nullable="true" originalLength="10" pattern="" precision="2" sourceType="FLOAT" type="id_Double" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="No" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -593,9 +566,9 @@
     <elementParameter field="TEXT" name="DBNAME" value="context.MSSQL_Data_Source_Database"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="context.MSSQL_Data_Source_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:fKbOAngiqMkyYf37Yr9ay9DeYaYtbKgXozajAUhFH0VWj8zu8Ws7MUGHb+vBuggZgEtgjKR6oO8tEZ83DNM="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:FPK8oSpqrSbNDCrUDqtGqDQNTBEmZvF5wx8rdtslMgtW90UILPrV/I8yUFtJMxUryUeM5Wjdprn4JGXxBJs="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;Transaction&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
@@ -656,7 +629,7 @@
     <elementParameter field="TEXT" name="LABEL" value="MSSQL_Data_Source"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_2">
-      <column comment="" key="false" length="10" name="Transaction_ID" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="true" length="10" name="Transaction_ID" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;9999 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
       </column>
       <column comment="" key="false" length="10" name="Customer" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -674,7 +647,7 @@
       </column>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="10" name="Transaction_ID" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="true" length="10" name="Transaction_ID" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;random&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;min value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;},{&quot;PARAMETER_NAME&quot;:&quot;max value&quot;,&quot;PARAMETER_VALUE&quot;:&quot;9999 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;Numeric&quot;}"/>
       </column>
       <column comment="" key="false" length="10" name="Customer" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -727,13 +700,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_251420f9-120c-4a7c-b557-8b86114d83d4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GfdUhVpA0hug5xCmrl9cOc9dbrPVnAwpLkf4G9TFLEFOEhr+OnAmGKFzHrOfHou3s2aJHEUYenN9&#13;
-kU/OjvUVUA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_07272914-75da-482c-9696-3a90004bd460"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JlExn69dWPGV3hRJNe0cwfaW6+1f/a4KlLnk+vsgfqTpCBKj7fYDrNdPT23BGI6PqPGCWaYycG6Y&#13;
-ieISHrflxA==</DigestValue></Reference></SignedInfo><SignatureValue>iz2EweTXh02H1YW9iHOb4hSvnDJnJM07X/sqAnf4eN4E+dflvhbe3yFQKMhojsikK1ryQ0iE9BR+&#13;
-9EBbWTw/+IfvbckBLglAw4yLBq856Ol7B97Jl4tf76yBuotgr1jbS57XAIcFmdDL5EV5nu8xQWgn&#13;
-oNxfivdmQw2Nrwkus6viTgRBAr6B5quyOML6fAiakZhN6B039+8VxlmmjcCzlJ3iC6OtcBY++OJb&#13;
-YNjFmD3r6BXe6PO/ZIMVxnMR8brDuSQOtBoYoJyEkKVEDYeXM1YGZ2ZwZQ0b3wqZI14CnihSiXGI&#13;
-BNrZadGqvAmQcKbNQ4tq0VEhSw8tulLJMRpY0w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7c8e83bf-e1a0-40aa-adb0-3be646625abd"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>42iL7RvT7WvYj69tlD2z8v3GW+n6d2qGC/vYyp8fZu0RFVMkY8ZbQoN0yTJoWa+nVIzWxyHLhbb3&#13;
+S5dYcIBJyQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6e0c462e-fdaa-41e0-969d-60cf67b10190"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>k8WW8ATZJ8b4vgzjcoz4s1Y5yDc6zRk1mrxQ6SW5pUD49XZFZtwrt9EeN8rQXuJ/DapVh5fDIcni&#13;
+8JIcxgKJ6g==</DigestValue></Reference></SignedInfo><SignatureValue>K2lp/eWBCVgjPaPYb676Kj+pdBBRsInKsAeV66DBCR7kVisrNPXpe3MpKeyYS3aSmi+ydmKOKNT4&#13;
+OuDeA1eEXCp5JsbzTbH7IHtLx34yq6bJALxqQlbSVZ+CI3avdFTprDIkx5aeBd2Qk4YI3/TGQ9xf&#13;
+52hfpENuzQTt17z7RiCYLj6Vk/ZRZxBf3FnNeBHiuunqYa4WBaNJmhMyb57JCbFKeWCmWwX2yOxm&#13;
+u2hPYg83StktYqffovQPGYrsu8jtrIQPV4qDa/swE8iafoeyZV+20VnHnC83uu9sizIPdrGcLPEa&#13;
+sZEmEMAuc2HKMknlCotueECqn3Wq+WYEO64oeQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -755,4 +728,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_07272914-75da-482c-9696-3a90004bd460" Target="#_251420f9-120c-4a7c-b557-8b86114d83d4"><Timestamp>2020-06-11 07:26:56</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6e0c462e-fdaa-41e0-969d-60cf67b10190" Target="#_7c8e83bf-e1a0-40aa-adb0-3be646625abd"><Timestamp>2020-06-11 07:30:09</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
