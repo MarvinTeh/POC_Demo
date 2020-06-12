@@ -2,6 +2,7 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_N46BgKvDEeqEZpA0foWSzw" name="TransactionAnalysis" creationDate="2020-06-11T16:39:12.642+0800" defaultContext="Default">
     <clientDependency href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_oLIYIKvDEeqEZpA0foWSzw"/>
+    <clientDependency href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_bygH8KxaEeqOCtlfb5qGKA"/>
     <taggedValue xmi:id="_N46BgavDEeqEZpA0foWSzw" tag="Status" value="development"/>
     <taggedValue xmi:id="_N46BgqvDEeqEZpA0foWSzw" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
     <taggedValue xmi:id="_N46Bg6vDEeqEZpA0foWSzw" tag="Purpose" value=""/>
@@ -13,460 +14,392 @@
     <taggedValue xmi:id="_oLgyoKvDEeqEZpA0foWSzw" tag="Is Use Sample Data" value="false"/>
     <context xmi:id="_N46BhqvDEeqEZpA0foWSzw">
       <connection href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_GlveUJT4EeqeWNXUfgSP-A"/>
-      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LkKvDEeqEZpA0foWSzw"/>
-      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LlKvDEeqEZpA0foWSzw"/>
-      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LmKvDEeqEZpA0foWSzw"/>
-      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LnKvDEeqEZpA0foWSzw"/>
-      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LoKvDEeqEZpA0foWSzw"/>
-      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LpKvDEeqEZpA0foWSzw"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Ccav2Eeq5fLclrRW2Iw"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Cdav2Eeq5fLclrRW2Iw"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Ceav2Eeq5fLclrRW2Iw"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Cfav2Eeq5fLclrRW2Iw"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Cgav2Eeq5fLclrRW2Iw"/>
     </context>
     <results xmi:id="_N46Bh6vDEeqEZpA0foWSzw">
-      <resultMetadata xmi:id="_N46BiKvDEeqEZpA0foWSzw" executionDate="2020-06-11T16:42:14.131+0800" executionDuration="13546" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_oK_1QKvDEeqEZpA0foWSzw" count="1002" computed="true">
-        <parameters xmi:id="_oK_1QavDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LkKvDEeqEZpA0foWSzw"/>
+      <resultMetadata xmi:id="_N46BiKvDEeqEZpA0foWSzw" executionDate="2020-06-12T10:42:06.688+0800" executionDuration="15544" message="" executionNumber="2" lastRunOk="true" lastExecutionNumberOk="2"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_e5CbEKxaEeqOCtlfb5qGKA" count="1005" computed="true">
+        <parameters xmi:id="_e5CbEaxaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Ccav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7feEavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; " language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_ozuCIKvDEeqEZpA0foWSzw" name="Row Count" label="Row Count">
-          <taggedValue xmi:id="_ozuCIavDEeqEZpA0foWSzw" tag="Description" value="counts the number of rows"/>
-          <taggedValue xmi:id="_ozuCIqvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of records"/>
-          <sqlGenericExpression xmi:id="_ozuCI6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxGEcaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_fopTEKxaEeqOCtlfb5qGKA" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_fopTEaxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_fopTEqxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_fopTE6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_oK_1QqvDEeqEZpA0foWSzw" count="1002" computed="true">
-        <parameters xmi:id="_oK_1Q6vDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LkKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_e5CbEqxaEeqOCtlfb5qGKA" count="1005" computed="true">
+        <parameters xmi:id="_e5CbE6xaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Ccav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7hTQKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; WHERE &quot;Transaction_ID&quot; IS NULL " language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o0DZUKvDEeqEZpA0foWSzw" name="Null Count" label="Null Count">
-          <taggedValue xmi:id="_o0DZUavDEeqEZpA0foWSzw" tag="Purpose" value="evaluate the number of missing data (null records)"/>
-          <taggedValue xmi:id="_o0DZUqvDEeqEZpA0foWSzw" tag="Description" value="counts the number of null rows"/>
-          <sqlGenericExpression xmi:id="_o0DZU6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxGEdaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; WHERE &quot;Transaction_ID&quot; IS NULL " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_fo81EKxaEeqOCtlfb5qGKA" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_fo81EaxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_fo81EqxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_fo81E6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_oK_1RKvDEeqEZpA0foWSzw" count="1002" computed="true" distinctValueCount="1002">
-        <parameters xmi:id="_oK_1RavDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LkKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_e5CbFKxaEeqOCtlfb5qGKA" count="1005" computed="true" distinctValueCount="1004">
+        <parameters xmi:id="_e5CbFaxaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Ccav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7h6UKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;Transaction_ID&quot; FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; ) A" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o0TQ8KvDEeqEZpA0foWSzw" name="Distinct Count" label="Distinct Count">
-          <taggedValue xmi:id="_o0TQ8avDEeqEZpA0foWSzw" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
-          <taggedValue xmi:id="_o0TQ8qvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of distinct records"/>
-          <sqlGenericExpression xmi:id="_o0TQ86vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxJu0KxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;Transaction_ID&quot; FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; ) A" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_fpZhAKxaEeqOCtlfb5qGKA" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_fpZhAaxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_fpZhAqxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_fpZhA6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_oK_1RqvDEeqEZpA0foWSzw" count="1002" computed="true" uniqueValueCount="1002">
-        <parameters xmi:id="_oK_1R6vDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LkKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_e5CbFqxaEeqOCtlfb5qGKA" count="1005" computed="true" uniqueValueCount="1003">
+        <parameters xmi:id="_e5CbF6xaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Ccav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7ihYKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &quot;Transaction_ID&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  GROUP BY &quot;Transaction_ID&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o0gFQKvDEeqEZpA0foWSzw" name="Unique Count" label="Unique Count">
-          <taggedValue xmi:id="_o0gFQavDEeqEZpA0foWSzw" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
-          <taggedValue xmi:id="_o0gFQqvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of unique records"/>
-          <sqlGenericExpression xmi:id="_o0gFQ6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
-          <sqlGenericExpression xmi:id="_o0gFRKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
-          <sqlGenericExpression xmi:id="_o0gFRavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
-          <sqlGenericExpression xmi:id="_o0gFRqvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
-          <sqlGenericExpression xmi:id="_o0gFR6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
-          <sqlGenericExpression xmi:id="_o0gFSKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
-          <sqlGenericExpression xmi:id="_o0gFSavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxLkAKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &quot;Transaction_ID&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  GROUP BY &quot;Transaction_ID&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_fpmVUKxaEeqOCtlfb5qGKA" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_fpmVUaxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_fpmVUqxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_fpmVU6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_fpmVVKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_fpmVVaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_fpmVVqxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_fpmVV6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_fpmVWKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_fpmVWaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_oK_1SKvDEeqEZpA0foWSzw" count="1002" computed="true" duplicateValueCount="0">
-        <parameters xmi:id="_oK_1SavDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LkKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_e5CbGKxaEeqOCtlfb5qGKA" count="1005" computed="true" duplicateValueCount="1">
+        <parameters xmi:id="_e5CbGaxaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Ccav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7ihYavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &quot;Transaction_ID&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  m  GROUP BY &quot;Transaction_ID&quot; HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o0sSgKvDEeqEZpA0foWSzw" name="Duplicate Count" label="Duplicate Count">
-          <taggedValue xmi:id="_o0sSgavDEeqEZpA0foWSzw" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
-          <taggedValue xmi:id="_o0sSgqvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of duplicated records"/>
-          <sqlGenericExpression xmi:id="_o0sSg6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
-          <sqlGenericExpression xmi:id="_o0sShKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
-          <sqlGenericExpression xmi:id="_o0sShavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
-          <sqlGenericExpression xmi:id="_o0sShqvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
-          <sqlGenericExpression xmi:id="_o0sSh6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
-          <sqlGenericExpression xmi:id="_o0sSiKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
-          <sqlGenericExpression xmi:id="_o0sSiavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxMyIKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &quot;Transaction_ID&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  m  GROUP BY &quot;Transaction_ID&quot; HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_fpzwsKxaEeqOCtlfb5qGKA" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_fpzwsaxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_fpzwsqxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_fpzws6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_fpzwtKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_fpzwtaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_fpzwtqxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_fpzwt6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_fpzwuKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_fpzwuaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_oK_1SqvDEeqEZpA0foWSzw" count="1002" computed="true">
-        <parameters xmi:id="_oK_1S6vDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LkKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_e5CbGqxaEeqOCtlfb5qGKA" count="1005" computed="true">
+        <parameters xmi:id="_e5CbG6xaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Ccav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7jIcKvDEeqEZpA0foWSzw" body="SELECT COUNT(&quot;Transaction_ID&quot;) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  WHERE LTRIM(RTRIM(&quot;Transaction_ID&quot;)) = '' " language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o04fwKvDEeqEZpA0foWSzw" name="Blank Count" label="Blank Count">
-          <taggedValue xmi:id="_o04fwavDEeqEZpA0foWSzw" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
-          <taggedValue xmi:id="_o04fwqvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of blank records"/>
-          <sqlGenericExpression xmi:id="_o04fw6vDEeqEZpA0foWSzw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
-          <sqlGenericExpression xmi:id="_o04fxKvDEeqEZpA0foWSzw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
-          <sqlGenericExpression xmi:id="_o04fxavDEeqEZpA0foWSzw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
-          <sqlGenericExpression xmi:id="_o04fxqvDEeqEZpA0foWSzw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
-          <sqlGenericExpression xmi:id="_o04fx6vDEeqEZpA0foWSzw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxMyIaxaEeqOCtlfb5qGKA" body="SELECT COUNT(&quot;Transaction_ID&quot;) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  WHERE LTRIM(RTRIM(&quot;Transaction_ID&quot;)) = '' " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_fp_98KxaEeqOCtlfb5qGKA" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_fp_98axaEeqOCtlfb5qGKA" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_fp_98qxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_fp_986xaEeqOCtlfb5qGKA" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_fp_99KxaEeqOCtlfb5qGKA" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_fp_99axaEeqOCtlfb5qGKA" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_fp_99qxaEeqOCtlfb5qGKA" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_fp_996xaEeqOCtlfb5qGKA" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_oLIYIqvDEeqEZpA0foWSzw" count="1002" computed="true">
-        <parameters xmi:id="_oLIYI6vDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LlKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_e5CbHKxaEeqOCtlfb5qGKA" count="1005" computed="true">
+        <parameters xmi:id="_e5CbHaxaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Cdav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7feFKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; " language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o1De4KvDEeqEZpA0foWSzw" name="Row Count" label="Row Count">
-          <taggedValue xmi:id="_o1De4avDEeqEZpA0foWSzw" tag="Description" value="counts the number of rows"/>
-          <taggedValue xmi:id="_o1De4qvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of records"/>
-          <sqlGenericExpression xmi:id="_o1De46vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxGEcqxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_fqNZUKxaEeqOCtlfb5qGKA" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_fqNZUaxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_fqNZUqxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_fqNZU6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_oLIYJKvDEeqEZpA0foWSzw" count="1002" computed="true">
-        <parameters xmi:id="_oLIYJavDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LlKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_e5CbHqxaEeqOCtlfb5qGKA" count="1005" computed="true">
+        <parameters xmi:id="_e5CbH6xaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Cdav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7jvgKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; WHERE &quot;Customer&quot; IS NULL " language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o1Q6QKvDEeqEZpA0foWSzw" name="Null Count" label="Null Count">
-          <taggedValue xmi:id="_o1Q6QavDEeqEZpA0foWSzw" tag="Purpose" value="evaluate the number of missing data (null records)"/>
-          <taggedValue xmi:id="_o1Q6QqvDEeqEZpA0foWSzw" tag="Description" value="counts the number of null rows"/>
-          <sqlGenericExpression xmi:id="_o1Q6Q6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxPOYKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; WHERE &quot;Customer&quot; IS NULL " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_fqrTYKxaEeqOCtlfb5qGKA" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_fqrTYaxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_fqrTYqxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_fqrTY6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_oLIYJqvDEeqEZpA0foWSzw" count="1002" computed="true" distinctValueCount="22">
-        <parameters xmi:id="_oLIYJ6vDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LlKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_e5CbIKxaEeqOCtlfb5qGKA" count="1005" computed="true" distinctValueCount="22">
+        <parameters xmi:id="_e5CbIaxaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Cdav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7kWkKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;Customer&quot; FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; ) A" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o1dHgKvDEeqEZpA0foWSzw" name="Distinct Count" label="Distinct Count">
-          <taggedValue xmi:id="_o1dHgavDEeqEZpA0foWSzw" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
-          <taggedValue xmi:id="_o1dHgqvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of distinct records"/>
-          <sqlGenericExpression xmi:id="_o1dHg6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxRDkKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;Customer&quot; FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; ) A" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_frAqkKxaEeqOCtlfb5qGKA" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_frAqkaxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_frAqkqxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_frAqk6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_oLIYKKvDEeqEZpA0foWSzw" count="1002" computed="true" uniqueValueCount="2">
-        <parameters xmi:id="_oLI_MKvDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LlKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_e5CbIqxaEeqOCtlfb5qGKA" count="1005" computed="true" uniqueValueCount="2">
+        <parameters xmi:id="_e5CbI6xaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Cdav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7k9oKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &quot;Customer&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  GROUP BY &quot;Customer&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o1oGoKvDEeqEZpA0foWSzw" name="Unique Count" label="Unique Count">
-          <taggedValue xmi:id="_o1oGoavDEeqEZpA0foWSzw" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
-          <taggedValue xmi:id="_o1oGoqvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of unique records"/>
-          <sqlGenericExpression xmi:id="_o1oGo6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
-          <sqlGenericExpression xmi:id="_o1oGpKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
-          <sqlGenericExpression xmi:id="_o1oGpavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
-          <sqlGenericExpression xmi:id="_o1oGpqvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
-          <sqlGenericExpression xmi:id="_o1oGp6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
-          <sqlGenericExpression xmi:id="_o1oGqKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
-          <sqlGenericExpression xmi:id="_o1oGqavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxRqoKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &quot;Customer&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  GROUP BY &quot;Customer&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_frSXYKxaEeqOCtlfb5qGKA" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_frSXYaxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_frSXYqxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_frSXY6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_frSXZKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_frSXZaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_frSXZqxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_frSXZ6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_frSXaKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_frSXaaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_oLI_MavDEeqEZpA0foWSzw" count="1002" computed="true" duplicateValueCount="20">
-        <parameters xmi:id="_oLI_MqvDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LlKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_e5CbJKxaEeqOCtlfb5qGKA" count="1005" computed="true" duplicateValueCount="20">
+        <parameters xmi:id="_e5CbJaxaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Cdav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7mLwKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &quot;Customer&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  m  GROUP BY &quot;Customer&quot; HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o1zs0KvDEeqEZpA0foWSzw" name="Duplicate Count" label="Duplicate Count">
-          <taggedValue xmi:id="_o1zs0avDEeqEZpA0foWSzw" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
-          <taggedValue xmi:id="_o1zs0qvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of duplicated records"/>
-          <sqlGenericExpression xmi:id="_o1zs06vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
-          <sqlGenericExpression xmi:id="_o1zs1KvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
-          <sqlGenericExpression xmi:id="_o1zs1avDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
-          <sqlGenericExpression xmi:id="_o1zs1qvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
-          <sqlGenericExpression xmi:id="_o1zs16vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
-          <sqlGenericExpression xmi:id="_o1zs2KvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
-          <sqlGenericExpression xmi:id="_o1zs2avDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxSRsKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &quot;Customer&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  m  GROUP BY &quot;Customer&quot; HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_frl5YKxaEeqOCtlfb5qGKA" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_frl5YaxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_frl5YqxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_frl5Y6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_frl5ZKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_frl5ZaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_frl5ZqxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_frl5Z6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_frl5aKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_frl5aaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_oLI_M6vDEeqEZpA0foWSzw" count="1002" computed="true">
-        <parameters xmi:id="_oLI_NKvDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LlKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_e5CbJqxaEeqOCtlfb5qGKA" count="1005" computed="true">
+        <parameters xmi:id="_e5CbJ6xaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Cdav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7mLwavDEeqEZpA0foWSzw" body="SELECT COUNT(&quot;Customer&quot;) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  WHERE LTRIM(RTRIM(&quot;Customer&quot;)) = '' " language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o2BIMKvDEeqEZpA0foWSzw" name="Blank Count" label="Blank Count">
-          <taggedValue xmi:id="_o2BIMavDEeqEZpA0foWSzw" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
-          <taggedValue xmi:id="_o2BIMqvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of blank records"/>
-          <sqlGenericExpression xmi:id="_o2BIM6vDEeqEZpA0foWSzw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
-          <sqlGenericExpression xmi:id="_o2BINKvDEeqEZpA0foWSzw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
-          <sqlGenericExpression xmi:id="_o2BINavDEeqEZpA0foWSzw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
-          <sqlGenericExpression xmi:id="_o2BINqvDEeqEZpA0foWSzw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
-          <sqlGenericExpression xmi:id="_o2BIN6vDEeqEZpA0foWSzw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxTf0KxaEeqOCtlfb5qGKA" body="SELECT COUNT(&quot;Customer&quot;) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  WHERE LTRIM(RTRIM(&quot;Customer&quot;)) = '' " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_fr1xAKxaEeqOCtlfb5qGKA" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_fr1xAaxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_fr1xAqxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_fr1xA6xaEeqOCtlfb5qGKA" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_fr1xBKxaEeqOCtlfb5qGKA" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_fr1xBaxaEeqOCtlfb5qGKA" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_fr1xBqxaEeqOCtlfb5qGKA" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_fr1xB6xaEeqOCtlfb5qGKA" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_oLI_NqvDEeqEZpA0foWSzw" count="1002" computed="true">
-        <parameters xmi:id="_oLI_N6vDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LmKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_e5DCIKxaEeqOCtlfb5qGKA" count="1005" computed="true">
+        <parameters xmi:id="_e5DCIaxaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Ceav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7feEKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; " language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o2N8gKvDEeqEZpA0foWSzw" name="Row Count" label="Row Count">
-          <taggedValue xmi:id="_o2N8gavDEeqEZpA0foWSzw" tag="Description" value="counts the number of rows"/>
-          <taggedValue xmi:id="_o2N8gqvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of records"/>
-          <sqlGenericExpression xmi:id="_o2N8g6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxGEcKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_fsJTAKxaEeqOCtlfb5qGKA" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_fsJTAaxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_fsJTAqxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_fsJTA6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_oLI_OKvDEeqEZpA0foWSzw" count="1002" computed="true">
-        <parameters xmi:id="_oLI_OavDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LmKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_e5DCIqxaEeqOCtlfb5qGKA" count="1005" computed="true">
+        <parameters xmi:id="_e5DCI6xaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Ceav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7my0KvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; WHERE &quot;Product&quot; IS NULL " language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o2b-8KvDEeqEZpA0foWSzw" name="Null Count" label="Null Count">
-          <taggedValue xmi:id="_o2b-8avDEeqEZpA0foWSzw" tag="Purpose" value="evaluate the number of missing data (null records)"/>
-          <taggedValue xmi:id="_o2b-8qvDEeqEZpA0foWSzw" tag="Description" value="counts the number of null rows"/>
-          <sqlGenericExpression xmi:id="_o2b-86vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxUG4KxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; WHERE &quot;Product&quot; IS NULL " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_fsUSIKxaEeqOCtlfb5qGKA" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_fsUSIaxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_fsUSIqxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_fsUSI6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_oLI_OqvDEeqEZpA0foWSzw" count="1002" computed="true" distinctValueCount="12">
-        <parameters xmi:id="_oLI_O6vDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LmKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_e5DCJKxaEeqOCtlfb5qGKA" count="1005" computed="true" distinctValueCount="12">
+        <parameters xmi:id="_e5DCJaxaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Ceav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7nZ4KvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;Product&quot; FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; ) A" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o2paUKvDEeqEZpA0foWSzw" name="Distinct Count" label="Distinct Count">
-          <taggedValue xmi:id="_o2paUavDEeqEZpA0foWSzw" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
-          <taggedValue xmi:id="_o2paUqvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of distinct records"/>
-          <sqlGenericExpression xmi:id="_o2paU6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxUG4axaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;Product&quot; FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; ) A" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_fs12kKxaEeqOCtlfb5qGKA" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_fs12kaxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_fs12kqxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_fs12k6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_oLI_PKvDEeqEZpA0foWSzw" count="1002" computed="true" uniqueValueCount="0">
-        <parameters xmi:id="_oLI_PavDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LmKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_e5DCJqxaEeqOCtlfb5qGKA" count="1005" computed="true" uniqueValueCount="0">
+        <parameters xmi:id="_e5DCJ6xaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Ceav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7oA8KvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &quot;Product&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  GROUP BY &quot;Product&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o221sKvDEeqEZpA0foWSzw" name="Unique Count" label="Unique Count">
-          <taggedValue xmi:id="_o221savDEeqEZpA0foWSzw" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
-          <taggedValue xmi:id="_o221sqvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of unique records"/>
-          <sqlGenericExpression xmi:id="_o221s6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
-          <sqlGenericExpression xmi:id="_o221tKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
-          <sqlGenericExpression xmi:id="_o221tavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
-          <sqlGenericExpression xmi:id="_o221tqvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
-          <sqlGenericExpression xmi:id="_o221t6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
-          <sqlGenericExpression xmi:id="_o221uKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
-          <sqlGenericExpression xmi:id="_o221uavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxUG4qxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &quot;Product&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  GROUP BY &quot;Product&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_ftIxgKxaEeqOCtlfb5qGKA" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_ftIxgaxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_ftIxgqxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_ftIxg6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_ftIxhKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_ftIxhaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_ftIxhqxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_ftIxh6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_ftIxiKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_ftIxiaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_oLI_PqvDEeqEZpA0foWSzw" count="1002" computed="true" duplicateValueCount="12">
-        <parameters xmi:id="_oLI_P6vDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LmKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_e5DCKKxaEeqOCtlfb5qGKA" count="1005" computed="true" duplicateValueCount="12">
+        <parameters xmi:id="_e5DCKaxaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Ceav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7ooAKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &quot;Product&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  m  GROUP BY &quot;Product&quot; HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o3DqAKvDEeqEZpA0foWSzw" name="Duplicate Count" label="Duplicate Count">
-          <taggedValue xmi:id="_o3DqAavDEeqEZpA0foWSzw" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
-          <taggedValue xmi:id="_o3DqAqvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of duplicated records"/>
-          <sqlGenericExpression xmi:id="_o3DqA6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
-          <sqlGenericExpression xmi:id="_o3DqBKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
-          <sqlGenericExpression xmi:id="_o3DqBavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
-          <sqlGenericExpression xmi:id="_o3DqBqvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
-          <sqlGenericExpression xmi:id="_o3DqB6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
-          <sqlGenericExpression xmi:id="_o3DqCKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
-          <sqlGenericExpression xmi:id="_o3DqCavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxVVAKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &quot;Product&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  m  GROUP BY &quot;Product&quot; HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_ftZQMKxaEeqOCtlfb5qGKA" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_ftZQMaxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_ftZQMqxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_ftZQM6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_ftZQNKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_ftZQNaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_ftZQNqxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_ftZQN6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_ftZQOKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_ftZQOaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_oLI_QKvDEeqEZpA0foWSzw" count="1002" computed="true">
-        <parameters xmi:id="_oLI_QavDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LmKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_e5DCKqxaEeqOCtlfb5qGKA" count="1005" computed="true">
+        <parameters xmi:id="_e5DCK6xaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Ceav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7pPEKvDEeqEZpA0foWSzw" body="SELECT COUNT(&quot;Product&quot;) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  WHERE LTRIM(RTRIM(&quot;Product&quot;)) = '' " language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o3iyMKvDEeqEZpA0foWSzw" name="Blank Count" label="Blank Count">
-          <taggedValue xmi:id="_o3iyMavDEeqEZpA0foWSzw" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
-          <taggedValue xmi:id="_o3iyMqvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of blank records"/>
-          <sqlGenericExpression xmi:id="_o3iyM6vDEeqEZpA0foWSzw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
-          <sqlGenericExpression xmi:id="_o3iyNKvDEeqEZpA0foWSzw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
-          <sqlGenericExpression xmi:id="_o3iyNavDEeqEZpA0foWSzw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
-          <sqlGenericExpression xmi:id="_o3iyNqvDEeqEZpA0foWSzw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
-          <sqlGenericExpression xmi:id="_o3iyN6vDEeqEZpA0foWSzw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxWjIKxaEeqOCtlfb5qGKA" body="SELECT COUNT(&quot;Product&quot;) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  WHERE LTRIM(RTRIM(&quot;Product&quot;)) = '' " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_ftpu4KxaEeqOCtlfb5qGKA" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_ftpu4axaEeqOCtlfb5qGKA" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_ftpu4qxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_ftpu46xaEeqOCtlfb5qGKA" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_ftpu5KxaEeqOCtlfb5qGKA" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_ftpu5axaEeqOCtlfb5qGKA" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_ftpu5qxaEeqOCtlfb5qGKA" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_ftpu56xaEeqOCtlfb5qGKA" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_oLI_Q6vDEeqEZpA0foWSzw" count="1002" computed="true">
-        <parameters xmi:id="_oLI_RKvDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LnKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_e5DCLKxaEeqOCtlfb5qGKA" count="1005" computed="true">
+        <parameters xmi:id="_e5DCLaxaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Cfav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7feEqvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; " language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o3w0oKvDEeqEZpA0foWSzw" name="Row Count" label="Row Count">
-          <taggedValue xmi:id="_o3w0oavDEeqEZpA0foWSzw" tag="Description" value="counts the number of rows"/>
-          <taggedValue xmi:id="_o3w0oqvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of records"/>
-          <sqlGenericExpression xmi:id="_o3w0o6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxGEdKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_ft18IKxaEeqOCtlfb5qGKA" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_ft18IaxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_ft18IqxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_ft18I6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_oLI_RavDEeqEZpA0foWSzw" count="1002" computed="true">
-        <parameters xmi:id="_oLI_RqvDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LnKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_e5DCLqxaEeqOCtlfb5qGKA" count="1005" nullCount="2" computed="true">
+        <parameters xmi:id="_e5DCL6xaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Cfav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7p2IKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; WHERE &quot;Quantity&quot; IS NULL " language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o39B4KvDEeqEZpA0foWSzw" name="Null Count" label="Null Count">
-          <taggedValue xmi:id="_o39B4avDEeqEZpA0foWSzw" tag="Purpose" value="evaluate the number of missing data (null records)"/>
-          <taggedValue xmi:id="_o39B4qvDEeqEZpA0foWSzw" tag="Description" value="counts the number of null rows"/>
-          <sqlGenericExpression xmi:id="_o39B46vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxXKMKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; WHERE &quot;Quantity&quot; IS NULL " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_fuA7QKxaEeqOCtlfb5qGKA" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_fuA7QaxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_fuA7QqxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_fuA7Q6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_oLI_R6vDEeqEZpA0foWSzw" count="1002" computed="true" distinctValueCount="627">
-        <parameters xmi:id="_oLI_SKvDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LnKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_e5DCMKxaEeqOCtlfb5qGKA" count="1005" nullCount="2" computed="true" distinctValueCount="628">
+        <parameters xmi:id="_e5DCMaxaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Cfav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7qdMKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;Quantity&quot; FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; ) A" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o4J2MKvDEeqEZpA0foWSzw" name="Distinct Count" label="Distinct Count">
-          <taggedValue xmi:id="_o4J2MavDEeqEZpA0foWSzw" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
-          <taggedValue xmi:id="_o4J2MqvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of distinct records"/>
-          <sqlGenericExpression xmi:id="_o4J2M6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxXKMaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;Quantity&quot; FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; ) A" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_fuQy4KxaEeqOCtlfb5qGKA" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_fuQy4axaEeqOCtlfb5qGKA" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_fuQy4qxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_fuQy46xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_oLI_SavDEeqEZpA0foWSzw" count="1002" computed="true" uniqueValueCount="353">
-        <parameters xmi:id="_oLI_SqvDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LnKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_e5DCMqxaEeqOCtlfb5qGKA" count="1005" nullCount="2" computed="true" uniqueValueCount="353">
+        <parameters xmi:id="_e5DCM6xaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Cfav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7rEQKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &quot;Quantity&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  GROUP BY &quot;Quantity&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o4VcYKvDEeqEZpA0foWSzw" name="Unique Count" label="Unique Count">
-          <taggedValue xmi:id="_o4VcYavDEeqEZpA0foWSzw" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
-          <taggedValue xmi:id="_o4VcYqvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of unique records"/>
-          <sqlGenericExpression xmi:id="_o4VcY6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
-          <sqlGenericExpression xmi:id="_o4VcZKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
-          <sqlGenericExpression xmi:id="_o4VcZavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
-          <sqlGenericExpression xmi:id="_o4VcZqvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
-          <sqlGenericExpression xmi:id="_o4VcZ6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
-          <sqlGenericExpression xmi:id="_o4VcaKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
-          <sqlGenericExpression xmi:id="_o4VcaavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxXxQKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &quot;Quantity&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  GROUP BY &quot;Quantity&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_fuifsKxaEeqOCtlfb5qGKA" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_fuifsaxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_fuifsqxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_fuifs6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_fuiftKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_fuiftaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_fuiftqxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_fuift6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_fuifuKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_fuifuaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_oLI_S6vDEeqEZpA0foWSzw" count="1002" computed="true" duplicateValueCount="274">
-        <parameters xmi:id="_oLI_TKvDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LnKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_e5DCNKxaEeqOCtlfb5qGKA" count="1005" nullCount="2" computed="true" duplicateValueCount="275">
+        <parameters xmi:id="_e5DCNaxaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Cfav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7rrUKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &quot;Quantity&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  m  GROUP BY &quot;Quantity&quot; HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o4je0KvDEeqEZpA0foWSzw" name="Duplicate Count" label="Duplicate Count">
-          <taggedValue xmi:id="_o4je0avDEeqEZpA0foWSzw" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
-          <taggedValue xmi:id="_o4je0qvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of duplicated records"/>
-          <sqlGenericExpression xmi:id="_o4je06vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
-          <sqlGenericExpression xmi:id="_o4je1KvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
-          <sqlGenericExpression xmi:id="_o4je1avDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
-          <sqlGenericExpression xmi:id="_o4je1qvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
-          <sqlGenericExpression xmi:id="_o4je16vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
-          <sqlGenericExpression xmi:id="_o4je2KvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
-          <sqlGenericExpression xmi:id="_o4je2avDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxXxQaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &quot;Quantity&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  m  GROUP BY &quot;Quantity&quot; HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_fu5FAKxaEeqOCtlfb5qGKA" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_fu5FAaxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_fu5FAqxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_fu5FA6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_fu5FBKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_fu5FBaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_fu5FBqxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_fu5FB6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_fu5FCKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_fu5FCaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_oLI_TqvDEeqEZpA0foWSzw" count="1002" computed="true">
-        <parameters xmi:id="_oLI_T6vDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LoKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_e5DCNqxaEeqOCtlfb5qGKA" count="1005" computed="true">
+        <parameters xmi:id="_e5DCN6xaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Cgav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7feFavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; " language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o4yIUKvDEeqEZpA0foWSzw" name="Row Count" label="Row Count">
-          <taggedValue xmi:id="_o4yIUavDEeqEZpA0foWSzw" tag="Description" value="counts the number of rows"/>
-          <taggedValue xmi:id="_o4yIUqvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of records"/>
-          <sqlGenericExpression xmi:id="_o4yIU6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxGEc6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_fvGgYKxaEeqOCtlfb5qGKA" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_fvGgYaxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_fvGgYqxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_fvGgY6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_oLI_UKvDEeqEZpA0foWSzw" count="1002" computed="true">
-        <parameters xmi:id="_oLI_UavDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LoKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_e5DCOKxaEeqOCtlfb5qGKA" count="1005" computed="true">
+        <parameters xmi:id="_e5DCOaxaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Cgav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7rrUavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; WHERE &quot;Total_Amount&quot; IS NULL " language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o4_jsKvDEeqEZpA0foWSzw" name="Null Count" label="Null Count">
-          <taggedValue xmi:id="_o4_jsavDEeqEZpA0foWSzw" tag="Purpose" value="evaluate the number of missing data (null records)"/>
-          <taggedValue xmi:id="_o4_jsqvDEeqEZpA0foWSzw" tag="Description" value="counts the number of null rows"/>
-          <sqlGenericExpression xmi:id="_o4_js6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxXxQqxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; WHERE &quot;Transaction_Date&quot; IS NULL " language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_fve64KxaEeqOCtlfb5qGKA" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_fve64axaEeqOCtlfb5qGKA" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_fve64qxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_fve646xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_oLI_UqvDEeqEZpA0foWSzw" count="1002" computed="true" distinctValueCount="999">
-        <parameters xmi:id="_oLI_U6vDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LoKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_e5DCOqxaEeqOCtlfb5qGKA" count="1005" computed="true" distinctValueCount="449">
+        <parameters xmi:id="_e5DCO6xaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Cgav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7sSYKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;Total_Amount&quot; FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; ) A" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o5ONMKvDEeqEZpA0foWSzw" name="Distinct Count" label="Distinct Count">
-          <taggedValue xmi:id="_o5ONMavDEeqEZpA0foWSzw" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
-          <taggedValue xmi:id="_o5ONMqvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of distinct records"/>
-          <sqlGenericExpression xmi:id="_o5ONM6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxaNgKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;Transaction_Date&quot; FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; ) A" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_fv6YsKxaEeqOCtlfb5qGKA" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_fv6YsaxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_fv6YsqxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_fv6Ys6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_oLI_VKvDEeqEZpA0foWSzw" count="1002" computed="true" uniqueValueCount="996">
-        <parameters xmi:id="_oLI_VavDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LoKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_e5DCPKxaEeqOCtlfb5qGKA" count="1005" computed="true" uniqueValueCount="148">
+        <parameters xmi:id="_e5DCPaxaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Cgav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7s5cKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &quot;Total_Amount&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  GROUP BY &quot;Total_Amount&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o5cPoKvDEeqEZpA0foWSzw" name="Unique Count" label="Unique Count">
-          <taggedValue xmi:id="_o5cPoavDEeqEZpA0foWSzw" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
-          <taggedValue xmi:id="_o5cPoqvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of unique records"/>
-          <sqlGenericExpression xmi:id="_o5cPo6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
-          <sqlGenericExpression xmi:id="_o5cPpKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
-          <sqlGenericExpression xmi:id="_o5cPpavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
-          <sqlGenericExpression xmi:id="_o5cPpqvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
-          <sqlGenericExpression xmi:id="_o5cPp6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
-          <sqlGenericExpression xmi:id="_o5cPqKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
-          <sqlGenericExpression xmi:id="_o5cPqavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxaNgaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &quot;Transaction_Date&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  GROUP BY &quot;Transaction_Date&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_fwMFgKxaEeqOCtlfb5qGKA" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_fwMFgaxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_fwMFgqxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_fwMFg6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_fwMFhKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_fwMFhaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_fwMFhqxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_fwMFh6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_fwMFiKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_fwMFiaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_oLI_VqvDEeqEZpA0foWSzw" count="1002" computed="true" duplicateValueCount="3">
-        <parameters xmi:id="_oLI_V6vDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LoKvDEeqEZpA0foWSzw"/>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_e5DCPqxaEeqOCtlfb5qGKA" count="1005" computed="true" duplicateValueCount="301">
+        <parameters xmi:id="_e5DCP6xaEeqOCtlfb5qGKA"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3Cgav2Eeq5fLclrRW2Iw"/>
         <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7tggKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &quot;Total_Amount&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  m  GROUP BY &quot;Total_Amount&quot; HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o5ujgKvDEeqEZpA0foWSzw" name="Duplicate Count" label="Duplicate Count">
-          <taggedValue xmi:id="_o5ujgavDEeqEZpA0foWSzw" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
-          <taggedValue xmi:id="_o5ujgqvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of duplicated records"/>
-          <sqlGenericExpression xmi:id="_o5ujg6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
-          <sqlGenericExpression xmi:id="_o5ujhKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
-          <sqlGenericExpression xmi:id="_o5ujhavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
-          <sqlGenericExpression xmi:id="_o5ujhqvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
-          <sqlGenericExpression xmi:id="_o5ujh6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
-          <sqlGenericExpression xmi:id="_o5ujiKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
-          <sqlGenericExpression xmi:id="_o5ujiavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
-        </builtInIndicatorDefinition>
-      </indicators>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_oLI_WavDEeqEZpA0foWSzw" count="1002" computed="true">
-        <parameters xmi:id="_oLI_WqvDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LpKvDEeqEZpA0foWSzw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7feE6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; " language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o57X0KvDEeqEZpA0foWSzw" name="Row Count" label="Row Count">
-          <taggedValue xmi:id="_o57X0avDEeqEZpA0foWSzw" tag="Description" value="counts the number of rows"/>
-          <taggedValue xmi:id="_o57X0qvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of records"/>
-          <sqlGenericExpression xmi:id="_o57X06vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
-        </builtInIndicatorDefinition>
-      </indicators>
-      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_oLI_W6vDEeqEZpA0foWSzw" count="1002" computed="true">
-        <parameters xmi:id="_oLI_XKvDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LpKvDEeqEZpA0foWSzw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7uHkKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; WHERE &quot;Transaction_Date&quot; IS NULL " language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o6Fv4KvDEeqEZpA0foWSzw" name="Null Count" label="Null Count">
-          <taggedValue xmi:id="_o6Fv4avDEeqEZpA0foWSzw" tag="Purpose" value="evaluate the number of missing data (null records)"/>
-          <taggedValue xmi:id="_o6Fv4qvDEeqEZpA0foWSzw" tag="Description" value="counts the number of null rows"/>
-          <sqlGenericExpression xmi:id="_o6Fv46vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
-        </builtInIndicatorDefinition>
-      </indicators>
-      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_oLI_XavDEeqEZpA0foWSzw" count="1002" computed="true" distinctValueCount="449">
-        <parameters xmi:id="_oLI_XqvDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LpKvDEeqEZpA0foWSzw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7uuoKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;Transaction_Date&quot; FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; ) A" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o6Pg4KvDEeqEZpA0foWSzw" name="Distinct Count" label="Distinct Count">
-          <taggedValue xmi:id="_o6Pg4avDEeqEZpA0foWSzw" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
-          <taggedValue xmi:id="_o6Pg4qvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of distinct records"/>
-          <sqlGenericExpression xmi:id="_o6Pg46vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
-        </builtInIndicatorDefinition>
-      </indicators>
-      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_oLI_X6vDEeqEZpA0foWSzw" count="1002" computed="true" uniqueValueCount="148">
-        <parameters xmi:id="_oLI_YKvDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LpKvDEeqEZpA0foWSzw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7vVsKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &quot;Transaction_Date&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  GROUP BY &quot;Transaction_Date&quot; HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o6h0wKvDEeqEZpA0foWSzw" name="Unique Count" label="Unique Count">
-          <taggedValue xmi:id="_o6h0wavDEeqEZpA0foWSzw" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
-          <taggedValue xmi:id="_o6h0wqvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of unique records"/>
-          <sqlGenericExpression xmi:id="_o6h0w6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
-          <sqlGenericExpression xmi:id="_o6h0xKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
-          <sqlGenericExpression xmi:id="_o6h0xavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
-          <sqlGenericExpression xmi:id="_o6h0xqvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
-          <sqlGenericExpression xmi:id="_o6h0x6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
-          <sqlGenericExpression xmi:id="_o6h0yKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
-          <sqlGenericExpression xmi:id="_o6h0yavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
-        </builtInIndicatorDefinition>
-      </indicators>
-      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_oLI_YavDEeqEZpA0foWSzw" count="1002" computed="true" duplicateValueCount="301">
-        <parameters xmi:id="_oLI_YqvDEeqEZpA0foWSzw"/>
-        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_gF7LpKvDEeqEZpA0foWSzw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_o7vVsavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &quot;Transaction_Date&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  m  GROUP BY &quot;Transaction_Date&quot; HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
-        <builtInIndicatorDefinition xmi:id="_o6upEKvDEeqEZpA0foWSzw" name="Duplicate Count" label="Duplicate Count">
-          <taggedValue xmi:id="_o6upEavDEeqEZpA0foWSzw" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
-          <taggedValue xmi:id="_o6upEqvDEeqEZpA0foWSzw" tag="Purpose" value="evaluates the number of duplicated records"/>
-          <sqlGenericExpression xmi:id="_o6upE6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
-          <sqlGenericExpression xmi:id="_o6upFKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
-          <sqlGenericExpression xmi:id="_o6upFavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
-          <sqlGenericExpression xmi:id="_o6upFqvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
-          <sqlGenericExpression xmi:id="_o6upF6vDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
-          <sqlGenericExpression xmi:id="_o6upGKvDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
-          <sqlGenericExpression xmi:id="_o6upGavDEeqEZpA0foWSzw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fxaNgqxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &quot;Transaction_Date&quot;, COUNT(*) mycount FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;  m  GROUP BY &quot;Transaction_Date&quot; HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+        <builtInIndicatorDefinition xmi:id="_fwbWEKxaEeqOCtlfb5qGKA" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_fwbWEaxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_fwbWEqxaEeqOCtlfb5qGKA" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_fwbWE6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_fwbWFKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_fwbWFaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_fwbWFqxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_fwbWF6xaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_fwbWGKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_fwbWGaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
         </builtInIndicatorDefinition>
       </indicators>
     </results>
