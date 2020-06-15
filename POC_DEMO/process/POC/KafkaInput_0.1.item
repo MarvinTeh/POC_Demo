@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -40,7 +42,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:9VlifE9fqEV/52wXGxhtOft/2EonjpId8607a8qY"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:sfuEAYG7opX21bPjGKdmm6X6KNY6XlETORlmoe+0"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -75,7 +77,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:I/nMKjints8QJ7o/vl81aRmqC6B2fEzHStXjU54Q"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:7qb+IQqG2sJl1RdIMspV/nKTnSMQRZom5GcYIpXn"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -110,13 +112,89 @@
     <routinesParameter id="_238zsKuIEeq2_fH8dztAFg" name="TalendStringUtil"/>
     <routinesParameter id="_23dEcKuIEeq2_fH8dztAFg" name="TalendString"/>
   </parameters>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6af7a090-1a4e-47e6-aeca-6e00ebe5addf"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1ibU9Z1uG1aSJPDdCNjFCmb5PBMdnEAm94mbp6zV4DqbQbHGZL/VtWKeI+MBs1EnRZU0Hbkl8KVP
-X4hTQN4j4Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_51b3fd93-d801-43e1-ab16-72ba2c9967f9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JccQFOeuMwDbNS/MAQcNdTi6KlZCE0CpxZJHBC+XQDToDEoANTEEWd2m2AEIyDvNmHp7+iTYoJ5/
-taZBz6dlIw==</DigestValue></Reference></SignedInfo><SignatureValue>MWB1vddWIhGNdoPv4u7/UrPAkqAHFp/99BcmvwGnupep+Vq1df1eJGiPiff4L1FrzVbiJr6LWlqC
-pPJ0A8IEGcQ48ASaP4QdaWfBZ1+KQ1QK227PXC5YBu03+3kXdWYFLSpX1x7PLDqE+r773A07hLwc
-snzVIVtkNxFazyD4CLCoN27PMh71QRwoRKlQDubRBVkYi47qjDdvwrBD8yFgglx/IchVJaIaF54/
-LpRrDPmm9+R4XlqwpZV+/AW/YlpYDimKpP1R8BHTPh7WsT9hJIQCo0QKWjOfhWQSIKIZpeyHcU+2
-kuXX/mk0EWTmfi9+15OP+TVVUkZzrpV2GARTfg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+  <node componentName="tKafkaInput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="256" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tKafkaInput_1"/>
+    <elementParameter field="CLOSED_LIST" name="OUTPUT_TYPE" value="STRING"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="KAFKA_VERSION" value="KAFKA_2_2_1"/>
+    <elementParameter field="TEXT" name="ZOOKEEPER_CONNECT" show="false" value="&quot;zk1:port1,zk2:port2,...&quot;"/>
+    <elementParameter field="TEXT" name="BROKER_LIST" value="&quot;3.130.216.75:9092&quot;"/>
+    <elementParameter field="TEXT" name="KAFKA_TOPIC" value="&quot;opc&quot;"/>
+    <elementParameter field="TEXT" name="GROUP_ID" value=""/>
+    <elementParameter field="CHECK" name="RESET_OFFSET" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="AUTO_OFFSET_RESET" show="false" value="LARGEST"/>
+    <elementParameter field="CLOSED_LIST" name="AUTO_OFFSET_RESET_NEW" value="LATEST"/>
+    <elementParameter field="CLOSED_LIST" name="KAFKA_OFFSET_STORAGE" show="false" value="ZOOKEEPER"/>
+    <elementParameter field="CHECK" name="KAFKA_DUAL_COMMIT_CHECK" show="false" value="true"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT_OFFSET" value="true"/>
+    <elementParameter field="TEXT" name="KAFKA_COMMIT_INTERVAL" value="5000"/>
+    <elementParameter field="CHECK" name="USE_BATCH_MAX_DURATION" value="false"/>
+    <elementParameter field="TEXT" name="BATCH_MAX_DURATION" show="false" value="600000"/>
+    <elementParameter field="CHECK" name="USE_BATCH_MAX_SIZE" value="false"/>
+    <elementParameter field="TEXT" name="BATCH_MAX_SIZE" show="false" value="5000"/>
+    <elementParameter field="CHECK" name="USE_BATCH_MESSAGE_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="BATCH_MESSAGE_TIMEOUT" show="false" value="10000"/>
+    <elementParameter field="CHECK" name="USE_HTTPS" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="HTTPS_SETTING" show="false" value=""/>
+    <elementParameter field="CHECK" name="USE_KRB" value="false"/>
+    <elementParameter field="FILE" name="JAAS_CONF" show="false" value="&quot;/etc/kafka/kafka_client_jaas.conf&quot;"/>
+    <elementParameter field="TEXT" name="KRB_SERVICE_NAME" show="false" value="&quot;kafka&quot;"/>
+    <elementParameter field="CHECK" name="SET_KINIT_PATH" show="false" value="false"/>
+    <elementParameter field="FILE" name="KINIT_PATH" show="false" value="&quot;/usr/bin/kinit&quot;"/>
+    <elementParameter field="CHECK" name="SET_KRB5_CONF" show="false" value="false"/>
+    <elementParameter field="FILE" name="KRB5_CONF" show="false" value="&quot;/etc/kafka/krb5.conf&quot;"/>
+    <elementParameter field="TABLE" name="KAFKA_CONSUMER_PROPERTIES"/>
+    <elementParameter field="TEXT" name="KAFKA_CONSUMER_TIMEOUT" value="-1"/>
+    <elementParameter field="CHECK" name="SAVE_OFFSET" value="false"/>
+    <elementParameter field="CHECK" name="CUSTOM_ENCODING" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="UTF-8"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tKafkaInput_1">
+      <column defaultValue="" key="false" length="0" name="payload" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="payload"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_1">
+      <column defaultValue="" key="false" length="0" name="payload" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tKafkaInput_1" offsetLabelX="0" offsetLabelY="0" source="tKafkaInput_1" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tKafkaInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8b482495-2f9c-49bb-9f79-2f7fb59091a1"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1KJ4IahFVwkbflRkQIZ0MISaWK3IE1KnPLObkxXBzk/OqEMSEnZwxRvQX0x036BC3fdGbUHvya/6
+AxrmjH8Fbg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d516518d-2952-420e-96a9-44f2dc416b4e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UA7Ijphxrqt6MSbXcCSRW7fDRFoJ09HxdGY3sXnS+ZVaWmFwcserKi4GqV9kx5jA8NN8lvSamkZe
+bloqjAmixw==</DigestValue></Reference></SignedInfo><SignatureValue>Rmk9kNt4ONT6unYDK1MFlz/NrT+S4Piz9b864/aSDcOaLNIU0Y5NT6p4MnDMSwPZZGCqR/UyUHnB
+hwWcBkg8cmCgD1lpAemsiBQU4aihi1Tla7eqfvAjQz767MTP08tTwdF14vfNgxRRb0nI0KLcGK3F
+SjOxARyWhkt0uW7Lxt2BFtNYOoTDjJW8dxvdbq1ZObLVrHMCHPmvOQbA6lkNadcBC0/mrCtzg1Eb
+X3fh19uZ8wYa4lRbSsSWM6WitTG2cuLQGDczHswVy7mHCDYs3d8sAsUo1vpzb4UgGu2Yj2uMXcc3
+vsK4Zf2DU4BFYq7leQypFrcFw1JaphtdILb1zQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -138,4 +216,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_51b3fd93-d801-43e1-ab16-72ba2c9967f9" Target="#_6af7a090-1a4e-47e6-aeca-6e00ebe5addf"><Timestamp>2020-06-15 02:27:58</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d516518d-2952-420e-96a9-44f2dc416b4e" Target="#_8b482495-2f9c-49bb-9f79-2f7fb59091a1"><Timestamp>2020-06-15 02:32:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
