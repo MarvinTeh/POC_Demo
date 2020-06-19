@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_y-GgELHlEeqbh8f8_Wn94w" name="SalesData" creationDate="2020-06-19T12:01:51.378+0800" defaultContext="Default">
+    <clientDependency href="../../metadata/connections/MysqlLocal_0.1.item#_FRneQLHnEeqbh8f8_Wn94w"/>
     <taggedValue xmi:id="_y-GgEbHlEeqbh8f8_Wn94w" tag="Status" value="development"/>
     <taggedValue xmi:id="_y-GgErHlEeqbh8f8_Wn94w" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
     <taggedValue xmi:id="_y-GgE7HlEeqbh8f8_Wn94w" tag="Purpose" value=""/>
@@ -10,9 +11,600 @@
     <taggedValue xmi:id="_OWB6grHmEeqbh8f8_Wn94w" tag="PREVIEW_ROW_NUMBER" value="50"/>
     <taggedValue xmi:id="_OWChkLHmEeqbh8f8_Wn94w" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
     <taggedValue xmi:id="_OWU1cLHmEeqbh8f8_Wn94w" tag="Is Use Sample Data" value="false"/>
-    <context xmi:id="_y-GgFrHlEeqbh8f8_Wn94w"/>
+    <context xmi:id="_y-GgFrHlEeqbh8f8_Wn94w">
+      <connection href="../../metadata/connections/MysqlLocal_0.1.item#_pddQQLHlEeqbh8f8_Wn94w"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5YLHmEeqbh8f8_Wn94w"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5ZLHmEeqbh8f8_Wn94w"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5aLHmEeqbh8f8_Wn94w"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5bLHmEeqbh8f8_Wn94w"/>
+    </context>
     <results xmi:id="_y-GgF7HlEeqbh8f8_Wn94w">
-      <resultMetadata xmi:id="_y-GgGLHlEeqbh8f8_Wn94w"/>
+      <resultMetadata xmi:id="_y-GgGLHlEeqbh8f8_Wn94w" executionDate="2020-06-19T12:11:07.772+0800" executionDuration="710" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_FRm3MLHnEeqbh8f8_Wn94w" count="15000" computed="true">
+        <parameters xmi:id="_FRm3MbHnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5YLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3wRMLHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM `talend`.`salesstaging` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_FwSXQLHnEeqbh8f8_Wn94w" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_FwSXQbHnEeqbh8f8_Wn94w" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_FwSXQrHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_FwSXQ7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_FRm3MrHnEeqbh8f8_Wn94w" count="15000" computed="true">
+        <parameters xmi:id="_FRm3M7HnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5YLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3w4QLHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM `talend`.`salesstaging` WHERE `ShopName` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_FwnucLHnEeqbh8f8_Wn94w" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_FwnucbHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_FwnucrHnEeqbh8f8_Wn94w" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_Fwnuc7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_FRm3NLHnEeqbh8f8_Wn94w" count="15000" computed="true" distinctValueCount="3">
+        <parameters xmi:id="_FRm3NbHnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5YLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3w4QbHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT DISTINCT `ShopName` FROM `talend`.`salesstaging` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_Fw1w4LHnEeqbh8f8_Wn94w" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_Fw1w4bHnEeqbh8f8_Wn94w" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_Fw1w4rHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_Fw1w47HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_FRm3NrHnEeqbh8f8_Wn94w" count="15000" computed="true" uniqueValueCount="0">
+        <parameters xmi:id="_FRm3N7HnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5YLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3w4QrHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT `ShopName`, COUNT(*) mycount FROM `talend`.`salesstaging`  GROUP BY `ShopName` HAVING mycount = 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_FxFBcLHnEeqbh8f8_Wn94w" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_FxFBcbHnEeqbh8f8_Wn94w" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_FxFBcrHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_FxFBc7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_FxFBdLHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_FxFBdbHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_FxFBdrHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_FxFBd7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_FxFBeLHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_FxFBebHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_FRm3OLHnEeqbh8f8_Wn94w" count="15000" computed="true" duplicateValueCount="3">
+        <parameters xmi:id="_FRm3ObHnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5YLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3w4Q7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT `ShopName`, COUNT(*) mycount FROM `talend`.`salesstaging`  m  GROUP BY `ShopName` HAVING mycount > 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_FxSc0LHnEeqbh8f8_Wn94w" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_FxSc0bHnEeqbh8f8_Wn94w" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_FxSc0rHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_FxSc07HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_FxSc1LHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_FxSc1bHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_FxSc1rHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_FxSc17HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_FxSc2LHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_FxSc2bHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_FRm3OrHnEeqbh8f8_Wn94w" count="15000" computed="true">
+        <parameters xmi:id="_FRm3O7HnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5YLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3w4RLHnEeqbh8f8_Wn94w" body="SELECT COUNT(`ShopName`) FROM `talend`.`salesstaging` WHERE TRIM(`ShopName`) = '' " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_FxiUcLHnEeqbh8f8_Wn94w" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_FxiUcbHnEeqbh8f8_Wn94w" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_FxiUcrHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_FxiUc7HnEeqbh8f8_Wn94w" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_FxiUdLHnEeqbh8f8_Wn94w" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_FxiUdbHnEeqbh8f8_Wn94w" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_FxiUdrHnEeqbh8f8_Wn94w" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_FxiUd7HnEeqbh8f8_Wn94w" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:TextIndicator" xmi:id="_FRm3PLHnEeqbh8f8_Wn94w">
+        <parameters xmi:id="_FRm3PbHnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5YLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Text_Statistics_0.1.definition#_yb9x0zh8Ed2XmO7pl5Yuyg"/>
+        <averageLengthIndicator xmi:id="_FRm3PrHnEeqbh8f8_Wn94w" count="15000" computed="true" sumLength="75000.0">
+          <parameters xmi:id="_FRm3P7HnEeqbh8f8_Wn94w">
+            <textParameter xmi:id="_FRm3QLHnEeqbh8f8_Wn94w" useBlank="false"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5YLHmEeqbh8f8_Wn94w"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3w4RbHnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH(`ShopName`)), COUNT(`ShopName`) FROM `talend`.`salesstaging` WHERE (`ShopName` IS NOT NULL ) AND (TRIM(IFNULL(`ShopName`,'NULL TALEND')) &lt;> '' ) " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_Fx0oULHnEeqbh8f8_Wn94w" name="Average Length" label="Average Length">
+            <taggedValue xmi:id="_Fx0oUbHnEeqbh8f8_Wn94w" tag="Description" value="computes the average length of the field. Does not take into account the null and blank values when computing the average length."/>
+            <taggedValue xmi:id="_Fx0oUrHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the average length of the textual record of non-null and non-blank values"/>
+            <sqlGenericExpression xmi:id="_Fx0oU7HnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND (TRIM(IFNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+            <sqlGenericExpression xmi:id="_Fx0oVLHnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND (TRIM(NVL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) IS NOT NULL) &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+            <sqlGenericExpression xmi:id="_Fx0oVbHnEeqbh8f8_Wn94w" body="SELECT SUM(LEN(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND (LTRIM(RTRIM(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END)) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+            <sqlGenericExpression xmi:id="_Fx0oVrHnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+            <sqlGenericExpression xmi:id="_Fx0oV7HnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Ingres"/>
+            <sqlGenericExpression xmi:id="_Fx0oWLHnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="SQLite"/>
+            <sqlGenericExpression xmi:id="_Fx0oWbHnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Hive"/>
+            <sqlGenericExpression xmi:id="_Fx0oWrHnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Teradata"/>
+            <sqlGenericExpression xmi:id="_Fx0oW7HnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND ( LTRIM(RTRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END ))  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+            <sqlGenericExpression xmi:id="_Fx0oXLHnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH( &lt;%=__COLUMN_NAMES__%> )), COUNT( &lt;%=__COLUMN_NAMES__%> ) FROM  &lt;%=__TABLE_NAME__%>   WHERE ( &lt;%=__COLUMN_NAMES__%>  IS NOT NULL ) AND ( TRIM( CASE WHEN  &lt;%=__COLUMN_NAMES__%>  IS NULL  THEN 'NULL TALEND' ELSE  &lt;%=__COLUMN_NAMES__%>  END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Informix"/>
+            <sqlGenericExpression xmi:id="_Fx0oXbHnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="PostgreSQL"/>
+            <sqlGenericExpression xmi:id="_Fx0oXrHnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND (TRIM(ISNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Netezza"/>
+            <sqlGenericExpression xmi:id="_Fx0oX7HnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND (TRIM(IFNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Snowflake"/>
+          </builtInIndicatorDefinition>
+        </averageLengthIndicator>
+        <maxLengthIndicator xmi:id="_FRm3QbHnEeqbh8f8_Wn94w" computed="true" length="5">
+          <parameters xmi:id="_FRm3QrHnEeqbh8f8_Wn94w">
+            <textParameter xmi:id="_FRm3Q7HnEeqbh8f8_Wn94w" useBlank="false"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5YLHmEeqbh8f8_Wn94w"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3w4RrHnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH(`ShopName`)) FROM `talend`.`salesstaging` WHERE (`ShopName` IS NOT NULL ) AND (TRIM(IFNULL(`ShopName`,'NULL TALEND')) &lt;> '' ) " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_FyA1kLHnEeqbh8f8_Wn94w" name="Maximal Length" label="Maximal Length">
+            <taggedValue xmi:id="_FyA1kbHnEeqbh8f8_Wn94w" tag="Description" value="computes the maximal length of a text field. Does not take into account the null and blank values when computing the maximal length."/>
+            <taggedValue xmi:id="_FyA1krHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the length of the longest textual record of non-null and non-blank values"/>
+            <sqlGenericExpression xmi:id="_FyA1k7HnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND (TRIM(IFNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+            <sqlGenericExpression xmi:id="_FyA1lLHnEeqbh8f8_Wn94w" body="SELECT MAX( LENGTH(&lt;%=__COLUMN_NAMES__%>) ) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND (TRIM(NVL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) IS NOT NULL) &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle" modificationDate=""/>
+            <sqlGenericExpression xmi:id="_FyA1lbHnEeqbh8f8_Wn94w" body="SELECT MAX(LEN(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND (LTRIM(RTRIM(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END)) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+            <sqlGenericExpression xmi:id="_FyA1lrHnEeqbh8f8_Wn94w" body="SELECT MAX(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+            <sqlGenericExpression xmi:id="_FyA1l7HnEeqbh8f8_Wn94w" body="SELECT MAX(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Ingres"/>
+            <sqlGenericExpression xmi:id="_FyA1mLHnEeqbh8f8_Wn94w" body="SELECT MAX(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="SQLite"/>
+            <sqlGenericExpression xmi:id="_FyA1mbHnEeqbh8f8_Wn94w" body="SELECT MAX(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Hive" modificationDate=""/>
+            <sqlGenericExpression xmi:id="_FyA1mrHnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%>  WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Teradata"/>
+            <sqlGenericExpression xmi:id="_FyA1m7HnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%>  WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND ( LTRIM(RTRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END ))  &lt;>  '' )  &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+            <sqlGenericExpression xmi:id="_FyA1nLHnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH( &lt;%=__COLUMN_NAMES__%> )) FROM  &lt;%=__TABLE_NAME__%>   WHERE ( &lt;%=__COLUMN_NAMES__%>  IS NOT NULL ) AND ( TRIM( CASE WHEN  &lt;%=__COLUMN_NAMES__%>  IS NULL  THEN 'NULL TALEND' ELSE  &lt;%=__COLUMN_NAMES__%>  END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Informix"/>
+            <sqlGenericExpression xmi:id="_FyA1nbHnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%>  WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="PostgreSQL"/>
+            <sqlGenericExpression xmi:id="_FyA1nrHnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND (TRIM(ISNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Netezza"/>
+            <sqlGenericExpression xmi:id="_FyA1n7HnEeqbh8f8_Wn94w" body="SELECT MAX(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND (TRIM(IFNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Snowflake"/>
+          </builtInIndicatorDefinition>
+        </maxLengthIndicator>
+        <minLengthIndicator xmi:id="_FRm3RLHnEeqbh8f8_Wn94w" computed="true" length="5">
+          <parameters xmi:id="_FRm3RbHnEeqbh8f8_Wn94w">
+            <textParameter xmi:id="_FRm3RrHnEeqbh8f8_Wn94w" useBlank="false"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5YLHmEeqbh8f8_Wn94w"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3w4R7HnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH(`ShopName`)) FROM `talend`.`salesstaging` WHERE (`ShopName` IS NOT NULL ) AND (TRIM(IFNULL(`ShopName`,'NULL TALEND')) &lt;> '' ) " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_FyUXkLHnEeqbh8f8_Wn94w" name="Minimal Length" label="Minimal Length">
+            <taggedValue xmi:id="_FyUXkbHnEeqbh8f8_Wn94w" tag="Description" value="computes the minimal length of a text field. Does not take into account the null and blank values when computing the minimal length."/>
+            <taggedValue xmi:id="_FyUXkrHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the length of the smallest textual record of non-null and non-blank values"/>
+            <sqlGenericExpression xmi:id="_FyUXk7HnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND (TRIM(IFNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+            <sqlGenericExpression xmi:id="_FyUXlLHnEeqbh8f8_Wn94w" body="SELECT MIN( LENGTH(&lt;%=__COLUMN_NAMES__%>) ) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND (TRIM(NVL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) IS NOT NULL) &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+            <sqlGenericExpression xmi:id="_FyUXlbHnEeqbh8f8_Wn94w" body="SELECT MIN(LEN(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND (LTRIM(RTRIM(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END)) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+            <sqlGenericExpression xmi:id="_FyUXlrHnEeqbh8f8_Wn94w" body="SELECT MIN(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+            <sqlGenericExpression xmi:id="_FyUXl7HnEeqbh8f8_Wn94w" body="SELECT MIN(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Ingres"/>
+            <sqlGenericExpression xmi:id="_FyUXmLHnEeqbh8f8_Wn94w" body="SELECT MIN(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="SQLite"/>
+            <sqlGenericExpression xmi:id="_FyUXmbHnEeqbh8f8_Wn94w" body="SELECT MIN(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Hive"/>
+            <sqlGenericExpression xmi:id="_FyUXmrHnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%>  WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Teradata"/>
+            <sqlGenericExpression xmi:id="_FyUXm7HnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%>  WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND ( LTRIM(RTRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END ))  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+            <sqlGenericExpression xmi:id="_FyUXnLHnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH( &lt;%=__COLUMN_NAMES__%> )) FROM  &lt;%=__TABLE_NAME__%>   WHERE ( &lt;%=__COLUMN_NAMES__%>  IS NOT NULL ) AND ( TRIM( CASE WHEN  &lt;%=__COLUMN_NAMES__%>  IS NULL  THEN 'NULL TALEND' ELSE  &lt;%=__COLUMN_NAMES__%>  END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Informix"/>
+            <sqlGenericExpression xmi:id="_FyUXnbHnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%>  WHERE (1=1) AND (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="PostgreSQL"/>
+            <sqlGenericExpression xmi:id="_FyUXnrHnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND (TRIM(ISNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Netezza"/>
+            <sqlGenericExpression xmi:id="_FyUXn7HnEeqbh8f8_Wn94w" body="SELECT MIN(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) AND (TRIM(IFNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Snowflake"/>
+          </builtInIndicatorDefinition>
+        </minLengthIndicator>
+        <minLengthWithBlankIndicator xmi:id="_FRm3R7HnEeqbh8f8_Wn94w" computed="true" length="5">
+          <parameters xmi:id="_FRm3SLHnEeqbh8f8_Wn94w">
+            <textParameter xmi:id="_FRm3SbHnEeqbh8f8_Wn94w"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5YLHmEeqbh8f8_Wn94w"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3xfU7HnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH(`ShopName`)) FROM `talend`.`salesstaging` WHERE (`ShopName` IS NOT NULL ) " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_Fz32wLHnEeqbh8f8_Wn94w" name="Minimal Length With Blank" label="Minimal Length With Blank">
+            <taggedValue xmi:id="_Fz32wbHnEeqbh8f8_Wn94w" tag="Description" value="computes the minimal length of a text field. Does not take into account the null values when computing the minimal length."/>
+            <taggedValue xmi:id="_Fz32wrHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the length of the smallest textual record of non-null values"/>
+            <sqlGenericExpression xmi:id="_Fz32w7HnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+            <sqlGenericExpression xmi:id="_Fz32xLHnEeqbh8f8_Wn94w" body="SELECT MIN( LENGTH(&lt;%=__COLUMN_NAMES__%>) ) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+            <sqlGenericExpression xmi:id="_Fz32xbHnEeqbh8f8_Wn94w" body="SELECT MIN(LEN(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+            <sqlGenericExpression xmi:id="_Fz32xrHnEeqbh8f8_Wn94w" body="SELECT MIN(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+            <sqlGenericExpression xmi:id="_Fz32x7HnEeqbh8f8_Wn94w" body="SELECT MIN(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Ingres"/>
+            <sqlGenericExpression xmi:id="_Fz32yLHnEeqbh8f8_Wn94w" body="SELECT MIN(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="SQLite"/>
+            <sqlGenericExpression xmi:id="_Fz32ybHnEeqbh8f8_Wn94w" body="SELECT MIN(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Hive"/>
+            <sqlGenericExpression xmi:id="_Fz32yrHnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%>  WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Teradata"/>
+            <sqlGenericExpression xmi:id="_Fz32y7HnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%>  WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+            <sqlGenericExpression xmi:id="_Fz32zLHnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH( &lt;%=__COLUMN_NAMES__%> )) FROM  &lt;%=__TABLE_NAME__%>   WHERE ( &lt;%=__COLUMN_NAMES__%>  IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Informix"/>
+            <sqlGenericExpression xmi:id="_Fz32zbHnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%>  WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="PostgreSQL"/>
+            <sqlGenericExpression xmi:id="_Fz32zrHnEeqbh8f8_Wn94w" body="SELECT MIN(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Snowflake"/>
+          </builtInIndicatorDefinition>
+        </minLengthWithBlankIndicator>
+        <minLengthWithNullIndicator xmi:id="_FRm3SrHnEeqbh8f8_Wn94w" computed="true" length="5">
+          <parameters xmi:id="_FRm3S7HnEeqbh8f8_Wn94w">
+            <textParameter xmi:id="_FRm3TLHnEeqbh8f8_Wn94w" useBlank="false" useNulls="true"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5YLHmEeqbh8f8_Wn94w"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3xfVLHnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH(IFNULL(`ShopName`,''))) FROM `talend`.`salesstaging` WHERE (TRIM(IFNULL(`ShopName`,'NULL TALEND')) &lt;> '' ) " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_F0EEALHnEeqbh8f8_Wn94w" name="Minimal Length With Null" label="Minimal Length With Null">
+            <taggedValue xmi:id="_F0EEAbHnEeqbh8f8_Wn94w" tag="Description" value="computes the minimal length of a text field. Does not take into account the blank values when computing the minimal length."/>
+            <taggedValue xmi:id="_F0EEArHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the length of the smallest textual record of non-blank values"/>
+            <sqlGenericExpression xmi:id="_F0EEA7HnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH(IFNULL(&lt;%=__COLUMN_NAMES__%>,''))) FROM &lt;%=__TABLE_NAME__%> WHERE (TRIM(IFNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+            <sqlGenericExpression xmi:id="_F0EEBLHnEeqbh8f8_Wn94w" body="SELECT MIN(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL THEN 0 ELSE LENGTH(&lt;%=__COLUMN_NAMES__%>) END) FROM &lt;%=__TABLE_NAME__%> WHERE (TRIM(NVL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) IS NOT NULL) &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+            <sqlGenericExpression xmi:id="_F0EEBbHnEeqbh8f8_Wn94w" body="SELECT MIN(LEN(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)) FROM &lt;%=__TABLE_NAME__%> WHERE (LTRIM(RTRIM(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END)) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+            <sqlGenericExpression xmi:id="_F0EEBrHnEeqbh8f8_Wn94w" body="SELECT MIN(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)) FROM &lt;%=__TABLE_NAME__%> WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+            <sqlGenericExpression xmi:id="_F0EEB7HnEeqbh8f8_Wn94w" body="SELECT MIN(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)) FROM &lt;%=__TABLE_NAME__%> WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Ingres"/>
+            <sqlGenericExpression xmi:id="_F0EECLHnEeqbh8f8_Wn94w" body="SELECT MIN(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)) FROM &lt;%=__TABLE_NAME__%> WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="SQLite"/>
+            <sqlGenericExpression xmi:id="_F0EECbHnEeqbh8f8_Wn94w" body="SELECT MIN(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)) FROM &lt;%=__TABLE_NAME__%> WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Hive"/>
+            <sqlGenericExpression xmi:id="_F0EECrHnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )) FROM &lt;%=__TABLE_NAME__%>  WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Teradata"/>
+            <sqlGenericExpression xmi:id="_F0EEC7HnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )) FROM &lt;%=__TABLE_NAME__%>  WHERE ( LTRIM(RTRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END ))  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+            <sqlGenericExpression xmi:id="_F0EEDLHnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH( CASE WHEN  &lt;%=__COLUMN_NAMES__%>  IS NULL  THEN '' ELSE  &lt;%=__COLUMN_NAMES__%>  END )) FROM  &lt;%=__TABLE_NAME__%>   WHERE ( TRIM( CASE WHEN  &lt;%=__COLUMN_NAMES__%>  IS NULL  THEN 'NULL TALEND' ELSE  &lt;%=__COLUMN_NAMES__%>  END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Informix"/>
+            <sqlGenericExpression xmi:id="_F0EEDbHnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )) FROM &lt;%=__TABLE_NAME__%>  WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="PostgreSQL"/>
+            <sqlGenericExpression xmi:id="_F0EEDrHnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH(ISNULL(&lt;%=__COLUMN_NAMES__%>,''))) FROM &lt;%=__TABLE_NAME__%> WHERE (TRIM(ISNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Netezza"/>
+            <sqlGenericExpression xmi:id="_F0EED7HnEeqbh8f8_Wn94w" body="SELECT MIN(LENGTH(IFNULL(&lt;%=__COLUMN_NAMES__%>,''))) FROM &lt;%=__TABLE_NAME__%> WHERE (TRIM(IFNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Snowflake"/>
+          </builtInIndicatorDefinition>
+        </minLengthWithNullIndicator>
+        <minLengthWithBlankNullIndicator xmi:id="_FRm3TbHnEeqbh8f8_Wn94w" computed="true" length="5">
+          <parameters xmi:id="_FRm3TrHnEeqbh8f8_Wn94w">
+            <textParameter xmi:id="_FRm3T7HnEeqbh8f8_Wn94w" useNulls="true"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5YLHmEeqbh8f8_Wn94w"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3xfVbHnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH(IFNULL(`ShopName`,''))) FROM `talend`.`salesstaging` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_F0RfYLHnEeqbh8f8_Wn94w" name="Minimal Length With Blank and Null" label="Minimal Length With Blank and Null">
+            <taggedValue xmi:id="_F0RfYbHnEeqbh8f8_Wn94w" tag="Description" value="computes the minimal length of a text field."/>
+            <taggedValue xmi:id="_F0RfYrHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the length of the smallest textual record"/>
+            <sqlGenericExpression xmi:id="_F0RfY7HnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH(IFNULL(&lt;%=__COLUMN_NAMES__%>,''))) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+            <sqlGenericExpression xmi:id="_F0RfZLHnEeqbh8f8_Wn94w" body="SELECT MIN(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 0 ELSE LENGTH(&lt;%=__COLUMN_NAMES__%>) END) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Oracle"/>
+            <sqlGenericExpression xmi:id="_F0RfZbHnEeqbh8f8_Wn94w" body="SELECT MIN(LEN(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+            <sqlGenericExpression xmi:id="_F0RfZrHnEeqbh8f8_Wn94w" body="SELECT MIN(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="DB2"/>
+            <sqlGenericExpression xmi:id="_F0RfZ7HnEeqbh8f8_Wn94w" body="SELECT MIN(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Ingres"/>
+            <sqlGenericExpression xmi:id="_F0RfaLHnEeqbh8f8_Wn94w" body="SELECT MIN(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQLite"/>
+            <sqlGenericExpression xmi:id="_F0RfabHnEeqbh8f8_Wn94w" body="SELECT MIN(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Hive"/>
+            <sqlGenericExpression xmi:id="_F0RfarHnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )) FROM &lt;%=__TABLE_NAME__%>  &lt;%=__WHERE_CLAUSE__%>" language="Teradata"/>
+            <sqlGenericExpression xmi:id="_F0Rfa7HnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )) FROM &lt;%=__TABLE_NAME__%>  &lt;%=__WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+            <sqlGenericExpression xmi:id="_F0RfbLHnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH( CASE WHEN  &lt;%=__COLUMN_NAMES__%>  IS NULL  THEN '' ELSE  &lt;%=__COLUMN_NAMES__%>  END )) FROM  &lt;%=__TABLE_NAME__%>   &lt;%=__WHERE_CLAUSE__%>" language="Informix"/>
+            <sqlGenericExpression xmi:id="_F0RfbbHnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )) FROM &lt;%=__TABLE_NAME__%>  &lt;%=__WHERE_CLAUSE__%>" language="PostgreSQL"/>
+            <sqlGenericExpression xmi:id="_F0RfbrHnEeqbh8f8_Wn94w" body="SELECT MIN(CHAR_LENGTH(ISNULL(&lt;%=__COLUMN_NAMES__%>,''))) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Netezza"/>
+            <sqlGenericExpression xmi:id="_F0Rfb7HnEeqbh8f8_Wn94w" body="SELECT MIN(LENGTH(IFNULL(&lt;%=__COLUMN_NAMES__%>,''))) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Snowflake"/>
+          </builtInIndicatorDefinition>
+        </minLengthWithBlankNullIndicator>
+        <maxLengthWithBlankIndicator xmi:id="_FRm3ULHnEeqbh8f8_Wn94w" computed="true" length="5">
+          <parameters xmi:id="_FRm3UbHnEeqbh8f8_Wn94w">
+            <textParameter xmi:id="_FRm3UrHnEeqbh8f8_Wn94w"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5YLHmEeqbh8f8_Wn94w"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3xfULHnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH(`ShopName`)) FROM `talend`.`salesstaging` WHERE (`ShopName` IS NOT NULL ) " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_FzOWgLHnEeqbh8f8_Wn94w" name="Maximal Length With Blank" label="Maximal Length With Blank">
+            <taggedValue xmi:id="_FzOWgbHnEeqbh8f8_Wn94w" tag="Description" value="computes the maximal length of a text field. Does not take into account the null values when computing the maximal length."/>
+            <taggedValue xmi:id="_FzOWgrHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the length of the longest textual record of non-null values"/>
+            <sqlGenericExpression xmi:id="_FzOWg7HnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+            <sqlGenericExpression xmi:id="_FzOWhLHnEeqbh8f8_Wn94w" body="SELECT MAX( LENGTH(&lt;%=__COLUMN_NAMES__%>) ) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+            <sqlGenericExpression xmi:id="_FzOWhbHnEeqbh8f8_Wn94w" body="SELECT MAX(LEN(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+            <sqlGenericExpression xmi:id="_FzOWhrHnEeqbh8f8_Wn94w" body="SELECT MAX(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+            <sqlGenericExpression xmi:id="_FzOWh7HnEeqbh8f8_Wn94w" body="SELECT MAX(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Ingres"/>
+            <sqlGenericExpression xmi:id="_FzOWiLHnEeqbh8f8_Wn94w" body="SELECT MAX(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="SQLite"/>
+            <sqlGenericExpression xmi:id="_FzOWibHnEeqbh8f8_Wn94w" body="SELECT MAX(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Hive"/>
+            <sqlGenericExpression xmi:id="_FzOWirHnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%>  WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Teradata"/>
+            <sqlGenericExpression xmi:id="_FzOWi7HnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%>  WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+            <sqlGenericExpression xmi:id="_FzOWjLHnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH( &lt;%=__COLUMN_NAMES__%> )) FROM  &lt;%=__TABLE_NAME__%>   WHERE ( &lt;%=__COLUMN_NAMES__%>  IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Informix"/>
+            <sqlGenericExpression xmi:id="_FzOWjbHnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%>  WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="PostgreSQL"/>
+            <sqlGenericExpression xmi:id="_FzOWjrHnEeqbh8f8_Wn94w" body="SELECT MAX(LENGTH(&lt;%=__COLUMN_NAMES__%>)) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Snowflake"/>
+          </builtInIndicatorDefinition>
+        </maxLengthWithBlankIndicator>
+        <maxLengthWithNullIndicator xmi:id="_FRm3U7HnEeqbh8f8_Wn94w" computed="true" length="5">
+          <parameters xmi:id="_FRm3VLHnEeqbh8f8_Wn94w">
+            <textParameter xmi:id="_FRm3VbHnEeqbh8f8_Wn94w" useBlank="false" useNulls="true"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5YLHmEeqbh8f8_Wn94w"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3xfUbHnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH(IFNULL(`ShopName`,''))) FROM `talend`.`salesstaging` WHERE (TRIM(IFNULL(`ShopName`,'NULL TALEND')) &lt;> '' ) " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_FzbK0LHnEeqbh8f8_Wn94w" name="Maximal Length With Null" label="Maximal Length With Null">
+            <taggedValue xmi:id="_FzbK0bHnEeqbh8f8_Wn94w" tag="Description" value="computes the maximal length of a text field. Does not take into account the blank values when computing the maximal length."/>
+            <taggedValue xmi:id="_FzbK0rHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the length of the longest textual record of non-blank values"/>
+            <sqlGenericExpression xmi:id="_FzbK07HnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH(IFNULL(&lt;%=__COLUMN_NAMES__%>,''))) FROM &lt;%=__TABLE_NAME__%> WHERE (TRIM(IFNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+            <sqlGenericExpression xmi:id="_FzbK1LHnEeqbh8f8_Wn94w" body="SELECT MAX(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL THEN 0 ELSE LENGTH(&lt;%=__COLUMN_NAMES__%>) END) FROM &lt;%=__TABLE_NAME__%> WHERE (TRIM(NVL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) IS NOT NULL) &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+            <sqlGenericExpression xmi:id="_FzbK1bHnEeqbh8f8_Wn94w" body="SELECT MAX(LEN(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)) FROM &lt;%=__TABLE_NAME__%> WHERE (LTRIM(RTRIM(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END)) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+            <sqlGenericExpression xmi:id="_FzbK1rHnEeqbh8f8_Wn94w" body="SELECT MAX(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)) FROM &lt;%=__TABLE_NAME__%> WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+            <sqlGenericExpression xmi:id="_FzbK17HnEeqbh8f8_Wn94w" body="SELECT MAX(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)) FROM &lt;%=__TABLE_NAME__%> WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Ingres"/>
+            <sqlGenericExpression xmi:id="_FzbK2LHnEeqbh8f8_Wn94w" body="SELECT MAX(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)) FROM &lt;%=__TABLE_NAME__%> WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="SQLite"/>
+            <sqlGenericExpression xmi:id="_FzbK2bHnEeqbh8f8_Wn94w" body="SELECT MAX(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)) FROM &lt;%=__TABLE_NAME__%> WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Hive" version=""/>
+            <sqlGenericExpression xmi:id="_FzbK2rHnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )) FROM &lt;%=__TABLE_NAME__%>  WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Teradata"/>
+            <sqlGenericExpression xmi:id="_FzbK27HnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )) FROM &lt;%=__TABLE_NAME__%>  WHERE ( LTRIM(RTRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END ))  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+            <sqlGenericExpression xmi:id="_FzbK3LHnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH( CASE WHEN  &lt;%=__COLUMN_NAMES__%>  IS NULL  THEN '' ELSE  &lt;%=__COLUMN_NAMES__%>  END )) FROM  &lt;%=__TABLE_NAME__%>   WHERE ( TRIM( CASE WHEN  &lt;%=__COLUMN_NAMES__%>  IS NULL  THEN 'NULL TALEND' ELSE  &lt;%=__COLUMN_NAMES__%>  END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Informix"/>
+            <sqlGenericExpression xmi:id="_FzbK3bHnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )) FROM &lt;%=__TABLE_NAME__%>  WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="PostgreSQL"/>
+            <sqlGenericExpression xmi:id="_FzbK3rHnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH(ISNULL(&lt;%=__COLUMN_NAMES__%>,''))) FROM &lt;%=__TABLE_NAME__%> WHERE (TRIM(ISNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Netezza"/>
+            <sqlGenericExpression xmi:id="_FzbK37HnEeqbh8f8_Wn94w" body="SELECT MAX(LENGTH(IFNULL(&lt;%=__COLUMN_NAMES__%>,''))) FROM &lt;%=__TABLE_NAME__%> WHERE (TRIM(IFNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Snowflake"/>
+          </builtInIndicatorDefinition>
+        </maxLengthWithNullIndicator>
+        <maxLengthWithBlankNullIndicator xmi:id="_FRm3VrHnEeqbh8f8_Wn94w" computed="true" length="5">
+          <parameters xmi:id="_FRm3V7HnEeqbh8f8_Wn94w">
+            <textParameter xmi:id="_FRm3WLHnEeqbh8f8_Wn94w" useNulls="true"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5YLHmEeqbh8f8_Wn94w"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3xfUrHnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH(IFNULL(`ShopName`,''))) FROM `talend`.`salesstaging` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_FzrpgLHnEeqbh8f8_Wn94w" name="Maximal Length With Blank and Null" label="Maximal Length With Blank and Null">
+            <taggedValue xmi:id="_FzrpgbHnEeqbh8f8_Wn94w" tag="Description" value="computes the maximal length of a text field."/>
+            <taggedValue xmi:id="_FzrpgrHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the length of the longest textual record"/>
+            <sqlGenericExpression xmi:id="_Fzrpg7HnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH(IFNULL(&lt;%=__COLUMN_NAMES__%>,''))) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+            <sqlGenericExpression xmi:id="_FzrphLHnEeqbh8f8_Wn94w" body="SELECT MAX(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 0 ELSE LENGTH(&lt;%=__COLUMN_NAMES__%>) END) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Oracle"/>
+            <sqlGenericExpression xmi:id="_FzrphbHnEeqbh8f8_Wn94w" body="SELECT MAX(LEN(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+            <sqlGenericExpression xmi:id="_FzrphrHnEeqbh8f8_Wn94w" body="SELECT MAX(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="DB2"/>
+            <sqlGenericExpression xmi:id="_Fzrph7HnEeqbh8f8_Wn94w" body="SELECT MAX(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Ingres"/>
+            <sqlGenericExpression xmi:id="_FzrpiLHnEeqbh8f8_Wn94w" body="SELECT MAX(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQLite"/>
+            <sqlGenericExpression xmi:id="_FzrpibHnEeqbh8f8_Wn94w" body="SELECT MAX(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Hive"/>
+            <sqlGenericExpression xmi:id="_FzrpirHnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Teradata"/>
+            <sqlGenericExpression xmi:id="_Fzrpi7HnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+            <sqlGenericExpression xmi:id="_FzrpjLHnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH( CASE WHEN  &lt;%=__COLUMN_NAMES__%>  IS NULL  THEN '' ELSE  &lt;%=__COLUMN_NAMES__%>  END )) FROM  &lt;%=__TABLE_NAME__%>   &lt;%=__WHERE_CLAUSE__%>" language="Informix"/>
+            <sqlGenericExpression xmi:id="_FzrpjbHnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )) FROM &lt;%=__TABLE_NAME__%>  &lt;%=__WHERE_CLAUSE__%>" language="PostgreSQL"/>
+            <sqlGenericExpression xmi:id="_FzrpjrHnEeqbh8f8_Wn94w" body="SELECT MAX(CHAR_LENGTH(ISNULL(&lt;%=__COLUMN_NAMES__%>,''))) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Netezza"/>
+            <sqlGenericExpression xmi:id="_Fzrpj7HnEeqbh8f8_Wn94w" body="SELECT MAX(LENGTH(IFNULL(&lt;%=__COLUMN_NAMES__%>,''))) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Snowflake"/>
+          </builtInIndicatorDefinition>
+        </maxLengthWithBlankNullIndicator>
+        <avgLengthWithBlankIndicator xmi:id="_FRm3WbHnEeqbh8f8_Wn94w" count="15000" computed="true" sumLength="75000.0">
+          <parameters xmi:id="_FRm3WrHnEeqbh8f8_Wn94w">
+            <textParameter xmi:id="_FRm3W7HnEeqbh8f8_Wn94w"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5YLHmEeqbh8f8_Wn94w"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3w4SLHnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH(`ShopName`)), COUNT(*) FROM `talend`.`salesstaging` WHERE (`ShopName` IS NOT NULL ) " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_FyldULHnEeqbh8f8_Wn94w" name="Average Length With Blank" label="Average Length With Blank">
+            <taggedValue xmi:id="_FyldUbHnEeqbh8f8_Wn94w" tag="Description" value="computes the average length of the field. Does not take into account the null values when computing the average length."/>
+            <taggedValue xmi:id="_FyldUrHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the average length of the textual record of non-null values"/>
+            <sqlGenericExpression xmi:id="_FyldU7HnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+            <sqlGenericExpression xmi:id="_FyldVLHnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+            <sqlGenericExpression xmi:id="_FyldVbHnEeqbh8f8_Wn94w" body="SELECT SUM(LEN(CASE WHEN  LEN( LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) )=0  THEN '' ELSE  &lt;%=__COLUMN_NAMES__%> END)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+            <sqlGenericExpression xmi:id="_FyldVrHnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+            <sqlGenericExpression xmi:id="_FyldV7HnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Ingres"/>
+            <sqlGenericExpression xmi:id="_FyldWLHnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="SQLite"/>
+            <sqlGenericExpression xmi:id="_FyldWbHnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Hive"/>
+            <sqlGenericExpression xmi:id="_FyldWrHnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(*) FROM &lt;%=__TABLE_NAME__%>  WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Teradata"/>
+            <sqlGenericExpression xmi:id="_FyldW7HnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH( CASE WHEN   CHAR_LENGTH( LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) ) =0  THEN '' ELSE  &lt;%=__COLUMN_NAMES__%> END)), COUNT(*) FROM &lt;%=__TABLE_NAME__%>  WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+            <sqlGenericExpression xmi:id="_FyldXLHnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(*) FROM  &lt;%=__TABLE_NAME__%>   WHERE ( &lt;%=__COLUMN_NAMES__%>  IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Informix"/>
+            <sqlGenericExpression xmi:id="_FyldXbHnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(*) FROM &lt;%=__TABLE_NAME__%>  WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="PostgreSQL"/>
+            <sqlGenericExpression xmi:id="_FyldXrHnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> IS NOT NULL ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Snowflake"/>
+          </builtInIndicatorDefinition>
+        </avgLengthWithBlankIndicator>
+        <avgLengthWithNullIndicator xmi:id="_FRm3XLHnEeqbh8f8_Wn94w" count="15000" computed="true" sumLength="75000.0">
+          <parameters xmi:id="_FRm3XbHnEeqbh8f8_Wn94w">
+            <textParameter xmi:id="_FRm3XrHnEeqbh8f8_Wn94w" useBlank="false" useNulls="true"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5YLHmEeqbh8f8_Wn94w"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3w4SbHnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH(IFNULL(`ShopName`,''))), COUNT(*) FROM `talend`.`salesstaging` WHERE (TRIM(IFNULL(`ShopName`,'NULL TALEND')) &lt;> '' ) " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_Fyy4sLHnEeqbh8f8_Wn94w" name="Average Length With Null" label="Average Length With Null">
+            <taggedValue xmi:id="_Fyy4sbHnEeqbh8f8_Wn94w" tag="Description" value="computes the average length of the field. Does not take into account the blank values when computing the average length."/>
+            <taggedValue xmi:id="_Fyy4srHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the average length of the textual record of non-blank values"/>
+            <sqlGenericExpression xmi:id="_Fyy4s7HnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH(IFNULL(&lt;%=__COLUMN_NAMES__%>,''))), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE (TRIM(IFNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+            <sqlGenericExpression xmi:id="_Fyy4tLHnEeqbh8f8_Wn94w" body="SELECT SUM(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL THEN 0 ELSE LENGTH(&lt;%=__COLUMN_NAMES__%>) END), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE (TRIM(NVL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) IS NOT NULL) &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+            <sqlGenericExpression xmi:id="_Fyy4tbHnEeqbh8f8_Wn94w" body="SELECT SUM(LEN(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE (LTRIM(RTRIM(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END)) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+            <sqlGenericExpression xmi:id="_Fyy4trHnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+            <sqlGenericExpression xmi:id="_Fyy4t7HnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Ingres"/>
+            <sqlGenericExpression xmi:id="_Fyy4uLHnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="SQLite"/>
+            <sqlGenericExpression xmi:id="_Fyy4ubHnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Hive"/>
+            <sqlGenericExpression xmi:id="_Fyy4urHnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )), COUNT(*) FROM &lt;%=__TABLE_NAME__%>  WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Teradata"/>
+            <sqlGenericExpression xmi:id="_Fyy4u7HnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )), COUNT(*) FROM &lt;%=__TABLE_NAME__%>  WHERE ( LTRIM(RTRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END ))  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+            <sqlGenericExpression xmi:id="_Fyy4vLHnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )), COUNT(*) FROM &lt;%=__TABLE_NAME__%>  WHERE ( TRIM( CASE WHEN  &lt;%=__COLUMN_NAMES__%>  IS NULL  THEN 'NULL TALEND' ELSE  &lt;%=__COLUMN_NAMES__%>  END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Informix"/>
+            <sqlGenericExpression xmi:id="_Fyy4vbHnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )), COUNT(*) FROM &lt;%=__TABLE_NAME__%>  WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="PostgreSQL"/>
+            <sqlGenericExpression xmi:id="_Fyy4vrHnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH(ISNULL(&lt;%=__COLUMN_NAMES__%>,''))), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE (TRIM(ISNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Netezza"/>
+            <sqlGenericExpression xmi:id="_Fyy4v7HnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(IFNULL(&lt;%=__COLUMN_NAMES__%>,''))), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE (TRIM(IFNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Snowflake"/>
+          </builtInIndicatorDefinition>
+        </avgLengthWithNullIndicator>
+        <avgLengthWithBlankNullIndicator xmi:id="_FRm3X7HnEeqbh8f8_Wn94w" count="15000" computed="true" sumLength="75000.0">
+          <parameters xmi:id="_FRm3YLHnEeqbh8f8_Wn94w">
+            <textParameter xmi:id="_FRm3YbHnEeqbh8f8_Wn94w" useNulls="true"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5YLHmEeqbh8f8_Wn94w"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3w4SrHnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH(IFNULL(`ShopName`,''))), COUNT(*) FROM `talend`.`salesstaging` " language="MySQL"/>
+          <builtInIndicatorDefinition xmi:id="_FzAUELHnEeqbh8f8_Wn94w" name="Average Length With Blank and Null" label="Average Length With Blank and Null">
+            <taggedValue xmi:id="_FzAUEbHnEeqbh8f8_Wn94w" tag="Description" value="computes the average length of the field."/>
+            <taggedValue xmi:id="_FzAUErHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the average length of the textual record"/>
+            <sqlGenericExpression xmi:id="_FzAUE7HnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH(IFNULL(&lt;%=__COLUMN_NAMES__%>,''))), COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+            <sqlGenericExpression xmi:id="_FzAUFLHnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Oracle"/>
+            <sqlGenericExpression xmi:id="_FzAUFbHnEeqbh8f8_Wn94w" body="SELECT SUM(LEN(CASE WHEN  LEN( LTRIM(RTRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )) )=0  THEN '' ELSE   CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END  END)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+            <sqlGenericExpression xmi:id="_FzAUFrHnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="DB2"/>
+            <sqlGenericExpression xmi:id="_FzAUF7HnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Ingres"/>
+            <sqlGenericExpression xmi:id="_FzAUGLHnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQLite"/>
+            <sqlGenericExpression xmi:id="_FzAUGbHnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Hive"/>
+            <sqlGenericExpression xmi:id="_FzAUGrHnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Teradata"/>
+            <sqlGenericExpression xmi:id="_FzAUG7HnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH( CASE WHEN   CHAR_LENGTH( LTRIM(RTRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )) ) =0  THEN '' ELSE   CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END  END)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+            <sqlGenericExpression xmi:id="_FzAUHLHnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(*) FROM  &lt;%=__TABLE_NAME__%>   &lt;%=__WHERE_CLAUSE__%>" language="Informix"/>
+            <sqlGenericExpression xmi:id="_FzAUHbHnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH(&lt;%=__COLUMN_NAMES__%>)), COUNT(*) FROM &lt;%=__TABLE_NAME__%>  &lt;%=__WHERE_CLAUSE__%>" language="PostgreSQL"/>
+            <sqlGenericExpression xmi:id="_FzAUHrHnEeqbh8f8_Wn94w" body="SELECT SUM(CHAR_LENGTH(ISNULL(&lt;%=__COLUMN_NAMES__%>,''))), COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Netezza"/>
+            <sqlGenericExpression xmi:id="_FzAUH7HnEeqbh8f8_Wn94w" body="SELECT SUM(LENGTH(IFNULL(&lt;%=__COLUMN_NAMES__%>,''))), COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Snowflake"/>
+          </builtInIndicatorDefinition>
+        </avgLengthWithBlankNullIndicator>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_FRneQrHnEeqbh8f8_Wn94w" count="15000" computed="true">
+        <parameters xmi:id="_FRneQ7HnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5ZLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3wRM7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM `talend`.`salesstaging` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_F0cegLHnEeqbh8f8_Wn94w" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_F0cegbHnEeqbh8f8_Wn94w" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_F0cegrHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_F0ceg7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_FRneRLHnEeqbh8f8_Wn94w" count="15000" computed="true">
+        <parameters xmi:id="_FRneRbHnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5ZLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3xfVrHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM `talend`.`salesstaging` WHERE `CustID` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_F0p54LHnEeqbh8f8_Wn94w" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_F0p54bHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_F0p54rHnEeqbh8f8_Wn94w" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_F0p547HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_FRneRrHnEeqbh8f8_Wn94w" count="15000" computed="true" distinctValueCount="101">
+        <parameters xmi:id="_FRneR7HnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5ZLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3xfV7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT DISTINCT `CustID` FROM `talend`.`salesstaging` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_F02uMLHnEeqbh8f8_Wn94w" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_F02uMbHnEeqbh8f8_Wn94w" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_F02uMrHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_F02uM7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_FRneSLHnEeqbh8f8_Wn94w" count="15000" computed="true" uniqueValueCount="0">
+        <parameters xmi:id="_FRneSbHnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5ZLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3xfWLHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT `CustID`, COUNT(*) mycount FROM `talend`.`salesstaging`  GROUP BY `CustID` HAVING mycount = 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_F1EwoLHnEeqbh8f8_Wn94w" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_F1EwobHnEeqbh8f8_Wn94w" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_F1EworHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_F1Ewo7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_F1EwpLHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_F1EwpbHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_F1EwprHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_F1Ewp7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_F1EwqLHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_F1EwqbHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_FRneSrHnEeqbh8f8_Wn94w" count="15000" computed="true" duplicateValueCount="101">
+        <parameters xmi:id="_FRneS7HnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5ZLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3xfWbHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT `CustID`, COUNT(*) mycount FROM `talend`.`salesstaging`  m  GROUP BY `CustID` HAVING mycount > 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_F1SzELHnEeqbh8f8_Wn94w" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_F1SzEbHnEeqbh8f8_Wn94w" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_F1SzErHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_F1SzE7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_F1SzFLHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_F1SzFbHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_F1SzFrHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_F1SzF7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_F1SzGLHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_F1SzGbHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_FRneTbHnEeqbh8f8_Wn94w" count="15000" computed="true">
+        <parameters xmi:id="_FRneTrHnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5aLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3wRMrHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM `talend`.`salesstaging` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_F1g1gLHnEeqbh8f8_Wn94w" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_F1g1gbHnEeqbh8f8_Wn94w" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_F1g1grHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_F1g1g7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_FRneT7HnEeqbh8f8_Wn94w" count="15000" computed="true">
+        <parameters xmi:id="_FRneULHnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5aLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3xfWrHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM `talend`.`salesstaging` WHERE `ProductID` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_F10XgLHnEeqbh8f8_Wn94w" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_F10XgbHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_F10XgrHnEeqbh8f8_Wn94w" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_F10Xg7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_FRneUbHnEeqbh8f8_Wn94w" count="15000" computed="true" distinctValueCount="80">
+        <parameters xmi:id="_FRneUrHnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5aLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3xfW7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT DISTINCT `ProductID` FROM `talend`.`salesstaging` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_F2HScLHnEeqbh8f8_Wn94w" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_F2HScbHnEeqbh8f8_Wn94w" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_F2HScrHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_F2HSc7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_FRneU7HnEeqbh8f8_Wn94w" count="15000" computed="true" uniqueValueCount="0">
+        <parameters xmi:id="_FRneVLHnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5aLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3xfXLHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT `ProductID`, COUNT(*) mycount FROM `talend`.`salesstaging`  GROUP BY `ProductID` HAVING mycount = 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_F2WjALHnEeqbh8f8_Wn94w" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_F2WjAbHnEeqbh8f8_Wn94w" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_F2WjArHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_F2WjA7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_F2WjBLHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_F2WjBbHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_F2WjBrHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_F2WjB7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_F2WjCLHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_F2WjCbHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_FRneVbHnEeqbh8f8_Wn94w" count="15000" computed="true" duplicateValueCount="80">
+        <parameters xmi:id="_FRneVrHnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5aLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3xfXbHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT `ProductID`, COUNT(*) mycount FROM `talend`.`salesstaging`  m  GROUP BY `ProductID` HAVING mycount > 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_F2j-YLHnEeqbh8f8_Wn94w" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_F2j-YbHnEeqbh8f8_Wn94w" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_F2j-YrHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_F2j-Y7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_F2j-ZLHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_F2j-ZbHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_F2j-ZrHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_F2j-Z7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_F2j-aLHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_F2j-abHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_FRneWLHnEeqbh8f8_Wn94w" count="15000" computed="true">
+        <parameters xmi:id="_FRneWbHnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5bLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3wRMbHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM `talend`.`salesstaging` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_F2wLoLHnEeqbh8f8_Wn94w" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_F2wLobHnEeqbh8f8_Wn94w" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_F2wLorHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_F2wLo7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_FRneWrHnEeqbh8f8_Wn94w" count="15000" computed="true">
+        <parameters xmi:id="_FRneW7HnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5bLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3xfXrHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM `talend`.`salesstaging` WHERE `Quantity` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_F29nALHnEeqbh8f8_Wn94w" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_F29nAbHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_F29nArHnEeqbh8f8_Wn94w" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_F29nA7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_FRneXLHnEeqbh8f8_Wn94w" count="15000" computed="true" distinctValueCount="1000">
+        <parameters xmi:id="_FRneXbHnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5bLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3yGYLHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT DISTINCT `Quantity` FROM `talend`.`salesstaging` ) A" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_F3ImILHnEeqbh8f8_Wn94w" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_F3ImIbHnEeqbh8f8_Wn94w" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_F3ImIrHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_F3ImI7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_FRneXrHnEeqbh8f8_Wn94w" count="15000" computed="true" uniqueValueCount="0">
+        <parameters xmi:id="_FRneX7HnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5bLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3yGYbHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT `Quantity`, COUNT(*) mycount FROM `talend`.`salesstaging`  GROUP BY `Quantity` HAVING mycount = 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_F3TlQLHnEeqbh8f8_Wn94w" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_F3TlQbHnEeqbh8f8_Wn94w" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_F3TlQrHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_F3TlQ7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_F3TlRLHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_F3TlRbHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_F3TlRrHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_F3TlR7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_F3TlSLHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_F3TlSbHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_FRneYLHnEeqbh8f8_Wn94w" count="15000" computed="true" duplicateValueCount="1000">
+        <parameters xmi:id="_FRneYbHnEeqbh8f8_Wn94w"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/MysqlLocal_0.1.item#_TJK5bLHmEeqbh8f8_Wn94w"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_F3yGYrHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT `Quantity`, COUNT(*) mycount FROM `talend`.`salesstaging`  m  GROUP BY `Quantity` HAVING mycount > 1) AS myquery" language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_F3fygLHnEeqbh8f8_Wn94w" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_F3fygbHnEeqbh8f8_Wn94w" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_F3fygrHnEeqbh8f8_Wn94w" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_F3fyg7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_F3fyhLHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_F3fyhbHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_F3fyhrHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_F3fyh7HnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_F3fyiLHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_F3fyibHnEeqbh8f8_Wn94w" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
     </results>
     <parameters xmi:id="_y-GgGbHlEeqbh8f8_Wn94w" dataFilter="_OWnwYLHmEeqbh8f8_Wn94w" analysisType="Multiple Column Analysis"/>
     <contextType xmi:id="_OWB6gLHmEeqbh8f8_Wn94w" confirmationNeeded="false" name="Default"/>
