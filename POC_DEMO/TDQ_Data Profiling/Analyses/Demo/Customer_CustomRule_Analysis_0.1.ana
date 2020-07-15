@@ -19,7 +19,7 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_aSVQn8aDEeqC87dzZRfK1A"/>
     </context>
     <results xmi:id="_lpCqJ8aDEeqC87dzZRfK1A">
-      <resultMetadata xmi:id="_lpCqKMaDEeqC87dzZRfK1A" executionDate="2020-07-15T17:43:15.253+0800" executionDuration="98" message="" executionNumber="2" lastRunOk="true" lastExecutionNumberOk="1"/>
+      <resultMetadata xmi:id="_lpCqKMaDEeqC87dzZRfK1A" executionDate="2020-07-15T17:48:18.652+0800" executionDuration="182" message="" executionNumber="3" lastRunOk="true" lastExecutionNumberOk="2"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_sCanAMaDEeqC87dzZRfK1A" count="30" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_aSVQn8aDEeqC87dzZRfK1A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -30,46 +30,46 @@
           <sqlGenericExpression xmi:id="_sXWVM8aDEeqC87dzZRfK1A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_sCanAcaDEeqC87dzZRfK1A" count="30" computed="true" userCount="0">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_f37KoMaEEeqC87dzZRfK1A" count="30" computed="true" userCount="28">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_aSVQn8aDEeqC87dzZRfK1A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/IC_0.1.rules#_MJC_YZ57EeqZm-JugjJCNA"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_sYIYUcaDEeqC87dzZRfK1A" body="SELECT COUNT(*) FROM `demo_staging`.`customer`   WHERE (NRIC like '[0-9][0-9][0-9][0-9][0-9][0-9][-][0-9][0-9][-][0-9][0-9][0-9][0-9]')" language="MySQL"/>
-        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_sXwk4MaDEeqC87dzZRfK1A" name="IC" criticalityLevel="1" whereExpression="NRIC like '[0-9][0-9][0-9][0-9][0-9][0-9][-][0-9][0-9][-][0-9][0-9][0-9][0-9]'">
-          <taggedValue xmi:id="_sXwk4caDEeqC87dzZRfK1A" tag="Status" value="development"/>
-          <taggedValue xmi:id="_sXwk4saDEeqC87dzZRfK1A" tag="Author" value="marvin.teh@quandatics.com"/>
-          <taggedValue xmi:id="_sXwk48aDEeqC87dzZRfK1A" tag="Purpose"/>
-          <taggedValue xmi:id="_sXwk5MaDEeqC87dzZRfK1A" tag="Description"/>
-          <taggedValue xmi:id="_sXwk5caDEeqC87dzZRfK1A" tag="Version" value="0.1"/>
-          <taggedValue xmi:id="_sXwk5saDEeqC87dzZRfK1A" tag="Validation_Status" value="true"/>
-          <sqlGenericExpression xmi:id="_sXwk58aDEeqC87dzZRfK1A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_gMPNwMaEEeqC87dzZRfK1A" body="SELECT COUNT(*) FROM `demo_staging`.`customer`   WHERE (NRIC REGEXP '[0-9]{6}[-][0-9]{2}[-][0-9]{4}')" language="MySQL"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_gLUAsMaEEeqC87dzZRfK1A" name="IC" criticalityLevel="1" whereExpression="NRIC REGEXP '[0-9]{6}[-][0-9]{2}[-][0-9]{4}'">
+          <taggedValue xmi:id="_gLUAscaEEeqC87dzZRfK1A" tag="Status" value="development"/>
+          <taggedValue xmi:id="_gLUAssaEEeqC87dzZRfK1A" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
+          <taggedValue xmi:id="_gLUAs8aEEeqC87dzZRfK1A" tag="Purpose" value=""/>
+          <taggedValue xmi:id="_gLUAtMaEEeqC87dzZRfK1A" tag="Description" value=""/>
+          <taggedValue xmi:id="_gLUAtcaEEeqC87dzZRfK1A" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_gLUAtsaEEeqC87dzZRfK1A" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_gLUAt8aEEeqC87dzZRfK1A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_sCanAsaDEeqC87dzZRfK1A" count="30" computed="true" userCount="30">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_f37KocaEEeqC87dzZRfK1A" count="30" computed="true" userCount="30">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_aSVQn8aDEeqC87dzZRfK1A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Name_0.1.rules#_Mzri4J6eEeq8BvVoyFeEWw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_sYIYUsaDEeqC87dzZRfK1A" body="SELECT COUNT(*) FROM `demo_staging`.`customer`   WHERE (CUST_NAME NOT LIKE '%[0-9&lt;->!?@#$%^&amp;*():;]%' AND CUST_NAME NOT LIKE '[0-9&lt;->!?@#$%^&amp;*():;]%' &#xD;&#xA;AND CUST_NAME NOT LIKE '%[0-9&lt;->!?@#$%^&amp;*():;]')" language="MySQL"/>
-        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_sX4gsMaDEeqC87dzZRfK1A" name="Name" criticalityLevel="1" whereExpression="CUST_NAME NOT LIKE '%[0-9&lt;->!?@#$%^&amp;*():;]%' AND CUST_NAME NOT LIKE '[0-9&lt;->!?@#$%^&amp;*():;]%' &#xD;&#xA;AND CUST_NAME NOT LIKE '%[0-9&lt;->!?@#$%^&amp;*():;]'">
-          <taggedValue xmi:id="_sX4gscaDEeqC87dzZRfK1A" tag="Status" value="development"/>
-          <taggedValue xmi:id="_sX4gssaDEeqC87dzZRfK1A" tag="Author" value="marvin.teh@quandatics.com"/>
-          <taggedValue xmi:id="_sX4gs8aDEeqC87dzZRfK1A" tag="Purpose" value=""/>
-          <taggedValue xmi:id="_sX4gtMaDEeqC87dzZRfK1A" tag="Description" value=""/>
-          <taggedValue xmi:id="_sX4gtcaDEeqC87dzZRfK1A" tag="Version" value="0.1"/>
-          <taggedValue xmi:id="_sX4gtsaDEeqC87dzZRfK1A" tag="Validation_Status" value="true"/>
-          <sqlGenericExpression xmi:id="_sX4gt8aDEeqC87dzZRfK1A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_gMP00MaEEeqC87dzZRfK1A" body="SELECT COUNT(*) FROM `demo_staging`.`customer`   WHERE (CUST_NAME REGEXP '[a-zA-Z/. ]+')" language="MySQL"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_gL5PgMaEEeqC87dzZRfK1A" name="Name" criticalityLevel="1" whereExpression="CUST_NAME REGEXP '[a-zA-Z/. ]+'">
+          <taggedValue xmi:id="_gL5PgcaEEeqC87dzZRfK1A" tag="Status" value="development"/>
+          <taggedValue xmi:id="_gL5PgsaEEeqC87dzZRfK1A" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
+          <taggedValue xmi:id="_gL5Pg8aEEeqC87dzZRfK1A" tag="Purpose" value=""/>
+          <taggedValue xmi:id="_gL5PhMaEEeqC87dzZRfK1A" tag="Description" value=""/>
+          <taggedValue xmi:id="_gL5PhcaEEeqC87dzZRfK1A" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_gL5PhsaEEeqC87dzZRfK1A" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_gL5Ph8aEEeqC87dzZRfK1A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_ypdzgMaDEeqC87dzZRfK1A" count="30" computed="true" userCount="0">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_f37KosaEEeqC87dzZRfK1A" count="30" computed="true" userCount="30">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_aSVQn8aDEeqC87dzZRfK1A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/CustID_0.1.rules#_s4F9wJ6iEeq8BvVoyFeEWw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_y-zKUMaDEeqC87dzZRfK1A" body="SELECT COUNT(*) FROM `demo_staging`.`customer`   WHERE ( LENGTH(CUST_ID)=8 AND CUST_ID LIKE '[C][0-9][0-9][0-9][0-9][0-9][0-9][0-9]')" language="MySQL"/>
-        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_y-V3UMaDEeqC87dzZRfK1A" name="CustID" criticalityLevel="1" whereExpression=" LENGTH(CUST_ID)=8 AND CUST_ID LIKE '[C][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'">
-          <taggedValue xmi:id="_y-V3UcaDEeqC87dzZRfK1A" tag="Status" value="development"/>
-          <taggedValue xmi:id="_y-V3UsaDEeqC87dzZRfK1A" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
-          <taggedValue xmi:id="_y-V3U8aDEeqC87dzZRfK1A" tag="Purpose" value=""/>
-          <taggedValue xmi:id="_y-V3VMaDEeqC87dzZRfK1A" tag="Description" value=""/>
-          <taggedValue xmi:id="_y-V3VcaDEeqC87dzZRfK1A" tag="Version" value="0.1"/>
-          <taggedValue xmi:id="_y-V3VsaDEeqC87dzZRfK1A" tag="Validation_Status" value="true"/>
-          <sqlGenericExpression xmi:id="_y-V3V8aDEeqC87dzZRfK1A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_gMP00caEEeqC87dzZRfK1A" body="SELECT COUNT(*) FROM `demo_staging`.`customer`   WHERE ( LENGTH(CUST_ID)=8 AND CUST_ID REGEXP '[C][0-9][0-9][0-9][0-9][0-9][0-9][0-9]')" language="MySQL"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_gMIgEMaEEeqC87dzZRfK1A" name="CustID" criticalityLevel="1" whereExpression=" LENGTH(CUST_ID)=8 AND CUST_ID REGEXP '[C][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'">
+          <taggedValue xmi:id="_gMIgEcaEEeqC87dzZRfK1A" tag="Status" value="development"/>
+          <taggedValue xmi:id="_gMIgEsaEEeqC87dzZRfK1A" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
+          <taggedValue xmi:id="_gMIgE8aEEeqC87dzZRfK1A" tag="Purpose" value=""/>
+          <taggedValue xmi:id="_gMIgFMaEEeqC87dzZRfK1A" tag="Description" value=""/>
+          <taggedValue xmi:id="_gMIgFcaEEeqC87dzZRfK1A" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_gMIgFsaEEeqC87dzZRfK1A" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_gMIgF8aEEeqC87dzZRfK1A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
     </results>
