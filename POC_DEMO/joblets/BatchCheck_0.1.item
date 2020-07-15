@@ -7,10 +7,10 @@
       <contextParameter comment="" name="MSSQL_STAGING_Server" prompt="MSSQL_STAGING_Server?" promptNeeded="false" repositoryContextId="_v10wsJZ_EeqaKYm7eFXXAA" type="id_String" value="ec2-18-219-55-49.us-east-2.compute.amazonaws.com"/>
       <contextParameter comment="" name="MSSQL_STAGING_Login" prompt="MSSQL_STAGING_Login?" promptNeeded="false" repositoryContextId="_v10wsJZ_EeqaKYm7eFXXAA" type="id_String" value="marvin.teh"/>
       <contextParameter comment="" name="MSSQL_STAGING_Database" prompt="MSSQL_STAGING_Database?" promptNeeded="false" repositoryContextId="_v10wsJZ_EeqaKYm7eFXXAA" type="id_String" value="Staging"/>
-      <contextParameter comment="" name="MSSQL_STAGING_Password" prompt="MSSQL_STAGING_Password?" promptNeeded="false" repositoryContextId="_v10wsJZ_EeqaKYm7eFXXAA" type="id_Password" value="enc:system.encryption.key.v1:4BO7UwSaOWXryidz5HPZyJZ2jM7+BaNzsnJhsIgiR0FMR/t8"/>
+      <contextParameter comment="" name="MSSQL_STAGING_Password" prompt="MSSQL_STAGING_Password?" promptNeeded="false" repositoryContextId="_v10wsJZ_EeqaKYm7eFXXAA" type="id_Password" value="enc:system.encryption.key.v1:uV6i9wtRDY9ixemxZAHu0aguRrHaiYrUWSAt5UzNDiAhkk7E"/>
     </context>
     <parameters>
-      <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="288"/>
+      <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="320"/>
       <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
       <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
       <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
@@ -38,6 +38,9 @@
       <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
       <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;D:/BSNWorkspace/in.csv&quot;"/>
       <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+      <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
+      <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+      <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
       <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
       <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value="ORACLE_12"/>
       <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -50,7 +53,7 @@
       <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:32g8wo72KmANWaHD0fR0Cxc1/LUn6Aw2if1V5U1C"/>
+      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:JsUQiP8PRKbYOgLmIbbwc1XaD6/JFVYZg++f/+Dc"/>
       <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -76,7 +79,6 @@
       <routinesParameter id="_Q6A0QJQYEeqb_vza_6K1gg" name="DataQualityDependencies"/>
       <routinesParameter id="_Q5w8oJQYEeqb_vza_6K1gg" name="DataQuality"/>
       <routinesParameter id="_Q6O2sJQYEeqb_vza_6K1gg" name="DqStringHandling"/>
-      <routinesParameter id="_Q7Z7YJQYEeqb_vza_6K1gg" name="MDM"/>
       <routinesParameter id="_Q79VAJQYEeqb_vza_6K1gg" name="Mathematical"/>
       <routinesParameter id="_Q8kZAJQYEeqb_vza_6K1gg" name="Numeric"/>
       <routinesParameter id="_Q837AJQYEeqb_vza_6K1gg" name="Relational"/>
@@ -87,12 +89,11 @@
       <routinesParameter id="_Q-d2cJQYEeqb_vza_6K1gg" name="TalendStringUtil"/>
       <routinesParameter id="_Q-P0AJQYEeqb_vza_6K1gg" name="TalendString"/>
     </parameters>
-    <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="352">
+    <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-288" posY="576">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
       <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
       <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tDBConnection_1"/>
-      <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-      <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_Jo6wwJZ_EeqaKYm7eFXXAA"/>
       <elementParameter field="TEXT" name="HOST" value="context.MSSQL_STAGING_Server"/>
       <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
       <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
@@ -100,9 +101,7 @@
       <elementParameter field="TEXT" name="DB_SCHEMA" value="context.MSSQL_STAGING_Schema"/>
       <elementParameter field="TEXT" name="DBNAME" value="context.MSSQL_STAGING_Database"/>
       <elementParameter field="TEXT" name="USER" value="context.MSSQL_STAGING_Login"/>
-      <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:rhmY2HQ9dNEJ+Z47+R2Ax+nt6EEIYVi09ipgOdhukPQR1zq8Vr9oHjbur2OJ+CyF9ZHveL2urTC4FQ=="/>
-      <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-      <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_Jo6wwJZ_EeqaKYm7eFXXAA - BatchLogs"/>
+      <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:hYZd28JpAJfbN2dtvwUqxJd19q4zsKMY55ox79giguB1Aa2ML+Y9jnowPpmiM8YuQAUV30bm5Bekxw=="/>
       <elementParameter field="DBTABLE" name="TABLE" value="&quot;BatchLogs&quot;"/>
       <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -153,19 +152,11 @@
         </column>
       </metadata>
     </node>
-    <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="352">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
-      <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#13;&#10;&#13;&#10;context.CheckBatch_Stat=input_row.Status;&#13;&#10;"/>
-      <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-      <metadata connector="FLOW" label="BatchLogs" name="tJavaRow_1"/>
-    </node>
-    <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="480">
+    <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-64" posY="704">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
       <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
       <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tDBConnection_1"/>
-      <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-      <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_Jo6wwJZ_EeqaKYm7eFXXAA"/>
       <elementParameter field="TEXT" name="HOST" value="context.MSSQL_STAGING_Server"/>
       <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
       <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
@@ -173,7 +164,7 @@
       <elementParameter field="TEXT" name="DB_SCHEMA" value="context.MSSQL_STAGING_Schema"/>
       <elementParameter field="TEXT" name="DBNAME" value="context.MSSQL_STAGING_Database"/>
       <elementParameter field="TEXT" name="USER" value="context.MSSQL_STAGING_Login"/>
-      <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Ut6qKKTB9s8ocRzdemG2ia9TlWDXyqLLHYeypGejlGJ+eTkFPh9bGxNjALXqthqguEYkOTNv7fM/Xw=="/>
+      <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:rNQkjku/bpru2qLPiBWuUaqStlzjY24HVtPgIERMuYAlK6YKGvB7mF5bNyXuT9RbXyjhnj29Bq+DkA=="/>
       <elementParameter field="DBTABLE" name="TABLE" value="&quot;Process_Config&quot;"/>
       <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -199,29 +190,11 @@
         </column>
       </metadata>
     </node>
-    <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="480">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_1"/>
-      <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
-      <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_3"/>
-      <elementParameter field="CLOSED_LIST" name="DATA_WRITE_MODEL" show="false" value="MEMORY"/>
-      <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;D:/BSNWorkspace/in.hash&quot;"/>
-      <elementParameter field="TEXT" name="MEMORY_HEAP_MAX_SIZE" show="false" value="2"/>
-      <elementParameter field="CLOSED_LIST" name="KEYS_MANAGEMENT" show="false" value="KEEP_ALL"/>
-      <elementParameter field="CHECK" name="APPEND" show="false" value="true"/>
-      <elementParameter field="CHECK" name="HASH_KEY_FROM_INPUT_CONNECTOR" show="false" value="false"/>
-      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-      <metadata connector="FLOW" label="Process_Config" name="tHashOutput_1">
-        <column comment="" key="false" length="50" name="ProcessName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-          <additionalField key="Comment" value=""/>
-        </column>
-      </metadata>
-    </node>
-    <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="608">
+    <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-64" posY="832">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_3"/>
+      <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
       <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
       <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tDBConnection_1"/>
-      <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-      <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_Jo6wwJZ_EeqaKYm7eFXXAA"/>
       <elementParameter field="TEXT" name="HOST" value="context.MSSQL_STAGING_Server"/>
       <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
       <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
@@ -229,7 +202,7 @@
       <elementParameter field="TEXT" name="DB_SCHEMA" value="context.MSSQL_STAGING_Schema"/>
       <elementParameter field="TEXT" name="DBNAME" value="context.MSSQL_STAGING_Database"/>
       <elementParameter field="TEXT" name="USER" value="context.MSSQL_STAGING_Login"/>
-      <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:384HkuPYc55HUUaZwtYmZp50Oa+Nms6wHirSj5kdUkKFiAWSKYX82xGWWZfv+mjrhEpr8MwIKX7vrg=="/>
+      <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:z2Z2+CO0pTNxr9AgIuhIUZmHO689xRvYz8OszwJF/OJx/RnBW7pdzgYvvXN22chcMDTritCPK/wsTA=="/>
       <elementParameter field="DBTABLE" name="TABLE" value="&quot;Process_Config&quot;"/>
       <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
       <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -250,23 +223,6 @@
       </elementParameter>
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
       <metadata connector="FLOW" label="Process_Config" name="tDBInput_3">
-        <column comment="" key="false" length="50" name="ProcessName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
-          <additionalField key="Comment" value=""/>
-        </column>
-      </metadata>
-    </node>
-    <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="608">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_2"/>
-      <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
-      <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_3"/>
-      <elementParameter field="CLOSED_LIST" name="DATA_WRITE_MODEL" show="false" value="MEMORY"/>
-      <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;D:/BSNWorkspace/in.hash&quot;"/>
-      <elementParameter field="TEXT" name="MEMORY_HEAP_MAX_SIZE" show="false" value="2"/>
-      <elementParameter field="CLOSED_LIST" name="KEYS_MANAGEMENT" show="false" value="KEEP_ALL"/>
-      <elementParameter field="CHECK" name="APPEND" show="false" value="true"/>
-      <elementParameter field="CHECK" name="HASH_KEY_FROM_INPUT_CONNECTOR" show="false" value="false"/>
-      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-      <metadata connector="FLOW" label="Process_Config" name="tHashOutput_2">
         <column comment="" key="false" length="50" name="ProcessName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
           <additionalField key="Comment" value=""/>
         </column>
@@ -345,31 +301,198 @@
         <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       </metadata>
     </node>
-    <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tJavaRow_1">
-      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
-    </connection>
+    <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="0" posY="352">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_4"/>
+      <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+      <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_c_R1cMZ3EeqoCLtNa2E8UQ"/>
+      <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
+      <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+      <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+      <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;"/>
+      <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
+      <elementParameter field="TEXT" name="DBNAME" value="&quot;demo_staging&quot;"/>
+      <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
+      <elementParameter field="TEXT" name="USER" value="&quot;root&quot;"/>
+      <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:jDUbgcReSzUm3EqOJSt9H2uxiZ2kHbu3m7D16RkSixfiDaosMQ=="/>
+      <elementParameter field="DBTABLE" name="TABLE" value="&quot;BatchLogs&quot;"/>
+      <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+      <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+      <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+      <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+      <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * from BatchLogs where BatchName='&quot;+jobName+&quot;' and StartTime=&#13;&#10;(select max(StartTime) from BatchLogs where BatchName='&quot;+jobName+&quot;')&quot;"/>
+      <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+      <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+      <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+      <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="mysql_id"/>
+      <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
+      <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+      <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+      <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+      <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+      <elementParameter field="TABLE" name="TRIM_COLUMN">
+        <elementValue elementRef="SCHEMA_COLUMN" value="BatchName"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="StartTime"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="EndTime"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="Batch_ID"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="Status"/>
+        <elementValue elementRef="TRIM" value="false"/>
+        <elementValue elementRef="SCHEMA_COLUMN" value="ErrorMessage"/>
+        <elementValue elementRef="TRIM" value="false"/>
+      </elementParameter>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tDBInput_4">
+        <column comment="" key="false" length="50" name="BatchName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+        <column comment="" key="false" length="23" name="StartTime" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+        <column comment="" key="false" length="23" name="EndTime" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+        <column comment="" key="false" length="10" name="Batch_ID" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+        <column comment="" key="false" length="10" name="Status" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+        <column comment="" key="false" length="255" name="ErrorMessage" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+      </metadata>
+    </node>
+    <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="352">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+      <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#13;&#10;&#13;&#10;context.CheckBatch_Stat=input_row.Status;&#13;&#10;"/>
+      <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" label="BatchLogs" name="tJavaRow_1"/>
+    </node>
+    <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="480">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_5"/>
+      <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+      <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_c_R1cMZ3EeqoCLtNa2E8UQ"/>
+      <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
+      <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+      <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+      <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;"/>
+      <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
+      <elementParameter field="TEXT" name="DBNAME" value="&quot;demo_staging&quot;"/>
+      <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
+      <elementParameter field="TEXT" name="USER" value="&quot;root&quot;"/>
+      <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:/c6ajc0gFEepOIJpbSWQyJulZT7rSIjr+iQ++FL2DahfQt50YQ=="/>
+      <elementParameter field="DBTABLE" name="TABLE" value="&quot;Process_Config&quot;"/>
+      <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+      <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+      <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+      <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+      <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select ProcessName from Process_Config where Inactive_Flag='0' and BatchID=(select BatchID from Batch_Config where Batch_Desc='&quot;+jobName+&quot;')&quot;"/>
+      <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+      <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+      <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+      <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="mysql_id"/>
+      <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
+      <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+      <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+      <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+      <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+      <elementParameter field="TABLE" name="TRIM_COLUMN">
+        <elementValue elementRef="SCHEMA_COLUMN" value="ProcessName"/>
+        <elementValue elementRef="TRIM" value="false"/>
+      </elementParameter>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tDBInput_5">
+        <column comment="" key="false" length="50" name="ProcessName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+      </metadata>
+    </node>
+    <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="480">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_1"/>
+      <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
+      <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_3"/>
+      <elementParameter field="CLOSED_LIST" name="DATA_WRITE_MODEL" show="false" value="MEMORY"/>
+      <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;D:/BSNWorkspace/in.hash&quot;"/>
+      <elementParameter field="TEXT" name="MEMORY_HEAP_MAX_SIZE" show="false" value="2"/>
+      <elementParameter field="CLOSED_LIST" name="KEYS_MANAGEMENT" show="false" value="KEEP_ALL"/>
+      <elementParameter field="CHECK" name="APPEND" show="false" value="true"/>
+      <elementParameter field="CHECK" name="HASH_KEY_FROM_INPUT_CONNECTOR" show="false" value="false"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" label="Process_Config" name="tHashOutput_1">
+        <column comment="" key="false" length="50" name="ProcessName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+      </metadata>
+    </node>
+    <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="608">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_6"/>
+      <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+      <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_c_R1cMZ3EeqoCLtNa2E8UQ"/>
+      <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
+      <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+      <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+      <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;"/>
+      <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
+      <elementParameter field="TEXT" name="DBNAME" value="&quot;demo_staging&quot;"/>
+      <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
+      <elementParameter field="TEXT" name="USER" value="&quot;root&quot;"/>
+      <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:uwe6JnxIHXBJJOcWGkM/UxBiruIeIqrMbX2VNCSxVxTkWUX+9Q=="/>
+      <elementParameter field="DBTABLE" name="TABLE" value="&quot;Process_Config&quot;"/>
+      <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+      <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+      <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+      <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+      <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select ProcessName from ProcessLogs where StartTime between (select max(StartTime) from BatchLogs where BatchName='&quot;+jobName+&quot;') &#13;&#10;and (select max(EndTime) from BatchLogs where BatchName='&quot;+jobName+&quot;') and Status='Error'&quot;"/>
+      <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+      <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+      <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+      <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="mysql_id"/>
+      <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
+      <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+      <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+      <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+      <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+      <elementParameter field="TABLE" name="TRIM_COLUMN">
+        <elementValue elementRef="SCHEMA_COLUMN" value="ProcessName"/>
+        <elementValue elementRef="TRIM" value="false"/>
+      </elementParameter>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tDBInput_6">
+        <column comment="" key="false" length="50" name="ProcessName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+      </metadata>
+    </node>
+    <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="608">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_2"/>
+      <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
+      <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_3"/>
+      <elementParameter field="CLOSED_LIST" name="DATA_WRITE_MODEL" show="false" value="MEMORY"/>
+      <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;D:/BSNWorkspace/in.hash&quot;"/>
+      <elementParameter field="TEXT" name="MEMORY_HEAP_MAX_SIZE" show="false" value="2"/>
+      <elementParameter field="CLOSED_LIST" name="KEYS_MANAGEMENT" show="false" value="KEEP_ALL"/>
+      <elementParameter field="CHECK" name="APPEND" show="false" value="true"/>
+      <elementParameter field="CHECK" name="HASH_KEY_FROM_INPUT_CONNECTOR" show="false" value="false"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" label="Process_Config" name="tHashOutput_2">
+        <column comment="" key="false" length="50" name="ProcessName" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+          <additionalField key="Comment" value=""/>
+        </column>
+      </metadata>
+    </node>
     <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tDBInput_1" target="tDBInput_2">
       <elementParameter field="MEMO_JAVA" name="CONDITION" value="context.CheckBatch_Stat==null||context.CheckBatch_Stat.trim().isEmpty()||context.CheckBatch_Stat.equalsIgnoreCase(&quot;Success&quot;)"/>
+      <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If1"/>
     </connection>
     <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tDBInput_1" offsetLabelX="7" offsetLabelY="4" outputId="2" source="tDBInput_1" target="tDBInput_3">
       <elementParameter field="MEMO_JAVA" name="CONDITION" value="context.CheckBatch_Stat.equalsIgnoreCase(&quot;Error&quot;)"/>
+      <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If2"/>
-    </connection>
-    <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tHashOutput_1">
-      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
-    </connection>
-    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tHashOutput_1" offsetLabelX="0" offsetLabelY="0" source="tHashOutput_1" target="tHashInput_1">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
-    </connection>
-    <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tHashOutput_2">
-      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
-    </connection>
-    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tHashOutput_2" offsetLabelX="0" offsetLabelY="0" source="tHashOutput_2" target="tHashInput_1">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
     </connection>
     <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tHashOutput_3">
       <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -380,7 +503,7 @@
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
     </connection>
-    <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tDBInput_1">
+    <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tDBInput_4">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
     </connection>
     <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tHashInput_1" offsetLabelX="0" offsetLabelY="0" source="tHashInput_1" target="tFilterRow_8">
@@ -396,6 +519,32 @@
     </connection>
     <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="TRIGGER_INPUT_1" offsetLabelX="0" offsetLabelY="0" source="TRIGGER_INPUT_1" target="tFixedFlowInput_1">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk3"/>
+    </connection>
+    <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_4" offsetLabelX="0" offsetLabelY="0" source="tDBInput_4" target="tJavaRow_1">
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+    </connection>
+    <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tDBInput_4" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tDBInput_4" target="tDBInput_5">
+      <elementParameter field="MEMO_JAVA" name="CONDITION" value="context.CheckBatch_Stat==null||context.CheckBatch_Stat.trim().isEmpty()||context.CheckBatch_Stat.equalsIgnoreCase(&quot;Success&quot;)"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If3"/>
+    </connection>
+    <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tDBInput_4" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tDBInput_4" target="tDBInput_6">
+      <elementParameter field="MEMO_JAVA" name="CONDITION" value="context.CheckBatch_Stat.equalsIgnoreCase(&quot;Error&quot;)"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If4"/>
+    </connection>
+    <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_5" offsetLabelX="0" offsetLabelY="0" source="tDBInput_5" target="tHashOutput_1">
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+    </connection>
+    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tHashOutput_1" offsetLabelX="0" offsetLabelY="0" source="tHashOutput_1" target="tHashInput_1">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
+    </connection>
+    <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tDBInput_6" offsetLabelX="0" offsetLabelY="0" source="tDBInput_6" target="tHashOutput_2">
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
+    </connection>
+    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tHashOutput_2" offsetLabelX="0" offsetLabelY="0" source="tHashOutput_2" target="tHashInput_1">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
     </connection>
     <subjob>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
@@ -432,6 +581,21 @@
       <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
       <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
     </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_4"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_5"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_6"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    </subjob>
     <jobletNodes componentName="OUTPUT" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="608">
       <elementParameter field="TEXT" name="UNIQUE_NAME" value="OUTPUT_1"/>
       <elementParameter field="CHECK" name="STARTABLE" show="false" value="false"/>
@@ -465,13 +629,13 @@
     </jobletNodes>
   </model:JobletProcess>
   <TalendProperties:ByteArray/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_585bf5eb-cf8d-4e12-88d9-219fc7f97732"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8Ul4/6VGE+lgI1EfJ6G+Egp/06ZuFBOdLWY2GguQoT5kG94DOGhJI8Gai/5tYmskq1tcJef37LLj
-WOBeraaZfg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_64482f87-e8ae-46f8-ad81-4a39b647d47a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qR2QglprDV57fz+ZceG8ixK2XPvt8MzZRPXWTTXSg5I6Oet/jYGnSzRFd2Wxa2VW+hOqVCzBzONw
-bdJ66yrJuw==</DigestValue></Reference></SignedInfo><SignatureValue>N971fLXtLJcHWKtE9HJ8SJDJpIVCE++eI1nCp6n7f4vHSbtuHlIfETvXZHBZ1ra+oHNoxlGJXBkP
-TcAK8kqdGzU/Iy/3zo2txEjGYKTtlLs6bWpkw63d+m42qmKQfEgu3ZWSW8B7h31ONqmGRpxQdZFG
-swlgHIc2sOzj27tHOcyvwkkf64JdMiKrLrQWAZ+W+ytwTYMYei6F4sM6QAbRcTlU3BmB4aLDIhvl
-A1USZxqRnAk/VKgLruk5PXk3Gb3M9eakuUxzrctvA95MzrXYMsAn5/tz5iqmuXBkFWaICM0L6VBZ
-NceTwZZ7w3z1dEAZKEPSHYj6ebS0DxZKz4k+RA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_327416b9-4045-4e9d-8df9-81b4758d5613"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>p2HGboEWnopUPDKUdwU31X0Iq/oTmMP37Da8Yg4i2f7v/Eu+NSFhpUXBwIBPs6SPmyBShV0mQ3gS
++CYpY8JfNQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_50396cf7-d54e-4ff4-bba2-08f56bd970f4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>laPAH1YzO9X643pX1pWJoYjN26iJ4MkCtO1tyjUO/t6GoRC98eDzoQDY3RSPvnDSZrw/Yo+5kLD1
+uu1vwICs1w==</DigestValue></Reference></SignedInfo><SignatureValue>aRjZXOX0BLweVFZzL8P7O8zv7ei4bBr4J4l1OxlMOGigIw+dzFvyZsGqqYl2Ih4VMksmmWFLu/VW
+c/ny3G43gYQ6bdj/ebVhL4SMgIWRp+ypcvpves1jPR/phRVtib5EHs5a0bXSfEVQHtgfDpXdIaVI
+JKXdOhj45Mf9ziPlEVFs4zzTn554+QzR/HOi2Ok0YagC68GdO0wCOcoacFB+gv/cQEgZ82YcGqvE
+QT6s7ChuU+kpvpZ/BsC+vxjQ+wksZdLVIUSP8Nch19fiCx+Kdo6Yyp9K9MygTWdfvhqQTrPKATRd
+YcjTpaw8YG2Sa6i6OAhumLg2tunpMGdGTQLyEQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -493,4 +657,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_64482f87-e8ae-46f8-ad81-4a39b647d47a" Target="#_585bf5eb-cf8d-4e12-88d9-219fc7f97732"><Timestamp>2020-07-14 13:56:48</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_50396cf7-d54e-4ff4-bba2-08f56bd970f4" Target="#_327416b9-4045-4e9d-8df9-81b4758d5613"><Timestamp>2020-07-15 09:20:02</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
