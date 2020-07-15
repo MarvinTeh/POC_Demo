@@ -5,6 +5,8 @@
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Name_0.1.rules#_DyE3IJ6sEeq8BvVoyFeEWw"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/CustID_0.1.rules#_DxY6oJ6sEeq8BvVoyFeEWw"/>
     <clientDependency href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_gfbsAMaDEeqC87dzZRfK1A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/IC_0.1.rules#_ypgPwMaDEeqC87dzZRfK1A"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Name_0.1.rules#_ypyjoMaDEeqC87dzZRfK1A"/>
     <taggedValue xmi:id="_lpCqIcaDEeqC87dzZRfK1A" tag="Status" value="development"/>
     <taggedValue xmi:id="_lpCqIsaDEeqC87dzZRfK1A" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
     <taggedValue xmi:id="_lpCqI8aDEeqC87dzZRfK1A" tag="Purpose" value=""/>
@@ -17,7 +19,7 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_aSVQn8aDEeqC87dzZRfK1A"/>
     </context>
     <results xmi:id="_lpCqJ8aDEeqC87dzZRfK1A">
-      <resultMetadata xmi:id="_lpCqKMaDEeqC87dzZRfK1A" executionDate="2020-07-15T17:42:30.932+0800" executionDuration="190" message="Query not executed for indicator: &quot;CustID&quot; SQL query: SELECT COUNT(*) FROM `demo_staging`.`customer`   WHERE ( LEN(CUST_ID)=8 AND CUST_ID LIKE '[C][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'). Exception: FUNCTION demo_staging.LEN does not exist" executionNumber="1"/>
+      <resultMetadata xmi:id="_lpCqKMaDEeqC87dzZRfK1A" executionDate="2020-07-15T17:43:15.253+0800" executionDuration="98" message="" executionNumber="2" lastRunOk="true" lastExecutionNumberOk="1"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_sCanAMaDEeqC87dzZRfK1A" count="30" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_aSVQn8aDEeqC87dzZRfK1A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -56,18 +58,18 @@
           <sqlGenericExpression xmi:id="_sX4gt8aDEeqC87dzZRfK1A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_sCanA8aDEeqC87dzZRfK1A" count="30">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_ypdzgMaDEeqC87dzZRfK1A" count="30" computed="true" userCount="0">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_aSVQn8aDEeqC87dzZRfK1A"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/CustID_0.1.rules#_s4F9wJ6iEeq8BvVoyFeEWw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_sYIYU8aDEeqC87dzZRfK1A" body="SELECT COUNT(*) FROM `demo_staging`.`customer`   WHERE ( LEN(CUST_ID)=8 AND CUST_ID LIKE '[C][0-9][0-9][0-9][0-9][0-9][0-9][0-9]')" language="MySQL"/>
-        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_sYBDkMaDEeqC87dzZRfK1A" name="CustID" criticalityLevel="1" whereExpression=" LEN(CUST_ID)=8 AND CUST_ID LIKE '[C][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'">
-          <taggedValue xmi:id="_sYBDkcaDEeqC87dzZRfK1A" tag="Status" value="development"/>
-          <taggedValue xmi:id="_sYBDksaDEeqC87dzZRfK1A" tag="Author" value="marvin.teh@quandatics.com"/>
-          <taggedValue xmi:id="_sYBDk8aDEeqC87dzZRfK1A" tag="Purpose" value=""/>
-          <taggedValue xmi:id="_sYBDlMaDEeqC87dzZRfK1A" tag="Description" value=""/>
-          <taggedValue xmi:id="_sYBDlcaDEeqC87dzZRfK1A" tag="Version" value="0.1"/>
-          <taggedValue xmi:id="_sYBDlsaDEeqC87dzZRfK1A" tag="Validation_Status" value="true"/>
-          <sqlGenericExpression xmi:id="_sYBDl8aDEeqC87dzZRfK1A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_y-zKUMaDEeqC87dzZRfK1A" body="SELECT COUNT(*) FROM `demo_staging`.`customer`   WHERE ( LENGTH(CUST_ID)=8 AND CUST_ID LIKE '[C][0-9][0-9][0-9][0-9][0-9][0-9][0-9]')" language="MySQL"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_y-V3UMaDEeqC87dzZRfK1A" name="CustID" criticalityLevel="1" whereExpression=" LENGTH(CUST_ID)=8 AND CUST_ID LIKE '[C][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'">
+          <taggedValue xmi:id="_y-V3UcaDEeqC87dzZRfK1A" tag="Status" value="development"/>
+          <taggedValue xmi:id="_y-V3UsaDEeqC87dzZRfK1A" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
+          <taggedValue xmi:id="_y-V3U8aDEeqC87dzZRfK1A" tag="Purpose" value=""/>
+          <taggedValue xmi:id="_y-V3VMaDEeqC87dzZRfK1A" tag="Description" value=""/>
+          <taggedValue xmi:id="_y-V3VcaDEeqC87dzZRfK1A" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_y-V3VsaDEeqC87dzZRfK1A" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_y-V3V8aDEeqC87dzZRfK1A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
     </results>
