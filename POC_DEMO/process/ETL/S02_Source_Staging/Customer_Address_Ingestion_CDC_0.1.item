@@ -7,14 +7,14 @@
     <contextParameter comment="" name="MSSQL_STAGING_Server" prompt="MSSQL_STAGING_Server?" promptNeeded="false" repositoryContextId="_v10wsJZ_EeqaKYm7eFXXAA" type="id_String" value="ec2-18-219-55-49.us-east-2.compute.amazonaws.com"/>
     <contextParameter comment="" name="MSSQL_STAGING_Login" prompt="MSSQL_STAGING_Login?" promptNeeded="false" repositoryContextId="_v10wsJZ_EeqaKYm7eFXXAA" type="id_String" value="marvin.teh"/>
     <contextParameter comment="" name="MSSQL_STAGING_Database" prompt="MSSQL_STAGING_Database?" promptNeeded="false" repositoryContextId="_v10wsJZ_EeqaKYm7eFXXAA" type="id_String" value="Staging"/>
-    <contextParameter comment="" name="MSSQL_STAGING_Password" prompt="MSSQL_STAGING_Password?" promptNeeded="false" repositoryContextId="_v10wsJZ_EeqaKYm7eFXXAA" type="id_Password" value="enc:system.encryption.key.v1:B6xjKUj+OkC8bmvAkYGEwNHqNDy7MAGZQ8rr/+Rk/o5KMR6Q"/>
+    <contextParameter comment="" name="MSSQL_STAGING_Password" prompt="MSSQL_STAGING_Password?" promptNeeded="false" repositoryContextId="_v10wsJZ_EeqaKYm7eFXXAA" type="id_Password" value="enc:system.encryption.key.v1:l28Zfm6wzKYzgT2pBTWAIhaRWFawgybn0k3Qj+niOiIBqFxS"/>
     <contextParameter comment="" name="BatchID" prompt="BatchID?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="MSSQL_CDC_Server" prompt="MSSQL_CDC_Server?" promptNeeded="false" repositoryContextId="_FFBWQJmJEeq7kexDI7Y3xA" type="id_String" value="ec2-18-219-55-49.us-east-2.compute.amazonaws.com"/>
     <contextParameter comment="" name="MSSQL_CDC_Port" prompt="MSSQL_CDC_Port?" promptNeeded="false" repositoryContextId="_FFBWQJmJEeq7kexDI7Y3xA" type="id_String" value="1433"/>
     <contextParameter comment="" name="MSSQL_CDC_Login" prompt="MSSQL_CDC_Login?" promptNeeded="false" repositoryContextId="_FFBWQJmJEeq7kexDI7Y3xA" type="id_String" value="marvin.teh"/>
     <contextParameter comment="" name="MSSQL_CDC_AdditionalParams" prompt="MSSQL_CDC_AdditionalParams?" promptNeeded="false" repositoryContextId="_FFBWQJmJEeq7kexDI7Y3xA" type="id_String" value=""/>
     <contextParameter comment="" name="MSSQL_CDC_Schema" prompt="MSSQL_CDC_Schema?" promptNeeded="false" repositoryContextId="_FFBWQJmJEeq7kexDI7Y3xA" type="id_String" value="dbo"/>
-    <contextParameter comment="" name="MSSQL_CDC_Password" prompt="MSSQL_CDC_Password?" promptNeeded="false" repositoryContextId="_FFBWQJmJEeq7kexDI7Y3xA" type="id_Password" value="enc:system.encryption.key.v1:nH/tOndm6r+GV5p4fOBnwp6kKXKAMcHO67VUub62RUBmJG8C"/>
+    <contextParameter comment="" name="MSSQL_CDC_Password" prompt="MSSQL_CDC_Password?" promptNeeded="false" repositoryContextId="_FFBWQJmJEeq7kexDI7Y3xA" type="id_Password" value="enc:system.encryption.key.v1:rEeLJ2ZZ9QQiChxCwBJmWJpunS8uMQtfY4l2TH0ojj9AAYi6"/>
     <contextParameter comment="" name="MSSQL_CDC_Database" prompt="MSSQL_CDC_Database?" promptNeeded="false" repositoryContextId="_FFBWQJmJEeq7kexDI7Y3xA" type="id_String" value="Data Source"/>
   </context>
   <parameters>
@@ -46,6 +46,9 @@
     <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
     <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
     <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
     <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -58,7 +61,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:aZXLERtCKm1k8Liu7qW+wrqbvQLpY8AwXz8rdk2C"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:OyygHX9/7EIqEkqM9vq58dDMrUshex5wZMcZwHxn"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -73,7 +76,7 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;D:/BSNWorkspace/.metadata&quot;"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Users/Xxe/Desktop/Talend-Studio-20200219_1130-V7.3.1/workspace/.metadata&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
@@ -93,7 +96,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:YNSDojYsUBWMmFQHlHL/5DN8+lw8od46VTRMrzYd"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:18iWok6Kc8GboU1pnqgZQWtBW8hggAMNMyuyEK5y"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -118,7 +121,6 @@
     <routinesParameter id="_Q6A0QJQYEeqb_vza_6K1gg" name="DataQualityDependencies"/>
     <routinesParameter id="_Q5w8oJQYEeqb_vza_6K1gg" name="DataQuality"/>
     <routinesParameter id="_Q6O2sJQYEeqb_vza_6K1gg" name="DqStringHandling"/>
-    <routinesParameter id="_Q7Z7YJQYEeqb_vza_6K1gg" name="MDM"/>
     <routinesParameter id="_Q79VAJQYEeqb_vza_6K1gg" name="Mathematical"/>
     <routinesParameter id="_Q8kZAJQYEeqb_vza_6K1gg" name="Numeric"/>
     <routinesParameter id="_Q837AJQYEeqb_vza_6K1gg" name="Relational"/>
@@ -133,8 +135,6 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBCDC_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_t_KYgJmJEeq7kexDI7Y3xA"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
     <elementParameter field="TEXT" name="HOST" value="context.MSSQL_CDC_Server"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
@@ -142,9 +142,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="context.MSSQL_CDC_Database"/>
     <elementParameter field="TEXT" name="DB_SCHEMA" value="context.MSSQL_CDC_Schema"/>
     <elementParameter field="TEXT" name="USER" value="context.MSSQL_CDC_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:SjYofSdY9XzUY5d4Bk3gcpPi9FyXhhGFD2MPmGahcNoOIRI0TBdnQe/QKyhutD+47eDaIjL7"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_oTFYIJT3EeqeWNXUfgSP-A - CUSTOMER_ADDRESS"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:6SWb3N6uw+MBwAWyMZoWCBUSH1X12xkR6lb7+u+2eRQBvhpRCFkqJu41AqCq6dxo8UlIkZpg"/>
     <elementParameter field="DBTABLE" name="DATATABLE" value="&quot;CUSTOMER_ADDRESS&quot;"/>
     <elementParameter field="TEXT" name="SUSCRIBER" value="&quot;SourceCustomerAddress&quot;"/>
     <elementParameter field="LABEL" name="EVENTS_TYPE" value=""/>
@@ -1067,8 +1065,6 @@
   </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_Jo6wwJZ_EeqaKYm7eFXXAA"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
@@ -1078,7 +1074,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="context.MSSQL_STAGING_Database"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="context.MSSQL_STAGING_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:LG/Iu6Db7Tb5GVyQ+qNJLw6qA2lp5B4fBnjFdNhA8CaoJswh8OyfMri5/Tat9BJiIaG5mz2UM79KDg=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:pvw87ykaIjBCZm7FPRLtmawdU+8mGKg3eyUIS1fgxiSJ7cfupTsMaz2kV06YGxSsslKcfLW3XXlZUg=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;CUSTOMER_ADDRESS&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -1088,14 +1084,14 @@
     <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="CUST_ID"/>
     <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
     <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:REPOSITORY_SCHEMA_TYPE" show="false" value="_Jo6wwJZ_EeqaKYm7eFXXAA - CUSTOMER_ADDRESS"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="context.MSSQL_STAGING_AdditionalParams"/>
+    <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" show="false" value="&quot;&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
@@ -1328,8 +1324,6 @@
   </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_Jo6wwJZ_EeqaKYm7eFXXAA"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
@@ -1339,7 +1333,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="context.MSSQL_STAGING_Database"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="context.MSSQL_STAGING_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:iFcM5P+n/OXzjQGbe3O1vb4l/EAzKDYXDGJQKvIU6hqL+EjAHmboYk98mubbWAu8SRPLnAyDd5ixCA=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:aKmAKWXjrwP0CI9p7QknXIxtwZHpNYTcAkT5dibBEndIlnWzsLMt2dtKS6Tuo0oRzqr2oVcYHsvwmQ=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;CUSTOMER_ADDRESS&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -1349,14 +1343,14 @@
     <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="CUST_ID"/>
     <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
     <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:REPOSITORY_SCHEMA_TYPE" show="false" value="_Jo6wwJZ_EeqaKYm7eFXXAA - CUSTOMER_ADDRESS"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="context.MSSQL_STAGING_AdditionalParams"/>
+    <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" show="false" value="&quot;&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
@@ -1589,8 +1583,6 @@
   </node>
   <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_3"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_Jo6wwJZ_EeqaKYm7eFXXAA"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
@@ -1600,7 +1592,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="context.MSSQL_STAGING_Database"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="USER" value="context.MSSQL_STAGING_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:NxdPY5eFW2sEAtySnEy6Jd/XWkwyyPcla54BOJ7+Yl6XaPcX1Bw3mo0kC1mXrw/BULm+ti+zQcWHow=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:somAJuVE8njFad6B9wB/mExHAh+l9eNgOFLi3vjsrPS1WMZQDbxd92UynW73TC3RK/X+oDbL/HYWIQ=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;CUSTOMER_ADDRESS&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
@@ -1610,14 +1602,14 @@
     <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="CUST_ID"/>
     <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
     <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:REPOSITORY_SCHEMA_TYPE" show="false" value="_Jo6wwJZ_EeqaKYm7eFXXAA - CUSTOMER_ADDRESS"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="context.MSSQL_STAGING_AdditionalParams"/>
+    <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" show="false" value="&quot;&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
@@ -2180,13 +2172,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5011f01f-5192-4bc6-97f6-c192ef8431a1"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lTIgxz02yz9Em4sK1A6WPCnyMMhXPvAILiE9BT2yQXPDUZuQW+YTrfqlGWKhe8R7MnKeJatrBTsv
-9Kp0ulHBHw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_859ee91c-ca0f-4f85-8706-2fc441f45812"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>kPAw10pTyMno/+ip9EJBI4WTdYMxPgtu60UK8otbAmh/GHiu6/IQ5FlJ2lhCbTeUy0vLXitMfQHA
-DPW3YulKQQ==</DigestValue></Reference></SignedInfo><SignatureValue>A69dC5K1tEmj6TBIh1gtRUibFf3oetciMVIbB6IC30xQ3WdZxd6OMlwTgqDuTN83cOBTutyp4GNR
-DcEU8sUxO8DTQzhrlsrtc7J5/3wbyT8eQAHy+ic4bXf9s6Yk58UfDkk6I0bTqf4YTBI5vd0RboDX
-p7V/X0JH75zS1ZyelmjZzNO3PRa9iPl+A177DcrZXzu3mceHd8rFc46nzRSzSpX0ZT+aLBRh4wzN
-p6et8G9hGWAe8hK0tEPdzI17lLuOwhFA8oWKdR0O55cfU45392OOb0gnZKVNgPBVdFjqpXaFZlY5
-AWWIiwQR4hzkCt4Fwvts71c+MmPJmGhY35MlOw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_76d0606e-d638-40cd-9bdc-1cf4d78ff1ec"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qgTYCGSIfbz7vJgZaLux4S60iRurIL5l7xJnAD64x5l5lyq/aNzysHcEoeBw/J0RKOaEiURy9Nea
+0KokU3LIMQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_350ced8e-48c3-4065-af04-2a9955e05f25"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cDhC9/0hmx2mhq+y+89JBPz4hu5bwlIvs1Hknt9xM8fCT56J8lyY3zfmvFW/Nq9YrzEcHx6gjLLk
+OZ7ZRWxONg==</DigestValue></Reference></SignedInfo><SignatureValue>bT5FpUV9GY6CJakfGU3Hi0l+vNNEYg8y1CcNiI0L1PidJ6Blsz8GzHCdVzddQEOVJ8Z0DOZFNivh
+F20WoxDJdM79NF57iplSI20b6FHLFhwAmlqe4nOA2sbjbswbkFgTpBx+vbxKLTe1VYk6FbK7rDek
+adJK3/++RHkgAiH+u3uYEQBHCrXGV+wmjZxm9XkvkP2RStDgi94B2Ib/XMexWhIHA3UNaln1e68j
+eXW4iPuvYFAF5YSj9vCYbF67wxcSuTo2a2fYF8Ou9goihuOgRjTXEx4+XBIMF0k0psZ+AIDRft7b
+K+oQ9ZDyfMnPSAHIBOKKq9C8rznYtbqxaXBs2g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -2208,4 +2200,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_859ee91c-ca0f-4f85-8706-2fc441f45812" Target="#_5011f01f-5192-4bc6-97f6-c192ef8431a1"><Timestamp>2020-07-15 08:11:45</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_350ced8e-48c3-4065-af04-2a9955e05f25" Target="#_76d0606e-d638-40cd-9bdc-1cf4d78ff1ec"><Timestamp>2020-07-15 09:30:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
