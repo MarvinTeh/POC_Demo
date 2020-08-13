@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_6Bp4UKvEEeqEZpA0foWSzw" name="TransactionFilterByRule" creationDate="2020-06-11T16:51:18.420+0800" defaultContext="Default">
-    <clientDependency href="../../TDQ_Libraries/Rules/SQL/Product_0.1.rules#_B0figKvFEeqEZpA0foWSzw"/>
-    <clientDependency href="../../TDQ_Libraries/Rules/SQL/TransactionDate_0.1.rules#_CJuLoKvFEeqEZpA0foWSzw"/>
-    <clientDependency href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_oLIYIKvDEeqEZpA0foWSzw"/>
-    <clientDependency href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_bygH8KxaEeqOCtlfb5qGKA"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Product_0.1.rules#_B0figKvFEeqEZpA0foWSzw"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/TransactionDate_0.1.rules#_CJuLoKvFEeqEZpA0foWSzw"/>
+    <clientDependency href="../../../metadata/connections/MSSQL_Data_Source_0.1.item#_oLIYIKvDEeqEZpA0foWSzw"/>
+    <clientDependency href="../../../metadata/connections/MSSQL_Data_Source_0.1.item#_bygH8KxaEeqOCtlfb5qGKA"/>
     <taggedValue xmi:id="_6Bp4UavEEeqEZpA0foWSzw" tag="Status" value="development"/>
     <taggedValue xmi:id="_6Bp4UqvEEeqEZpA0foWSzw" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
     <taggedValue xmi:id="_6Bp4U6vEEeqEZpA0foWSzw" tag="Purpose" value=""/>
@@ -13,14 +13,14 @@
     <taggedValue xmi:id="_CxmrAavFEeqEZpA0foWSzw" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
     <taggedValue xmi:id="_CxnSE6vFEeqEZpA0foWSzw" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
     <context xmi:id="_6Bp4VqvEEeqEZpA0foWSzw">
-      <connection href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_GlveUJT4EeqeWNXUfgSP-A"/>
-      <analysedElements xsi:type="relational:TdTable" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3CcKv2Eeq5fLclrRW2Iw"/>
+      <connection href="../../../metadata/connections/MSSQL_Data_Source_0.1.item#_GlveUJT4EeqeWNXUfgSP-A"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3CcKv2Eeq5fLclrRW2Iw"/>
     </context>
     <results xmi:id="_6Bp4V6vEEeqEZpA0foWSzw">
       <resultMetadata xmi:id="_6Bp4WKvEEeqEZpA0foWSzw" executionDate="2020-06-12T10:43:36.420+0800" executionDuration="4519" message="" executionNumber="2" lastRunOk="true" lastExecutionNumberOk="2"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_sqOTAKxaEeqOCtlfb5qGKA" count="1005" computed="true">
-        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3CcKv2Eeq5fLclrRW2Iw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3CcKv2Eeq5fLclrRW2Iw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tIoGQKxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot; " language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xmi:id="_tII-EKxaEeqOCtlfb5qGKA" name="Row Count" label="Row Count">
           <taggedValue xmi:id="_tII-EaxaEeqOCtlfb5qGKA" tag="Description" value="counts the number of rows"/>
@@ -29,8 +29,8 @@
         </builtInIndicatorDefinition>
       </indicators>
       <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_sqOTAaxaEeqOCtlfb5qGKA" count="1005" computed="true" userCount="81">
-        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3CcKv2Eeq5fLclrRW2Iw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/Product_0.1.rules#_2AGucKvEEeqEZpA0foWSzw"/>
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3CcKv2Eeq5fLclrRW2Iw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Product_0.1.rules#_2AGucKvEEeqEZpA0foWSzw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tIoGQaxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;   WHERE (Product='HF01')" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_tIXAgKxaEeqOCtlfb5qGKA" name="Product" criticalityLevel="1" whereExpression="Product='HF01'">
           <taggedValue xmi:id="_tIXAgaxaEeqOCtlfb5qGKA" tag="Status" value="development"/>
@@ -43,8 +43,8 @@
         </builtInIndicatorDefinition>
       </indicators>
       <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_sqOTAqxaEeqOCtlfb5qGKA" count="1005" computed="true" userCount="690">
-        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3CcKv2Eeq5fLclrRW2Iw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/TransactionDate_0.1.rules#_yVxKsKvEEeqEZpA0foWSzw"/>
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/MSSQL_Data_Source_0.1.item#_Rp3CcKv2Eeq5fLclrRW2Iw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/TransactionDate_0.1.rules#_yVxKsKvEEeqEZpA0foWSzw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_tIoGQqxaEeqOCtlfb5qGKA" body="SELECT COUNT(*) FROM &quot;POC&quot;.&quot;dbo&quot;.&quot;Transaction&quot;   WHERE (Transaction_Date between DATEADD(year, -1, SYSDATETIME()) and convert(varchar, getdate(), 21))" language="Microsoft SQL Server"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_tIcgEKxaEeqOCtlfb5qGKA" name="TransactionDate" criticalityLevel="1" whereExpression="Transaction_Date between DATEADD(year, -1, SYSDATETIME()) and convert(varchar, getdate(), 21)">
           <taggedValue xmi:id="_tIcgEaxaEeqOCtlfb5qGKA" tag="Status" value="development"/>
