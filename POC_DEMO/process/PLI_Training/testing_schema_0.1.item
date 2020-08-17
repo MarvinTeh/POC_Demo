@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
@@ -42,7 +42,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:sH2ep0kA567Ps14UeqVccxZuASfoOXxoZNHLQeGu"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:4KHlg/k8oiUqYnzcEhhrxivtqqZ+fW8Mo9u8Pytm"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -77,7 +77,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:wMJA1Tjs9K64bm1rItKeXwR+gL+U918zzcZ3o4Fp"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:q2znJb0vB8sM8bBGWXaQo0Uu71bCTVutmTHgR+jB"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -335,7 +335,122 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="128">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="640" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_nUvrIOCnEeqWruaqAquR1g-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="out1">
+      <column comment="" key="false" length="-1" name="Cluster_CD" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Comp_CD" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Plant_CD" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Product_CD" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Product_NM" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Prod_Type_CD" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Prod_Type_NM" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Prod_Category_CD" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Prod_Category_NM" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Tech_App_CD" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Tech_App_NM" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Oil_Type_CD" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Oil_Type_NM" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="MasterBrand_CD" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="MasterBrand_NM" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BRand_CD" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Brand_NM" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Brand_Ext_CD" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Brand_Ext_NM" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Variant_CD" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Variant_NM" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Package_Config_CD" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Package_Config_NM" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ABC_Classification" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Conversion_Metrics" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UnitofMeasure" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Avg_ListPrice" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Active_Flag" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Last_Updated" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SOP_Cube" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="out1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row1.Cluster_CD " name="Cluster_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Comp_CD.replace(&quot; &quot;,&quot;&quot;)" name="Comp_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Plant_CD " name="Plant_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Product_CD " name="Product_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Product_NM " name="Product_NM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Prod_Type_CD " name="Prod_Type_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Prod_Type_NM " name="Prod_Type_NM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Prod_Category_CD " name="Prod_Category_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Prod_Category_NM " name="Prod_Category_NM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Tech_App_CD " name="Tech_App_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Tech_App_NM " name="Tech_App_NM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Oil_Type_CD " name="Oil_Type_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Oil_Type_NM " name="Oil_Type_NM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.MasterBrand_CD " name="MasterBrand_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.MasterBrand_NM " name="MasterBrand_NM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.BRand_CD " name="BRand_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Brand_NM " name="Brand_NM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Brand_Ext_CD " name="Brand_Ext_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Brand_Ext_NM " name="Brand_Ext_NM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Variant_CD " name="Variant_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Variant_NM " name="Variant_NM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Package_Config_CD " name="Package_Config_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Package_Config_NM " name="Package_Config_NM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.ABC_Classification " name="ABC_Classification" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Conversion_Metrics " name="Conversion_Metrics" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.UnitofMeasure " name="UnitofMeasure" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Avg_ListPrice " name="Avg_ListPrice" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Active_Flag " name="Active_Flag" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Last_Updated " name="Last_Updated" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.SOP_Cube " name="SOP_Cube" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="Cluster_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Comp_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Plant_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Product_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Product_NM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Prod_Type_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Prod_Type_NM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Prod_Category_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Prod_Category_NM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Tech_App_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Tech_App_NM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Oil_Type_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Oil_Type_NM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="MasterBrand_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries name="MasterBrand_NM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="BRand_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Brand_NM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Brand_Ext_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Brand_Ext_NM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Variant_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Variant_NM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Package_Config_CD" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Package_Config_NM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ABC_Classification" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Conversion_Metrics" nullable="true" type="id_String"/>
+        <mapperTableEntries name="UnitofMeasure" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Avg_ListPrice" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Active_Flag" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Last_Updated" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SOP_Cube" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -457,7 +572,7 @@
     <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;testing_pli&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;root&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:F/D5D+pILI5m3RBYpuZhVbq4YPHR6NfrIsm+9l54KLbhW+WtyQ=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:WrBs+p0/PVmyKnM+PjPAVPL9PEtZQdO3o+7YqktMuenKaUUFfw=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;Dim_Product&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -575,9 +690,13 @@
       <column comment="" key="false" length="-1" name="data" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Dynamic" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tLogRow_2">
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tLogRow_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
   </connection>
   <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tFileInputDelimited_2" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_2" target="tLogRow_3">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -604,13 +723,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c85201f7-bcea-4e19-8cbf-0e6d541540e4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>k/gMSLCdIjWja4NZY8eRaM9KoegtQx0cX0L261av+cI18bx6iJNWsCzcD2m9Fq5ic9GNrArqIUnr
-kp52YAY5IA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8d7abea2-e865-4b10-8504-0d837f1ea296"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>u7yHWDYAx0cL612BDP3EC97F5HmKXMcnfa39zkS5qs57CX5ZopW3dcoeWjqsEMzRt+z45JZOoLCC
-tohEJI0JmA==</DigestValue></Reference></SignedInfo><SignatureValue>Pjicos/5kzdPwTPX6q+Do4LYQqi2/vEwW2+JdTUAKLy6mObR+oDzrRk5Ak5aesgQgtTIhMCsB3sU
-7lELzpInXAmkBErIjF+tPB8aY9WZ7Uu8MJ6Itiwt9U1aYUCPXdNhaK3YDiaUakC+PjMfU4COzBQM
-f8+7EQoeefmcaVGRLfCIWSH+an/bfHSicFLJkHzK1ynojpH42dnIBNb14RU4ci5PDHkhLIImQM3e
-atOQIjZZhL55B+LQRoIYy1dCoepCF7u9KcL6WP/t/vliVs7ClSdVlIVuZNNG9vGKmD4atqSwVq5y
-slSB29EyVp3rl9H/EtwxshhEQ8wh9/lx6f9NVw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_43bbe028-aebc-4879-81a7-6e0668ff3de4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rFo00byAqr7NkibmqpNxPJJwMoTIUzovo30YzTh+S1aOYGuzDjiKkI6ukC4T4CqsxuCdtrBULYBZ
+c9MXrkt5Vw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b66ab5c7-520a-43bd-a744-cbe02cf879e8"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ViBpFqFdHev2DnTpcvWF1nxPydERJZpnCc1y4JGm9m+eES0Xljw0VEUGrjvEfArtAMwe1KTJPCQN
+NzR05JnJgQ==</DigestValue></Reference></SignedInfo><SignatureValue>YiVepWLP7zJOJGKzpQTB9S3zbds6GxMLtvtcXYAY+wm+PCwmKRuCOl+OUI2MEdBYR1e6Xl+ksqVU
+XaXp5vgMcj+XeqWadWchRMlq/pBZZ0Qu+y4K3Lh0dQMHuRmJGcJlBiWhfxK/x8jHtZVTMltgv1yC
+uw5kL9OegJ+uHOv0dEXchvrM+8hJ8JToxJOzLwPwgbdHCSCVcY7EPtYr15bL+hOc0l0sblMIP0K8
+nvrYZSW4Q5cgAeCM7zF4vaGktTzAuAUE3vU5FnjywD2Czad74DKDudoceqXFhEUFNVOIawMUuy4P
+JWLTw4NYh8T3Dbzay8oeFpvQjxusjr4kABFmpA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U
@@ -632,4 +751,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8d7abea2-e865-4b10-8504-0d837f1ea296" Target="#_c85201f7-bcea-4e19-8cbf-0e6d541540e4"><Timestamp>2020-08-17 16:29:44</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b66ab5c7-520a-43bd-a744-cbe02cf879e8" Target="#_43bbe028-aebc-4879-81a7-6e0668ff3de4"><Timestamp>2020-08-17 16:38:26</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
