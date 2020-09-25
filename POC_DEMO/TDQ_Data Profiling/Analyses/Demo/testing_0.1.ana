@@ -1,13 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.analysis="http://dataquality.analysis" xmi:id="_qEOzgP7gEeq-AbpzMkWKBg" name="testing" creationDate="2020-09-25T11:09:03.735+0800">
-  <taggedValue xmi:id="_qEOzgf7gEeq-AbpzMkWKBg" tag="Status" value="development"/>
-  <taggedValue xmi:id="_qEOzgv7gEeq-AbpzMkWKBg" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
-  <taggedValue xmi:id="_qEOzg_7gEeq-AbpzMkWKBg" tag="Purpose"/>
-  <taggedValue xmi:id="_qEOzhP7gEeq-AbpzMkWKBg" tag="Description"/>
-  <taggedValue xmi:id="_qEOzhf7gEeq-AbpzMkWKBg" tag="Version" value="0.1"/>
-  <context xmi:id="_qEOzhv7gEeq-AbpzMkWKBg"/>
-  <results xmi:id="_qEOzh_7gEeq-AbpzMkWKBg">
-    <resultMetadata xmi:id="_qEOziP7gEeq-AbpzMkWKBg"/>
-  </results>
-  <parameters xmi:id="_qEOzif7gEeq-AbpzMkWKBg" analysisType="Multiple Column Analysis"/>
-</dataquality.analysis:Analysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_qEOzgP7gEeq-AbpzMkWKBg" name="testing" creationDate="2020-09-25T11:09:03.735+0800" defaultContext="Default">
+    <clientDependency href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_gfbsAMaDEeqC87dzZRfK1A"/>
+    <taggedValue xmi:id="_qEOzgf7gEeq-AbpzMkWKBg" tag="Status" value="development"/>
+    <taggedValue xmi:id="_qEOzgv7gEeq-AbpzMkWKBg" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
+    <taggedValue xmi:id="_qEOzg_7gEeq-AbpzMkWKBg" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_qEOzhP7gEeq-AbpzMkWKBg" tag="Description" value=""/>
+    <taggedValue xmi:id="_qEOzhf7gEeq-AbpzMkWKBg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_qVJkYf7gEeq-AbpzMkWKBg" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_qVJkYv7gEeq-AbpzMkWKBg" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_qVJkY_7gEeq-AbpzMkWKBg" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_qVKLm_7gEeq-AbpzMkWKBg" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_qEOzhv7gEeq-AbpzMkWKBg">
+      <connection href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_iccowMZ3EeqoCLtNa2E8UQ"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_dqs6mMaDEeqC87dzZRfK1A"/>
+    </context>
+    <results xmi:id="_qEOzh_7gEeq-AbpzMkWKBg">
+      <resultMetadata xmi:id="_qEOziP7gEeq-AbpzMkWKBg"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_qVJkZP7gEeq-AbpzMkWKBg">
+        <parameters xmi:id="_qVJkZf7gEeq-AbpzMkWKBg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_dqs6mMaDEeqC87dzZRfK1A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_qVJkZv7gEeq-AbpzMkWKBg">
+        <parameters xmi:id="_qVJkZ_7gEeq-AbpzMkWKBg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_dqs6mMaDEeqC87dzZRfK1A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_qVJkaP7gEeq-AbpzMkWKBg">
+        <parameters xmi:id="_qVJkaf7gEeq-AbpzMkWKBg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_dqs6mMaDEeqC87dzZRfK1A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_qVJkav7gEeq-AbpzMkWKBg">
+        <parameters xmi:id="_qVJka_7gEeq-AbpzMkWKBg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_dqs6mMaDEeqC87dzZRfK1A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_qVJkbP7gEeq-AbpzMkWKBg">
+        <parameters xmi:id="_qVKLcP7gEeq-AbpzMkWKBg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_dqs6mMaDEeqC87dzZRfK1A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_qVKLcf7gEeq-AbpzMkWKBg">
+        <parameters xmi:id="_qVKLcv7gEeq-AbpzMkWKBg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_dqs6mMaDEeqC87dzZRfK1A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:FrequencyIndicator" xmi:id="_qVKLc_7gEeq-AbpzMkWKBg">
+        <parameters xmi:id="_qVKLdP7gEeq-AbpzMkWKBg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_dqs6mMaDEeqC87dzZRfK1A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Advanced Statistics/Frequency_Table_0.1.definition#_ccIR4hF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:TextIndicator" xmi:id="_qVKLdf7gEeq-AbpzMkWKBg">
+        <parameters xmi:id="_qVKLdv7gEeq-AbpzMkWKBg"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_dqs6mMaDEeqC87dzZRfK1A"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Text_Statistics_0.1.definition#_yb9x0zh8Ed2XmO7pl5Yuyg"/>
+        <averageLengthIndicator xmi:id="_qVKLd_7gEeq-AbpzMkWKBg">
+          <parameters xmi:id="_qVKLeP7gEeq-AbpzMkWKBg">
+            <textParameter xmi:id="_qVKLef7gEeq-AbpzMkWKBg" useBlank="false"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_dqs6mMaDEeqC87dzZRfK1A"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_0.1.definition#_ccIR4BF2Ed2PKb6nEJEvhw"/>
+        </averageLengthIndicator>
+        <maxLengthIndicator xmi:id="_qVKLev7gEeq-AbpzMkWKBg">
+          <parameters xmi:id="_qVKLe_7gEeq-AbpzMkWKBg">
+            <textParameter xmi:id="_qVKLfP7gEeq-AbpzMkWKBg" useBlank="false"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_dqs6mMaDEeqC87dzZRfK1A"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_0.1.definition#_ccHq1RF2Ed2PKb6nEJEvhw"/>
+        </maxLengthIndicator>
+        <minLengthIndicator xmi:id="_qVKLff7gEeq-AbpzMkWKBg">
+          <parameters xmi:id="_qVKLfv7gEeq-AbpzMkWKBg">
+            <textParameter xmi:id="_qVKLf_7gEeq-AbpzMkWKBg" useBlank="false"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_dqs6mMaDEeqC87dzZRfK1A"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_0.1.definition#_ccHq1BF2Ed2PKb6nEJEvhw"/>
+        </minLengthIndicator>
+        <minLengthWithBlankIndicator xmi:id="_qVKLgP7gEeq-AbpzMkWKBg">
+          <parameters xmi:id="_qVKLgf7gEeq-AbpzMkWKBg">
+            <textParameter xmi:id="_qVKLgv7gEeq-AbpzMkWKBg"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_dqs6mMaDEeqC87dzZRfK1A"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_0.1.definition#_G4EzQZU9Ed-Y15ulK_jijQ"/>
+        </minLengthWithBlankIndicator>
+        <minLengthWithNullIndicator xmi:id="_qVKLg_7gEeq-AbpzMkWKBg">
+          <parameters xmi:id="_qVKLhP7gEeq-AbpzMkWKBg">
+            <textParameter xmi:id="_qVKLhf7gEeq-AbpzMkWKBg" useBlank="false" useNulls="true"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_dqs6mMaDEeqC87dzZRfK1A"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Null_0.1.definition#_a4KsoI1qEd-xwI2imLgHRA"/>
+        </minLengthWithNullIndicator>
+        <minLengthWithBlankNullIndicator xmi:id="_qVKLhv7gEeq-AbpzMkWKBg">
+          <parameters xmi:id="_qVKLh_7gEeq-AbpzMkWKBg">
+            <textParameter xmi:id="_qVKLiP7gEeq-AbpzMkWKBg" useNulls="true"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_dqs6mMaDEeqC87dzZRfK1A"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Minimal_Length_With_Blank_and_Null_0.1.definition#_9HDjMJSOEd-TE5ti6XNR2Q"/>
+        </minLengthWithBlankNullIndicator>
+        <maxLengthWithBlankIndicator xmi:id="_qVKLif7gEeq-AbpzMkWKBg">
+          <parameters xmi:id="_qVKLiv7gEeq-AbpzMkWKBg">
+            <textParameter xmi:id="_qVKLi_7gEeq-AbpzMkWKBg"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_dqs6mMaDEeqC87dzZRfK1A"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_0.1.definition#_-xmZcJSOEd-TE5ti6XNR2Q"/>
+        </maxLengthWithBlankIndicator>
+        <maxLengthWithNullIndicator xmi:id="_qVKLjP7gEeq-AbpzMkWKBg">
+          <parameters xmi:id="_qVKLjf7gEeq-AbpzMkWKBg">
+            <textParameter xmi:id="_qVKLjv7gEeq-AbpzMkWKBg" useBlank="false" useNulls="true"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_dqs6mMaDEeqC87dzZRfK1A"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Null_0.1.definition#_-_UFUJSOEd-TE5ti6XNR2Q"/>
+        </maxLengthWithNullIndicator>
+        <maxLengthWithBlankNullIndicator xmi:id="_qVKLj_7gEeq-AbpzMkWKBg">
+          <parameters xmi:id="_qVKLkP7gEeq-AbpzMkWKBg">
+            <textParameter xmi:id="_qVKLkf7gEeq-AbpzMkWKBg" useNulls="true"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_dqs6mMaDEeqC87dzZRfK1A"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Maximal_Length_With_Blank_and_Null_0.1.definition#_-hzp8JSOEd-TE5ti6XNR2Q"/>
+        </maxLengthWithBlankNullIndicator>
+        <avgLengthWithBlankIndicator xmi:id="_qVKLkv7gEeq-AbpzMkWKBg">
+          <parameters xmi:id="_qVKLk_7gEeq-AbpzMkWKBg">
+            <textParameter xmi:id="_qVKLlP7gEeq-AbpzMkWKBg"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_dqs6mMaDEeqC87dzZRfK1A"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_0.1.definition#__gPoIJSOEd-TE5ti6XNR2Q"/>
+        </avgLengthWithBlankIndicator>
+        <avgLengthWithNullIndicator xmi:id="_qVKLlf7gEeq-AbpzMkWKBg">
+          <parameters xmi:id="_qVKLlv7gEeq-AbpzMkWKBg">
+            <textParameter xmi:id="_qVKLl_7gEeq-AbpzMkWKBg" useBlank="false" useNulls="true"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_dqs6mMaDEeqC87dzZRfK1A"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
+        </avgLengthWithNullIndicator>
+        <avgLengthWithBlankNullIndicator xmi:id="_qVKLmP7gEeq-AbpzMkWKBg">
+          <parameters xmi:id="_qVKLmf7gEeq-AbpzMkWKBg">
+            <textParameter xmi:id="_qVKLmv7gEeq-AbpzMkWKBg" useNulls="true"/>
+          </parameters>
+          <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_dqs6mMaDEeqC87dzZRfK1A"/>
+          <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Blank_and_Null_0.1.definition#__TbUIJSOEd-TE5ti6XNR2Q"/>
+        </avgLengthWithBlankNullIndicator>
+      </indicators>
+    </results>
+    <parameters xmi:id="_qEOzif7gEeq-AbpzMkWKBg" dataFilter="_qVKLnP7gEeq-AbpzMkWKBg" analysisType="Multiple Column Analysis"/>
+    <contextType xmi:id="_qVJkYP7gEeq-AbpzMkWKBg" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_qVKLnP7gEeq-AbpzMkWKBg" name="testing">
+    <ranges xmi:id="_qVKLnf7gEeq-AbpzMkWKBg">
+      <expressions xmi:id="_qVKLnv7gEeq-AbpzMkWKBg">
+        <expression xsi:type="relational:TdExpression" xmi:id="_qVKLn_7gEeq-AbpzMkWKBg" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
