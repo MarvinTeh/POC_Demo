@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.reports="http://dataquality.reports" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_Y_7NgMaDEeqC87dzZRfK1A" name="Customer_Basic_Analysis" supplierDependency="_dmvdkP1rEeqkFIdyIp61ig" creationDate="2020-07-15T17:40:20.885+0800" defaultContext="Default">
     <clientDependency href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_gfbsAMaDEeqC87dzZRfK1A"/>
     <taggedValue xmi:id="_Y_7NgcaDEeqC87dzZRfK1A" tag="Status" value="development"/>
@@ -1175,7 +1175,9 @@
     <parameters xmi:id="_Y_7NicaDEeqC87dzZRfK1A" dataFilter="_gfgkgMaDEeqC87dzZRfK1A" analysisType="Multiple Column Analysis"/>
     <contextType xmi:id="_gfYBoMaDEeqC87dzZRfK1A" confirmationNeeded="false" name="Default"/>
   </dataquality.analysis:Analysis>
-  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_dmvdkP1rEeqkFIdyIp61ig" kind="Usage" supplier="_Y_7NgMaDEeqC87dzZRfK1A"/>
+  <orgomg.cwm.objectmodel.core:Dependency xmi:id="_dmvdkP1rEeqkFIdyIp61ig" kind="Usage" supplier="_Y_7NgMaDEeqC87dzZRfK1A">
+    <client xsi:type="dataquality.reports:TdReport" href="../../Reports/Demo/Customer_Basic_Analysis_0.1.rep#_IijNIN0hEeq5DJ9YiaafTg"/>
+  </orgomg.cwm.objectmodel.core:Dependency>
   <dataquality.domain:Domain xmi:id="_gfgkgMaDEeqC87dzZRfK1A" name="Customer_Basic_Analysis">
     <ranges xmi:id="_gfgkgcaDEeqC87dzZRfK1A">
       <expressions xmi:id="_gfgkgsaDEeqC87dzZRfK1A">
