@@ -22,7 +22,7 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_YsPOcAw9EeutSdGm3mY9oQ"/>
     </context>
     <results xmi:id="_GG7v6hHSEeus79wlODPhpw">
-      <resultMetadata xmi:id="_GG7v6xHSEeus79wlODPhpw" executionDate="2020-10-19T13:41:00.941+0800" executionDuration="271" message="" executionNumber="11" lastRunOk="true" lastExecutionNumberOk="10"/>
+      <resultMetadata xmi:id="_GG7v6xHSEeus79wlODPhpw" executionDate="2020-10-19T13:50:50.915+0800" executionDuration="177" message="" executionNumber="12" lastRunOk="true" lastExecutionNumberOk="11"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_GG7v7BHSEeus79wlODPhpw" count="30" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_YsPOcAw9EeutSdGm3mY9oQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -36,7 +36,7 @@
       <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_GG7v8hHSEeus79wlODPhpw" count="30" computed="true" userCount="30">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_YsPOcAw9EeutSdGm3mY9oQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/CustID_0.1.rules#_s4F9wJ6iEeq8BvVoyFeEWw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_GG7v8xHSEeus79wlODPhpw" body="SELECT COUNT(*) FROM `demo_staging`.`customer_address`   WHERE (CUST_ID REGEXP '^[A-Z][0-9][0-9][0-9][0-9][0-9][0-9][0-9]$')" language="MySQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_GG7v8xHSEeus79wlODPhpw" body="SELECT COUNT(*) FROM `demo_staging`.`customer_address`   WHERE (CUST_ID REGEXP '[C][0-9]{7}')" language="MySQL"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_GG7v9BHSEeus79wlODPhpw" name="CustID" criticalityLevel="1" whereExpression="CUST_ID REGEXP '^[A-Z][0-9][0-9][0-9][0-9][0-9][0-9][0-9]$'">
           <taggedValue xmi:id="_GG7v9RHSEeus79wlODPhpw" tag="Status" value="development"/>
           <taggedValue xmi:id="_GG7v9hHSEeus79wlODPhpw" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
