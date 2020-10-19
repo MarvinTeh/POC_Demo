@@ -20,7 +20,7 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_YsPOcAw9EeutSdGm3mY9oQ"/>
     </context>
     <results xmi:id="_lpCqJ8aDEeqC87dzZRfK1A">
-      <resultMetadata xmi:id="_lpCqKMaDEeqC87dzZRfK1A" executionDate="2020-10-19T13:38:30.627+0800" executionDuration="164" message="" executionNumber="10" lastRunOk="true" lastExecutionNumberOk="9"/>
+      <resultMetadata xmi:id="_lpCqKMaDEeqC87dzZRfK1A" executionDate="2020-10-19T13:41:00.941+0800" executionDuration="271" message="" executionNumber="11" lastRunOk="true" lastExecutionNumberOk="10"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_91G5EBHQEeus79wlODPhpw" count="30" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_YsPOcAw9EeutSdGm3mY9oQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -73,10 +73,10 @@
           <sqlGenericExpression xmi:id="_-PtxdxHQEeus79wlODPhpw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_91G5FBHQEeus79wlODPhpw" count="30" computed="true" userCount="18">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_91G5FBHQEeus79wlODPhpw" count="30" computed="true" userCount="24">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_YsPOcAw9EeutSdGm3mY9oQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Add_Phone_0.1.rules#_zriVkJ6kEeq8BvVoyFeEWw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_-QU1dBHQEeus79wlODPhpw" body="SELECT COUNT(*) FROM `demo_staging`.`customer_address`   WHERE (CARD_PHONE_1 REGEXP '[01][0-9][-][0-9]+' AND CARD_PHONE_2 REGEXP '[6]?[0][0-9][-][0-9]+' &#xD;&#xA;AND (CARD_FAX='' OR CARD_FAX REGEXP '[6]?[0][0-9][-][0-9]+' ))" language="MySQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_-QU1dBHQEeus79wlODPhpw" body="SELECT COUNT(*) FROM `demo_staging`.`customer_address`   WHERE (CARD_PHONE_1 REGEXP '([6]?[0][0-9][-][0-9]+|[01][0-9][-][0-9]+)' AND CARD_PHONE_2 REGEXP '([6]?[0][0-9][-][0-9]+|[01][0-9][-][0-9]+)' AND (CARD_FAX='' OR CARD_FAX REGEXP '([6]?[0][0-9][-][0-9]+|[01][0-9][-][0-9]+)' ))" language="MySQL"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_-QBTcBHQEeus79wlODPhpw" name="Add_Phone" criticalityLevel="1" whereExpression="CARD_PHONE_1 LIKE '%[0,1][0-9][-][0-9]%[0-9]' AND CARD_PHONE_2 LIKE '%[0,1][0-9][-][0-9]%[0-9]'&#xD;&#xA;AND (CARD_FAX='' OR CARD_FAX LIKE '[0][0-9][-][0-9]%[0-9]')">
           <taggedValue xmi:id="_-QB6gBHQEeus79wlODPhpw" tag="Status" value="development"/>
           <taggedValue xmi:id="_-QB6gRHQEeus79wlODPhpw" tag="Author" value="marvin.teh@quandatics.com"/>
