@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.rules="http://dataquality.rules" xmlns:orgomg.cwm.objectmodel.core="http:///orgomg/cwm/objectmodel/core.ecore">
-  <dataquality.rules:WhereRule xmi:id="_zriVkJ6kEeq8BvVoyFeEWw" name="Add_Phone" supplierDependency="_0_f30J6kEeq8BvVoyFeEWw" criticalityLevel="1" whereExpression="CARD_PHONE_1 REGEXP '[01][0-9][-][0-9]+' AND CARD_PHONE_2 REGEXP '[6]?[0][0-9][-][0-9]+' &#xD;&#xA;AND (CARD_FAX='' OR CARD_FAX REGEXP '[6]?[0][0-9][-][0-9]+' )">
+  <dataquality.rules:WhereRule xmi:id="_zriVkJ6kEeq8BvVoyFeEWw" name="Add_Phone" supplierDependency="_0_f30J6kEeq8BvVoyFeEWw" criticalityLevel="1" whereExpression="CARD_PHONE_1 REGEXP '([6]?[0][0-9][-][0-9]+|[01][0-9][-][0-9]+)' AND CARD_PHONE_2 REGEXP '([6]?[0][0-9][-][0-9]+|[01][0-9][-][0-9]+)' AND (CARD_FAX='' OR CARD_FAX REGEXP '([6]?[0][0-9][-][0-9]+|[01][0-9][-][0-9]+)' )">
     <taggedValue xmi:id="_zriVkZ6kEeq8BvVoyFeEWw" tag="Status" value="development"/>
     <taggedValue xmi:id="_zriVkp6kEeq8BvVoyFeEWw" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
     <taggedValue xmi:id="_zriVk56kEeq8BvVoyFeEWw" tag="Purpose" value=""/>
