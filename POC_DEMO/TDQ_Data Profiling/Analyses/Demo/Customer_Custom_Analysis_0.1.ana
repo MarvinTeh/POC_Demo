@@ -17,7 +17,7 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_YtDt0Aw9EeutSdGm3mY9oQ"/>
     </context>
     <results xmi:id="_lfu-xxHSEeus79wlODPhpw">
-      <resultMetadata xmi:id="_lfu-yBHSEeus79wlODPhpw" executionDate="2020-10-19T13:47:24.630+0800" executionDuration="214" message="" executionNumber="2" lastRunOk="true" lastExecutionNumberOk="2"/>
+      <resultMetadata xmi:id="_lfu-yBHSEeus79wlODPhpw" executionDate="2020-10-19T13:47:54.503+0800" executionDuration="244" message="" executionNumber="3" lastRunOk="true" lastExecutionNumberOk="3"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_rQy-chHSEeus79wlODPhpw" count="30" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_YtDt0Aw9EeutSdGm3mY9oQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -56,10 +56,10 @@
           <sqlGenericExpression xmi:id="_rk8phxHSEeus79wlODPhpw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_rQy-dRHSEeus79wlODPhpw" count="30" computed="true" userCount="0">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_rQy-dRHSEeus79wlODPhpw" count="30" computed="true" userCount="30">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_YtDt0Aw9EeutSdGm3mY9oQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/CustID_0.1.rules#_s4F9wJ6iEeq8BvVoyFeEWw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_rlh4UxHSEeus79wlODPhpw" body="SELECT COUNT(*) FROM `demo_staging`.`customer`   WHERE (CUST_ID REGEXP '[C][0-9]{8}')" language="MySQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_rlh4UxHSEeus79wlODPhpw" body="SELECT COUNT(*) FROM `demo_staging`.`customer`   WHERE (CUST_ID REGEXP '[C][0-9]{7}')" language="MySQL"/>
         <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_rlFzcBHSEeus79wlODPhpw" name="CustID" criticalityLevel="1" whereExpression="CUST_ID REGEXP '[C][0-9]{8}'">
           <taggedValue xmi:id="_rlFzcRHSEeus79wlODPhpw" tag="Status" value="development"/>
           <taggedValue xmi:id="_rlFzchHSEeus79wlODPhpw" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
