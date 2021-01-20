@@ -3,6 +3,7 @@
   <dataquality.analysis:Analysis xmi:id="_R2Z18IDnEeuoP4HHVRLafw" name="Flags" creationDate="2021-03-09T22:23:58.737+0800" defaultContext="Default">
     <clientDependency href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_7iVvkHNUEeuOLcAiuBiIdw"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Custom_Address_0.1.rules#__sCFUIDoEeuoP4HHVRLafw"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Custom_Address_0.1.rules#_2gsOEFr_EeufRvxNlgLipA"/>
     <taggedValue xmi:id="_R2Z18YDnEeuoP4HHVRLafw" tag="Status" value="development"/>
     <taggedValue xmi:id="_R2Z18oDnEeuoP4HHVRLafw" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
     <taggedValue xmi:id="_R2Z184DnEeuoP4HHVRLafw" tag="Purpose" value=""/>
@@ -12,32 +13,32 @@
     <taggedValue xmi:id="_gQNXoIDoEeuoP4HHVRLafw" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
     <context xmi:id="_R2Z19oDnEeuoP4HHVRLafw">
       <connection href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_MLPtcHNTEeuOLcAiuBiIdw"/>
-      <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_sWIWsIDfEeuoP4HHVRLafw"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_-1hGUIDjEeuoP4HHVRLafw"/>
     </context>
     <results xmi:id="_R2Z194DnEeuoP4HHVRLafw">
-      <resultMetadata xmi:id="_R2Z1-IDnEeuoP4HHVRLafw" executionDate="2021-01-20T16:43:01.614+0800" executionDuration="365" message="" executionNumber="10" lastRunOk="true" lastExecutionNumberOk="10"/>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_eQvpsII6EeufRfxNlgLipA" count="15" computed="true">
-        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_sWIWsIDfEeuoP4HHVRLafw"/>
+      <resultMetadata xmi:id="_R2Z1-IDnEeuoP4HHVRLafw" executionDate="2021-01-20T16:44:13.727+0800" executionDuration="353" message="" executionNumber="11" lastRunOk="true" lastExecutionNumberOk="11"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_22ISkFr_EeufRvxNlgLipA" count="9" computed="true">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_-1hGUIDjEeuoP4HHVRLafw"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_fQeBUII6EeufRfxNlgLipA" body="SELECT COUNT(*) FROM `lotus`.`cardacc` " language="MySQL"/>
-        <builtInIndicatorDefinition xmi:id="_fPbfgII6EeufRfxNlgLipA" name="Row Count" label="Row Count">
-          <taggedValue xmi:id="_fPbfgYI6EeufRfxNlgLipA" tag="Description" value="counts the number of rows"/>
-          <taggedValue xmi:id="_fPbfgoI6EeufRfxNlgLipA" tag="Purpose" value="evaluates the number of records"/>
-          <sqlGenericExpression xmi:id="_fPbfg4I6EeufRfxNlgLipA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_3RWO8Fr_EeufRvxNlgLipA" body="SELECT COUNT(*) FROM `lotus`.`addressmaster` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_3QQp0Fr_EeufRvxNlgLipA" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_3QQp0Vr_EeufRvxNlgLipA" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_3QQp0lr_EeufRvxNlgLipA" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_3QQp01r_EeufRvxNlgLipA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_sEptAFr_EeufRvxNlgLipA" count="15" computed="true" userCount="14">
-        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_sWIWsIDfEeuoP4HHVRLafw"/>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_22ISkVr_EeufRvxNlgLipA" count="9" computed="true" userCount="9">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_-1hGUIDjEeuoP4HHVRLafw"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Custom_Address_0.1.rules#_eMS_IYDoEeuoP4HHVRLafw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_shoj8Fr_EeufRvxNlgLipA" body="SELECT COUNT(*) FROM `lotus`.`cardacc`   WHERE (!(street regexp &quot;.*[\\u0E00-\\u0E7F].*&quot; AND street regexp &quot;.*[a-zA-Z].*&quot;))" language="MySQL"/>
-        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_sg6LMFr_EeufRvxNlgLipA" name="Custom_Address" criticalityLevel="1" whereExpression="!(street regexp &quot;.*[\\u0E00-\\u0E7F].*&quot; AND street regexp &quot;.*[a-zA-Z].*&quot;)">
-          <taggedValue xmi:id="_sg6LMVr_EeufRvxNlgLipA" tag="Status" value="development"/>
-          <taggedValue xmi:id="_sg6LMlr_EeufRvxNlgLipA" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
-          <taggedValue xmi:id="_sg6LM1r_EeufRvxNlgLipA" tag="Purpose"/>
-          <taggedValue xmi:id="_sg6LNFr_EeufRvxNlgLipA" tag="Description"/>
-          <taggedValue xmi:id="_sg6LNVr_EeufRvxNlgLipA" tag="Version" value="0.1"/>
-          <taggedValue xmi:id="_sg6LNlr_EeufRvxNlgLipA" tag="Validation_Status" value="true"/>
-          <sqlGenericExpression xmi:id="_sg6LN1r_EeufRvxNlgLipA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_3RWO8Vr_EeufRvxNlgLipA" body="SELECT COUNT(*) FROM `lotus`.`addressmaster`   WHERE (!(street regexp &quot;.*[\\u0E00-\\u0E7F].*&quot; AND street regexp &quot;.*[a-zA-Z].*&quot;))" language="MySQL"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_3RFwQFr_EeufRvxNlgLipA" name="Custom_Address" criticalityLevel="1" whereExpression="!(street regexp &quot;.*[\\u0E00-\\u0E7F].*&quot; AND street regexp &quot;.*[a-zA-Z].*&quot;)">
+          <taggedValue xmi:id="_3RFwQVr_EeufRvxNlgLipA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_3RFwQlr_EeufRvxNlgLipA" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
+          <taggedValue xmi:id="_3RFwQ1r_EeufRvxNlgLipA" tag="Purpose"/>
+          <taggedValue xmi:id="_3RFwRFr_EeufRvxNlgLipA" tag="Description"/>
+          <taggedValue xmi:id="_3RFwRVr_EeufRvxNlgLipA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_3RFwRlr_EeufRvxNlgLipA" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_3RFwR1r_EeufRvxNlgLipA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
     </results>
