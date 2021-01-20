@@ -15,7 +15,7 @@
       <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_sWIWsIDfEeuoP4HHVRLafw"/>
     </context>
     <results xmi:id="_R2Z194DnEeuoP4HHVRLafw">
-      <resultMetadata xmi:id="_R2Z1-IDnEeuoP4HHVRLafw" executionDate="2021-03-11T14:52:33.392+0800" executionDuration="148" message="" executionNumber="9" lastRunOk="true" lastExecutionNumberOk="9"/>
+      <resultMetadata xmi:id="_R2Z1-IDnEeuoP4HHVRLafw" executionDate="2021-01-20T16:43:01.614+0800" executionDuration="365" message="" executionNumber="10" lastRunOk="true" lastExecutionNumberOk="10"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_eQvpsII6EeufRfxNlgLipA" count="15" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_sWIWsIDfEeuoP4HHVRLafw"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -26,18 +26,18 @@
           <sqlGenericExpression xmi:id="_fPbfg4I6EeufRfxNlgLipA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_ilKsQII6EeufRfxNlgLipA" count="15" computed="true" userCount="14">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_sEptAFr_EeufRvxNlgLipA" count="15" computed="true" userCount="14">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_sWIWsIDfEeuoP4HHVRLafw"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Custom_Address_0.1.rules#_eMS_IYDoEeuoP4HHVRLafw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_jAdhIII6EeufRfxNlgLipA" body="SELECT COUNT(*) FROM `lotus`.`cardacc`   WHERE (!(street regexp &quot;.*[\\u0E00-\\u0E7F].*&quot; AND street regexp &quot;.*[a-zA-Z].*&quot;))" language="MySQL"/>
-        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_i_reAII6EeufRfxNlgLipA" name="Custom_Address" criticalityLevel="1" whereExpression="!(street regexp &quot;.*[\\u0E00-\\u0E7F].*&quot; AND street regexp &quot;.*[a-zA-Z].*&quot;)">
-          <taggedValue xmi:id="_i_reAYI6EeufRfxNlgLipA" tag="Status" value="development"/>
-          <taggedValue xmi:id="_i_reAoI6EeufRfxNlgLipA" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
-          <taggedValue xmi:id="_i_reA4I6EeufRfxNlgLipA" tag="Purpose"/>
-          <taggedValue xmi:id="_i_reBII6EeufRfxNlgLipA" tag="Description"/>
-          <taggedValue xmi:id="_i_reBYI6EeufRfxNlgLipA" tag="Version" value="0.1"/>
-          <taggedValue xmi:id="_i_reBoI6EeufRfxNlgLipA" tag="Validation_Status" value="true"/>
-          <sqlGenericExpression xmi:id="_i_reB4I6EeufRfxNlgLipA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_shoj8Fr_EeufRvxNlgLipA" body="SELECT COUNT(*) FROM `lotus`.`cardacc`   WHERE (!(street regexp &quot;.*[\\u0E00-\\u0E7F].*&quot; AND street regexp &quot;.*[a-zA-Z].*&quot;))" language="MySQL"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_sg6LMFr_EeufRvxNlgLipA" name="Custom_Address" criticalityLevel="1" whereExpression="!(street regexp &quot;.*[\\u0E00-\\u0E7F].*&quot; AND street regexp &quot;.*[a-zA-Z].*&quot;)">
+          <taggedValue xmi:id="_sg6LMVr_EeufRvxNlgLipA" tag="Status" value="development"/>
+          <taggedValue xmi:id="_sg6LMlr_EeufRvxNlgLipA" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
+          <taggedValue xmi:id="_sg6LM1r_EeufRvxNlgLipA" tag="Purpose"/>
+          <taggedValue xmi:id="_sg6LNFr_EeufRvxNlgLipA" tag="Description"/>
+          <taggedValue xmi:id="_sg6LNVr_EeufRvxNlgLipA" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_sg6LNlr_EeufRvxNlgLipA" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_sg6LN1r_EeufRvxNlgLipA" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
     </results>
