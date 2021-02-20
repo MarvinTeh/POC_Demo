@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.rules:MatchRuleDefinition xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmi:id="_hWj20XNiEeuOLcAiuBiIdw" name="Deduplication_Appended" recordLinkageAlgorithm="T_SwooshAlgorithm">
+  <taggedValue xmi:id="_hWkd4HNiEeuOLcAiuBiIdw" tag="Status" value="development"/>
+  <taggedValue xmi:id="_hWkd4XNiEeuOLcAiuBiIdw" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
+  <taggedValue xmi:id="_hWkd4nNiEeuOLcAiuBiIdw" tag="Purpose"/>
+  <taggedValue xmi:id="_hWkd43NiEeuOLcAiuBiIdw" tag="Description"/>
+  <taggedValue xmi:id="_hWkd5HNiEeuOLcAiuBiIdw" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_hWkd5XNiEeuOLcAiuBiIdw" tag="Validation_Status" value="true"/>
+  <blockKeys xmi:id="_hWkd5nNiEeuOLcAiuBiIdw" name="ssn" column="ssn">
+    <preAlgorithm xmi:id="_hWkd53NiEeuOLcAiuBiIdw" algorithmType="NON_ALGO" algorithmParameters=""/>
+    <algorithm xmi:id="_hWkd6HNiEeuOLcAiuBiIdw" algorithmType="first_Char_EW" algorithmParameters=""/>
+    <postAlgorithm xmi:id="_hWkd6XNiEeuOLcAiuBiIdw" algorithmType="NON_ALGO" algorithmParameters=""/>
+  </blockKeys>
+  <matchRules xmi:id="_hWkd6nNiEeuOLcAiuBiIdw" name="Match Rule 4" matchInterval="0.7">
+    <matchKeys xmi:id="_hWkd63NiEeuOLcAiuBiIdw" name="phone" column="phone" confidenceWeight="1" handleNull="nullMatchNull" threshold="0.5" tokenizationType="No">
+      <algorithm xmi:id="_hWkd7HNiEeuOLcAiuBiIdw" algorithmType="LEVENSHTEIN" algorithmParameters=""/>
+    </matchKeys>
+    <matchKeys xmi:id="_hWkd7XNiEeuOLcAiuBiIdw" name="fullname" column="fullname" confidenceWeight="1" handleNull="nullMatchNull" threshold="0.6" tokenizationType="No">
+      <algorithm xmi:id="_hWkd7nNiEeuOLcAiuBiIdw" algorithmType="JARO_WINKLER" algorithmParameters=""/>
+    </matchKeys>
+  </matchRules>
+  <appliedBlockKeys xmi:id="_hWkd73NiEeuOLcAiuBiIdw" name="BLOCK_KEY" column="BLOCK_KEY"/>
+  <survivorshipKeys xmi:id="_hWkd8HNiEeuOLcAiuBiIdw" name="phone" column="phone" allowManualResolution="true">
+    <function xmi:id="_hWkd8XNiEeuOLcAiuBiIdw" algorithmType="MostTrustedSource" algorithmParameters="," referenceColumn=""/>
+  </survivorshipKeys>
+  <survivorshipKeys xmi:id="_hWkd8nNiEeuOLcAiuBiIdw" name="fullname" column="fullname" allowManualResolution="true">
+    <function xmi:id="_hWkd83NiEeuOLcAiuBiIdw" algorithmType="MostCommon" referenceColumn="fullname"/>
+  </survivorshipKeys>
+</dataquality.rules:MatchRuleDefinition>
