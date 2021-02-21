@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.rules:MatchRuleDefinition xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmi:id="_G4_BMHQlEeui5oiU5VtVaQ" name="VSR_Match_Cleansed">
+  <taggedValue xmi:id="_G4_BMXQlEeui5oiU5VtVaQ" tag="Status" value="development"/>
+  <taggedValue xmi:id="_G4_BMnQlEeui5oiU5VtVaQ" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
+  <taggedValue xmi:id="_G4_BM3QlEeui5oiU5VtVaQ" tag="Purpose"/>
+  <taggedValue xmi:id="_G4_BNHQlEeui5oiU5VtVaQ" tag="Description"/>
+  <taggedValue xmi:id="_G4_BNXQlEeui5oiU5VtVaQ" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_G4_BNnQlEeui5oiU5VtVaQ" tag="Validation_Status" value="true"/>
+  <blockKeys xmi:id="_G4_BN3QlEeui5oiU5VtVaQ" name="ssn" column="ssn">
+    <preAlgorithm xmi:id="_G4_BOHQlEeui5oiU5VtVaQ" algorithmType="NON_ALGO" algorithmParameters=""/>
+    <algorithm xmi:id="_G4_BOXQlEeui5oiU5VtVaQ" algorithmType="exact" algorithmParameters=""/>
+    <postAlgorithm xmi:id="_G4_BOnQlEeui5oiU5VtVaQ" algorithmType="NON_ALGO" algorithmParameters=""/>
+  </blockKeys>
+  <matchRules xmi:id="_G4_BO3QlEeui5oiU5VtVaQ" name="Match Rule 4" matchInterval="0.2">
+    <matchKeys xmi:id="_G4_BPHQlEeui5oiU5VtVaQ" name="firstname" column="firstname" confidenceWeight="2" handleNull="nullMatchNull" threshold="0.6" tokenizationType="No">
+      <algorithm xmi:id="_G4_BPXQlEeui5oiU5VtVaQ" algorithmType="JARO" algorithmParameters=""/>
+    </matchKeys>
+    <matchKeys xmi:id="_G4_BPnQlEeui5oiU5VtVaQ" name="lastname" column="lastname" confidenceWeight="2" handleNull="nullMatchNull" threshold="0.6" tokenizationType="No">
+      <algorithm xmi:id="_G4_BP3QlEeui5oiU5VtVaQ" algorithmType="JARO" algorithmParameters=""/>
+    </matchKeys>
+    <matchKeys xmi:id="_G4_BQHQlEeui5oiU5VtVaQ" name="phone" column="phone" confidenceWeight="1" handleNull="nullMatchNull" threshold="0.5" tokenizationType="No">
+      <algorithm xmi:id="_G4_BQXQlEeui5oiU5VtVaQ" algorithmType="EXACT" algorithmParameters=""/>
+    </matchKeys>
+  </matchRules>
+  <appliedBlockKeys xmi:id="_G4_BQnQlEeui5oiU5VtVaQ" name="BLOCK_KEY" column="BLOCK_KEY"/>
+</dataquality.rules:MatchRuleDefinition>
