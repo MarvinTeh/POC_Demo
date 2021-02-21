@@ -28,18 +28,18 @@
       <builtInMatchRuleDefinition xmi:id="_Dp03UHNZEeuOLcAiuBiIdw" recordLinkageAlgorithm="T_SwooshAlgorithm">
         <blockKeys xmi:id="_Dp03UXNZEeuOLcAiuBiIdw" name="ssn" column="ssn">
           <preAlgorithm xmi:id="_Dp03UnNZEeuOLcAiuBiIdw" algorithmType="NON_ALGO" algorithmParameters=""/>
-          <algorithm xmi:id="_Dp03U3NZEeuOLcAiuBiIdw" algorithmType="first_Char_EW" algorithmParameters=""/>
+          <algorithm xmi:id="_Dp03U3NZEeuOLcAiuBiIdw" algorithmType="exact" algorithmParameters=""/>
           <postAlgorithm xmi:id="_Dp03VHNZEeuOLcAiuBiIdw" algorithmType="NON_ALGO" algorithmParameters=""/>
         </blockKeys>
-        <matchRules xmi:id="_Dp03VXNZEeuOLcAiuBiIdw" name="Match Rule 4" matchInterval="0.7">
-          <matchKeys xmi:id="_Dp03VnNZEeuOLcAiuBiIdw" name="firstname" column="firstname" confidenceWeight="1" handleNull="nullMatchNull" threshold="0.6" tokenizationType="No">
-            <algorithm xmi:id="_Dp03V3NZEeuOLcAiuBiIdw" algorithmType="JARO_WINKLER" algorithmParameters=""/>
+        <matchRules xmi:id="_Dp03VXNZEeuOLcAiuBiIdw" name="Match Rule 4" matchInterval="0.2">
+          <matchKeys xmi:id="_Dp03VnNZEeuOLcAiuBiIdw" name="firstname" column="firstname" confidenceWeight="2" handleNull="nullMatchNull" threshold="0.2" tokenizationType="No">
+            <algorithm xmi:id="_Dp03V3NZEeuOLcAiuBiIdw" algorithmType="JARO" algorithmParameters=""/>
           </matchKeys>
-          <matchKeys xmi:id="_Dp03WHNZEeuOLcAiuBiIdw" name="lastname" column="lastname" confidenceWeight="1" handleNull="nullMatchNull" threshold="0.6" tokenizationType="No">
-            <algorithm xmi:id="_Dp03WXNZEeuOLcAiuBiIdw" algorithmType="JARO_WINKLER" algorithmParameters=""/>
+          <matchKeys xmi:id="_Dp03WHNZEeuOLcAiuBiIdw" name="lastname" column="lastname" confidenceWeight="2" handleNull="nullMatchNull" threshold="0.2" tokenizationType="No">
+            <algorithm xmi:id="_Dp03WXNZEeuOLcAiuBiIdw" algorithmType="JARO" algorithmParameters=""/>
           </matchKeys>
-          <matchKeys xmi:id="_Dp03WnNZEeuOLcAiuBiIdw" name="phone" column="phone" confidenceWeight="1" handleNull="nullMatchNull" threshold="0.5" tokenizationType="No">
-            <algorithm xmi:id="_Dp03W3NZEeuOLcAiuBiIdw" algorithmType="LEVENSHTEIN" algorithmParameters=""/>
+          <matchKeys xmi:id="_Dp03WnNZEeuOLcAiuBiIdw" name="phone" column="phone" confidenceWeight="1" handleNull="nullMatchNull" threshold="1.0" tokenizationType="No">
+            <algorithm xmi:id="_Dp03W3NZEeuOLcAiuBiIdw" algorithmType="EXACT" algorithmParameters=""/>
           </matchKeys>
         </matchRules>
         <appliedBlockKeys xmi:id="_3RUNAHNZEeuOLcAiuBiIdw" name="BLOCK_KEY" column="BLOCK_KEY"/>
@@ -50,7 +50,7 @@
           <function xmi:id="_Dp03YHNZEeuOLcAiuBiIdw" algorithmType="Longest" algorithmParameters="" referenceColumn=""/>
         </survivorshipKeys>
         <survivorshipKeys xmi:id="_Dp03YXNZEeuOLcAiuBiIdw" name="phone" column="phone" allowManualResolution="true">
-          <function xmi:id="_Dp03YnNZEeuOLcAiuBiIdw" algorithmType="MostTrustedSource" algorithmParameters="," referenceColumn=""/>
+          <function xmi:id="_Dp03YnNZEeuOLcAiuBiIdw" algorithmType="MostTrustedSource" algorithmParameters="Mock2_Data.csv" referenceColumn=""/>
         </survivorshipKeys>
       </builtInMatchRuleDefinition>
     </indicators>
