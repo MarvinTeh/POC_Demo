@@ -26,8 +26,12 @@
     <resultMetadata xmi:id="_z-R7KXfcEeuuoegYn3iddA"/>
     <indicators xsi:type="dataquality.indicators.columnset:BlockKeyIndicator" xmi:id="_z-SiMHfcEeuuoegYn3iddA"/>
     <indicators xsi:type="dataquality.indicators.columnset:RecordMatchingIndicator" xmi:id="_z-SiMXfcEeuuoegYn3iddA">
-      <builtInMatchRuleDefinition xmi:id="_z-SiMnfcEeuuoegYn3iddA">
-        <matchRules xmi:id="_1T3OAHfcEeuuoegYn3iddA" name="Match Rule 2"/>
+      <builtInMatchRuleDefinition xmi:id="_z-SiMnfcEeuuoegYn3iddA" matchGroupQualityThreshold="1.0">
+        <matchRules xmi:id="_1T3OAHfcEeuuoegYn3iddA" name="Match Rule 2" matchInterval="0.8">
+          <matchKeys xmi:id="_OQWGgHmaEeuW99NGaRXL9w" name="ssn" column="ssn" confidenceWeight="1" handleNull="nullMatchNull" threshold="1.0" tokenizationType="No">
+            <algorithm xmi:id="_OQWGgXmaEeuW99NGaRXL9w" algorithmType="HAMMING" algorithmParameters=""/>
+          </matchKeys>
+        </matchRules>
       </builtInMatchRuleDefinition>
     </indicators>
   </results>
