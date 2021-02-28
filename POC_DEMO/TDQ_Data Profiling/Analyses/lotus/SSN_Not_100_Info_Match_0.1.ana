@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010" xmi:id="_SCWjEHmbEeuW99NGaRXL9w" name="SSN_Not_100_Info_Match" creationDate="2021-02-28T15:27:42.634+0800" defaultContext="Default">
-  <clientDependency href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_7iVvkHNUEeuOLcAiuBiIdw"/>
   <taggedValue xmi:id="_SCWjEXmbEeuW99NGaRXL9w" tag="PREVIEW_ROW_NUMBER" value="10000"/>
   <taggedValue xmi:id="_SCWjEnmbEeuW99NGaRXL9w" tag="Status" value="development"/>
   <taggedValue xmi:id="_SCWjE3mbEeuW99NGaRXL9w" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
@@ -12,7 +11,6 @@
   <taggedValue xmi:id="_SCWjGXmbEeuW99NGaRXL9w" tag="STORE_ON_DISK" value="false"/>
   <taggedValue xmi:id="_SCWjGnmbEeuW99NGaRXL9w" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
   <context xmi:id="_SCWjG3mbEeuW99NGaRXL9w">
-    <connection href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_MLPtcHNTEeuOLcAiuBiIdw"/>
     <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_kWSC4nmaEeuW99NGaRXL9w"/>
     <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_kWSC5nmaEeuW99NGaRXL9w"/>
     <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_kWSC6nmaEeuW99NGaRXL9w"/>
@@ -31,20 +29,18 @@
     <indicators xsi:type="dataquality.indicators.columnset:BlockKeyIndicator" xmi:id="_SCWjHnmbEeuW99NGaRXL9w" blockSize2frequency="ACED0005737200116A6176612E7574696C2E547265654D61700CC1F63E2D256AE60300014C000A636F6D70617261746F727400164C6A6176612F7574696C2F436F6D70617261746F723B7870707704000000027372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B020000787000000000000000027371007E000300000000000001507371007E000300000000000000037371007E0003000000000000002778"/>
     <indicators xsi:type="dataquality.indicators.columnset:RecordMatchingIndicator" xmi:id="_SCWjH3mbEeuW99NGaRXL9w" count="789" groupSize2groupFrequency="ACED0005737200116A6176612E7574696C2E547265654D61700CC1F63E2D256AE60300014C000A636F6D70617261746F727400164C6A6176612F7574696C2F436F6D70617261746F723B787070770400000003740001317372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078700000000000000002740001327371007E0004000000000000014F740001337371007E0004000000000000002778" matchedRecordCount="787">
       <builtInMatchRuleDefinition xmi:id="_SCWjIHmbEeuW99NGaRXL9w" matchGroupQualityThreshold="1.0">
-        <blockKeys xmi:id="_wj6A4HmbEeuW99NGaRXL9w" name="GID_SSN" column="GID_SSN">
-          <preAlgorithm xmi:id="_wj6A4XmbEeuW99NGaRXL9w" algorithmType="NON_ALGO" algorithmParameters=""/>
-          <algorithm xmi:id="_wj6A4nmbEeuW99NGaRXL9w" algorithmType="exact" algorithmParameters=""/>
-          <postAlgorithm xmi:id="_wj6A43mbEeuW99NGaRXL9w" algorithmType="NON_ALGO" algorithmParameters=""/>
-        </blockKeys>
         <matchRules xmi:id="_SCWjJXmbEeuW99NGaRXL9w" name="Match Rule 2" matchInterval="0.7">
-          <matchKeys xmi:id="_SCWjJnmbEeuW99NGaRXL9w" name="firstname" column="firstname" confidenceWeight="1" handleNull="nullMatchNull" threshold="1.0" tokenizationType="No">
+          <matchKeys xmi:id="_SCWjJnmbEeuW99NGaRXL9w" name="firstname" column="firstname" confidenceWeight="2" handleNull="nullMatchNull" threshold="1.0" tokenizationType="No">
             <algorithm xmi:id="_SCWjJ3mbEeuW99NGaRXL9w" algorithmType="JARO" algorithmParameters=""/>
           </matchKeys>
-          <matchKeys xmi:id="_SCWjKHmbEeuW99NGaRXL9w" name="lastname" column="lastname" confidenceWeight="1" handleNull="nullMatchNull" threshold="1.0" tokenizationType="No">
+          <matchKeys xmi:id="_SCWjKHmbEeuW99NGaRXL9w" name="lastname" column="lastname" confidenceWeight="2" handleNull="nullMatchNull" threshold="1.0" tokenizationType="No">
             <algorithm xmi:id="_SCWjKXmbEeuW99NGaRXL9w" algorithmType="JARO" algorithmParameters=""/>
           </matchKeys>
           <matchKeys xmi:id="_SCWjKnmbEeuW99NGaRXL9w" name="phone" column="phone" confidenceWeight="1" handleNull="nullMatchNull" threshold="1.0" tokenizationType="No">
             <algorithm xmi:id="_SCWjK3mbEeuW99NGaRXL9w" algorithmType="HAMMING" algorithmParameters=""/>
+          </matchKeys>
+          <matchKeys xmi:id="_jmKtMHmdEeuW99NGaRXL9w" name="ssn" column="ssn" confidenceWeight="2" handleNull="nullMatchNull" threshold="1.0" tokenizationType="No">
+            <algorithm xmi:id="_jmKtMXmdEeuW99NGaRXL9w" algorithmType="HAMMING" algorithmParameters=""/>
           </matchKeys>
         </matchRules>
         <appliedBlockKeys xmi:id="_SCWjLHmbEeuW99NGaRXL9w" name="BLOCK_KEY" column="BLOCK_KEY"/>
