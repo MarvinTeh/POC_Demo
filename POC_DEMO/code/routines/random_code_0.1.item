@@ -32,10 +32,21 @@ public class random_code {
      * 
      * {example} helloExemple("world") # hello world !.
      */
-    public static void helloExample(String message) {
-        if (message == null) {
-            message = "World"; //$NON-NLS-1$
-        }
-        System.out.println("Hello " + message + " !"); //$NON-NLS-1$ //$NON-NLS-2$
+	
+	public String getRandomstatus() {
+
+		String[] statusTable = new String[] { "001", "002" };
+		java.util.Random randomtRowGenerator_1 = new java.util.Random();
+		return statusTable[randomtRowGenerator_1.nextInt(statusTable.length)];
+
+	}
+
+	public String getRandomCode() {
+
+		String[] CodeTable = new String[] { "1", "2", "3" };
+		java.util.Random randomtRowGenerator_1 = new java.util.Random();
+		return CodeTable[randomtRowGenerator_1.nextInt(CodeTable.length)];
+
+	}
     }
 }
