@@ -4,6 +4,7 @@
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Custom_Address_0.1.rules#_gA5JQIDoEeuoP4HHVRLafw"/>
     <clientDependency href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_7iVvkHNUEeuOLcAiuBiIdw"/>
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Custom_Address_0.1.rules#_mNMTcIDoEeuoP4HHVRLafw"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Custom_Address_0.1.rules#_zIOmgIDoEeuoP4HHVRLafw"/>
     <taggedValue xmi:id="_R2Z18YDnEeuoP4HHVRLafw" tag="Status" value="development"/>
     <taggedValue xmi:id="_R2Z18oDnEeuoP4HHVRLafw" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
     <taggedValue xmi:id="_R2Z184DnEeuoP4HHVRLafw" tag="Purpose" value=""/>
@@ -13,35 +14,10 @@
     <taggedValue xmi:id="_gQNXoIDoEeuoP4HHVRLafw" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
     <context xmi:id="_R2Z19oDnEeuoP4HHVRLafw">
       <connection href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_MLPtcHNTEeuOLcAiuBiIdw"/>
-      <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_-1hGUIDjEeuoP4HHVRLafw"/>
       <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_sWIWsIDfEeuoP4HHVRLafw"/>
     </context>
     <results xmi:id="_R2Z194DnEeuoP4HHVRLafw">
-      <resultMetadata xmi:id="_R2Z1-IDnEeuoP4HHVRLafw" executionDate="2021-03-09T22:34:07.377+0800" executionDuration="169" message="" executionNumber="3" lastRunOk="true" lastExecutionNumberOk="3"/>
-      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_gQMwkoDoEeuoP4HHVRLafw" count="9" computed="true">
-        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_-1hGUIDjEeuoP4HHVRLafw"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_gqhVEIDoEeuoP4HHVRLafw" body="SELECT COUNT(*) FROM `lotus`.`addressmaster` " language="MySQL"/>
-        <builtInIndicatorDefinition xmi:id="_gpv5AIDoEeuoP4HHVRLafw" name="Row Count" label="Row Count">
-          <taggedValue xmi:id="_gpv5AYDoEeuoP4HHVRLafw" tag="Description" value="counts the number of rows"/>
-          <taggedValue xmi:id="_gpv5AoDoEeuoP4HHVRLafw" tag="Purpose" value="evaluates the number of records"/>
-          <sqlGenericExpression xmi:id="_gpv5A4DoEeuoP4HHVRLafw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
-        </builtInIndicatorDefinition>
-      </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_gQMwk4DoEeuoP4HHVRLafw" count="9" computed="true" userCount="9">
-        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_-1hGUIDjEeuoP4HHVRLafw"/>
-        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Custom_Address_0.1.rules#_eMS_IYDoEeuoP4HHVRLafw"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_gqh8IIDoEeuoP4HHVRLafw" body="SELECT COUNT(*) FROM `lotus`.`addressmaster`   WHERE (!(street regexp &quot;.*[\\u0E00-\\u0E7F].*&quot; AND street regexp &quot;.*[a-zA-Z].*&quot;))" language="MySQL"/>
-        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_gp8tUIDoEeuoP4HHVRLafw" name="Custom_Address" criticalityLevel="1" whereExpression="!(street regexp &quot;.*[\\u0E00-\\u0E7F].*&quot; AND street regexp &quot;.*[a-zA-Z].*&quot;)">
-          <taggedValue xmi:id="_gp8tUYDoEeuoP4HHVRLafw" tag="Status" value="development"/>
-          <taggedValue xmi:id="_gp8tUoDoEeuoP4HHVRLafw" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
-          <taggedValue xmi:id="_gp8tU4DoEeuoP4HHVRLafw" tag="Purpose"/>
-          <taggedValue xmi:id="_gp8tVIDoEeuoP4HHVRLafw" tag="Description"/>
-          <taggedValue xmi:id="_gp8tVYDoEeuoP4HHVRLafw" tag="Version" value="0.1"/>
-          <taggedValue xmi:id="_gp8tVoDoEeuoP4HHVRLafw" tag="Validation_Status" value="true"/>
-          <sqlGenericExpression xmi:id="_gp8tV4DoEeuoP4HHVRLafw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
-        </builtInIndicatorDefinition>
-      </indicators>
+      <resultMetadata xmi:id="_R2Z1-IDnEeuoP4HHVRLafw" executionDate="2021-03-09T22:34:53.545+0800" executionDuration="123" message="" executionNumber="4" lastRunOk="true" lastExecutionNumberOk="4"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_mbUPAIDoEeuoP4HHVRLafw" count="15" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_sWIWsIDfEeuoP4HHVRLafw"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -52,7 +28,7 @@
           <sqlGenericExpression xmi:id="_mu4EM4DoEeuoP4HHVRLafw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
-      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_mbUPAYDoEeuoP4HHVRLafw" count="9" computed="true" userCount="14">
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_mbUPAYDoEeuoP4HHVRLafw" count="15" computed="true" userCount="14">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_sWIWsIDfEeuoP4HHVRLafw"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Custom_Address_0.1.rules#_eMS_IYDoEeuoP4HHVRLafw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_mvuYwYDoEeuoP4HHVRLafw" body="SELECT COUNT(*) FROM `lotus`.`cardacc`   WHERE (!(street regexp &quot;.*[\\u0E00-\\u0E7F].*&quot; AND street regexp &quot;.*[a-zA-Z].*&quot;))" language="MySQL"/>
