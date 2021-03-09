@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.domain.pattern:Pattern xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.domain.pattern="http://dataquality.domain.pattern" xmi:id="_XcMkUIDoEeuoP4HHVRLafw" name="Address">
+  <taggedValue xmi:id="_XcMkUYDoEeuoP4HHVRLafw" tag="Status" value="development"/>
+  <taggedValue xmi:id="_XcMkUoDoEeuoP4HHVRLafw" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
+  <taggedValue xmi:id="_XcMkU4DoEeuoP4HHVRLafw" tag="Purpose"/>
+  <taggedValue xmi:id="_XcMkVIDoEeuoP4HHVRLafw" tag="Description"/>
+  <taggedValue xmi:id="_XcMkVYDoEeuoP4HHVRLafw" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_XcMkVoDoEeuoP4HHVRLafw" tag="Validation_Status" value="true"/>
+  <components xsi:type="dataquality.domain.pattern:RegularExpression" xmi:id="_XcMkV4DoEeuoP4HHVRLafw" expressionType="SQL like">
+    <expression xmi:id="_XcMkWIDoEeuoP4HHVRLafw" body="'!(street regexp &quot;.*[\\u0E00-\\u0E7F].*&quot; AND street regexp &quot;.*[a-zA-Z].*&quot;)'" language="SQL"/>
+  </components>
+</dataquality.domain.pattern:Pattern>
