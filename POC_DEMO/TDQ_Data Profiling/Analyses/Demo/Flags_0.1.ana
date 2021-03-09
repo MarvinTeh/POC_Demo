@@ -3,6 +3,7 @@
   <dataquality.analysis:Analysis xmi:id="_R2Z18IDnEeuoP4HHVRLafw" name="Flags" creationDate="2021-03-09T22:23:58.737+0800" defaultContext="Default">
     <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Custom_Address_0.1.rules#_gA5JQIDoEeuoP4HHVRLafw"/>
     <clientDependency href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_7iVvkHNUEeuOLcAiuBiIdw"/>
+    <clientDependency href="../../../TDQ_Libraries/Rules/SQL/Custom_Address_0.1.rules#_mNMTcIDoEeuoP4HHVRLafw"/>
     <taggedValue xmi:id="_R2Z18YDnEeuoP4HHVRLafw" tag="Status" value="development"/>
     <taggedValue xmi:id="_R2Z18oDnEeuoP4HHVRLafw" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
     <taggedValue xmi:id="_R2Z184DnEeuoP4HHVRLafw" tag="Purpose" value=""/>
@@ -13,9 +14,10 @@
     <context xmi:id="_R2Z19oDnEeuoP4HHVRLafw">
       <connection href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_MLPtcHNTEeuOLcAiuBiIdw"/>
       <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_-1hGUIDjEeuoP4HHVRLafw"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_sWIWsIDfEeuoP4HHVRLafw"/>
     </context>
     <results xmi:id="_R2Z194DnEeuoP4HHVRLafw">
-      <resultMetadata xmi:id="_R2Z1-IDnEeuoP4HHVRLafw" executionDate="2021-03-09T22:32:47.772+0800" executionDuration="1375" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+      <resultMetadata xmi:id="_R2Z1-IDnEeuoP4HHVRLafw" executionDate="2021-03-09T22:33:28.588+0800" executionDuration="122" message="" executionNumber="2" lastRunOk="true" lastExecutionNumberOk="2"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_gQMwkoDoEeuoP4HHVRLafw" count="9" computed="true">
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_-1hGUIDjEeuoP4HHVRLafw"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
@@ -38,6 +40,30 @@
           <taggedValue xmi:id="_gp8tVYDoEeuoP4HHVRLafw" tag="Version" value="0.1"/>
           <taggedValue xmi:id="_gp8tVoDoEeuoP4HHVRLafw" tag="Validation_Status" value="true"/>
           <sqlGenericExpression xmi:id="_gp8tV4DoEeuoP4HHVRLafw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_mbUPAIDoEeuoP4HHVRLafw" count="15" computed="true">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_sWIWsIDfEeuoP4HHVRLafw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_mvuYwIDoEeuoP4HHVRLafw" body="SELECT COUNT(*) FROM `lotus`.`cardacc` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_mu4EMIDoEeuoP4HHVRLafw" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_mu4EMYDoEeuoP4HHVRLafw" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_mu4EMoDoEeuoP4HHVRLafw" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_mu4EM4DoEeuoP4HHVRLafw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_mbUPAYDoEeuoP4HHVRLafw" count="9" computed="true" userCount="14">
+        <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_sWIWsIDfEeuoP4HHVRLafw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/Custom_Address_0.1.rules#_eMS_IYDoEeuoP4HHVRLafw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_mvuYwYDoEeuoP4HHVRLafw" body="SELECT COUNT(*) FROM `lotus`.`cardacc`   WHERE (!(street regexp &quot;.*[\\u0E00-\\u0E7F].*&quot; AND street regexp &quot;.*[a-zA-Z].*&quot;))" language="MySQL"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_mvKYEIDoEeuoP4HHVRLafw" name="Custom_Address" criticalityLevel="1" whereExpression="!(street regexp &quot;.*[\\u0E00-\\u0E7F].*&quot; AND street regexp &quot;.*[a-zA-Z].*&quot;)">
+          <taggedValue xmi:id="_mvKYEYDoEeuoP4HHVRLafw" tag="Status" value="development"/>
+          <taggedValue xmi:id="_mvKYEoDoEeuoP4HHVRLafw" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
+          <taggedValue xmi:id="_mvKYE4DoEeuoP4HHVRLafw" tag="Purpose"/>
+          <taggedValue xmi:id="_mvKYFIDoEeuoP4HHVRLafw" tag="Description"/>
+          <taggedValue xmi:id="_mvKYFYDoEeuoP4HHVRLafw" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_mvKYFoDoEeuoP4HHVRLafw" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_mvKYF4DoEeuoP4HHVRLafw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
         </builtInIndicatorDefinition>
       </indicators>
     </results>
