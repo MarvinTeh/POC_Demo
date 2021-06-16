@@ -1,13 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.analysis="http://dataquality.analysis" xmi:id="_stnp4M5gEeuogdjtcb8veg" name="Customer_BusinessRule_GP" creationDate="2021-06-16T12:37:07.773+0800">
-  <taggedValue xmi:id="_stnp4c5gEeuogdjtcb8veg" tag="Status" value="development"/>
-  <taggedValue xmi:id="_stnp4s5gEeuogdjtcb8veg" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
-  <taggedValue xmi:id="_stnp485gEeuogdjtcb8veg" tag="Purpose"/>
-  <taggedValue xmi:id="_stnp5M5gEeuogdjtcb8veg" tag="Description"/>
-  <taggedValue xmi:id="_stnp5c5gEeuogdjtcb8veg" tag="Version" value="0.1"/>
-  <context xmi:id="_stnp5s5gEeuogdjtcb8veg"/>
-  <results xmi:id="_stnp585gEeuogdjtcb8veg">
-    <resultMetadata xmi:id="_stnp6M5gEeuogdjtcb8veg"/>
-  </results>
-  <parameters xmi:id="_stnp6c5gEeuogdjtcb8veg" analysisType="Table Analysis"/>
-</dataquality.analysis:Analysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_stnp4M5gEeuogdjtcb8veg" name="Customer_BusinessRule_GP" creationDate="2021-06-16T12:37:07.773+0800" defaultContext="Default">
+    <clientDependency href="../../TDQ_Libraries/Rules/SQL/CardType_0.1.rules#_GHYb0BHSEeus79wlODPhpw"/>
+    <clientDependency href="../../metadata/connections/Mysql_Staging_Demo_0.1.item#_gfbsAMaDEeqC87dzZRfK1A"/>
+    <taggedValue xmi:id="_stnp4c5gEeuogdjtcb8veg" tag="Status" value="development"/>
+    <taggedValue xmi:id="_stnp4s5gEeuogdjtcb8veg" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
+    <taggedValue xmi:id="_stnp485gEeuogdjtcb8veg" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_stnp5M5gEeuogdjtcb8veg" tag="Description" value=""/>
+    <taggedValue xmi:id="_stnp5c5gEeuogdjtcb8veg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_2xcfQc5gEeuogdjtcb8veg" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_2xdtYM5gEeuogdjtcb8veg" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <context xmi:id="_stnp5s5gEeuogdjtcb8veg">
+      <connection href="../../metadata/connections/Mysql_Staging_Demo_0.1.item#_iccowMZ3EeqoCLtNa2E8UQ"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../metadata/connections/Mysql_Staging_Demo_0.1.item#_IeIo8F8PEeuOmb2-AlZWZQ"/>
+    </context>
+    <results xmi:id="_stnp585gEeuogdjtcb8veg">
+      <resultMetadata xmi:id="_stnp6M5gEeuogdjtcb8veg" executionDate="2021-06-16T12:38:18.578+0800" executionDuration="142" message="Query not executed for indicator: &quot;CardType&quot; SQL query: SELECT COUNT(*) FROM `demo_staging`.`transactions`   WHERE (CARD_TYPE='CREDIT' OR CARD_TYPE='DEBIT'). Exception: Unknown column 'CARD_TYPE' in 'where clause'" executionNumber="1"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_2xdGUM5gEeuogdjtcb8veg" count="1000" computed="true">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/Mysql_Staging_Demo_0.1.item#_IeIo8F8PEeuOmb2-AlZWZQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_3Q4NQM5gEeuogdjtcb8veg" body="SELECT COUNT(*) FROM `demo_staging`.`transactions` " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_3PyoIM5gEeuogdjtcb8veg" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_3PyoIc5gEeuogdjtcb8veg" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_3PyoIs5gEeuogdjtcb8veg" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_3PyoI85gEeuogdjtcb8veg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_2xdGUc5gEeuogdjtcb8veg" count="1000">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/Mysql_Staging_Demo_0.1.item#_IeIo8F8PEeuOmb2-AlZWZQ"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/CardType_0.1.rules#_NOM-4J6iEeq8BvVoyFeEWw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_3Q4NQc5gEeuogdjtcb8veg" body="SELECT COUNT(*) FROM `demo_staging`.`transactions`   WHERE (CARD_TYPE='CREDIT' OR CARD_TYPE='DEBIT')" language="MySQL"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_3QfLsM5gEeuogdjtcb8veg" name="CardType" criticalityLevel="1" whereExpression="CARD_TYPE='CREDIT' OR CARD_TYPE='DEBIT'">
+          <taggedValue xmi:id="_3QfywM5gEeuogdjtcb8veg" tag="Status" value="development"/>
+          <taggedValue xmi:id="_3Qfywc5gEeuogdjtcb8veg" tag="Author" value="marvin.teh@quandatics.com"/>
+          <taggedValue xmi:id="_3Qfyws5gEeuogdjtcb8veg" tag="Purpose"/>
+          <taggedValue xmi:id="_3Qfyw85gEeuogdjtcb8veg" tag="Description"/>
+          <taggedValue xmi:id="_3QfyxM5gEeuogdjtcb8veg" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_3Qfyxc5gEeuogdjtcb8veg" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_3Qfyxs5gEeuogdjtcb8veg" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+    </results>
+    <parameters xmi:id="_stnp6c5gEeuogdjtcb8veg" dataFilter="_2yJC0M5gEeuogdjtcb8veg" analysisType="Table Analysis"/>
+    <contextType xmi:id="_2xcfQM5gEeuogdjtcb8veg" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_2yJC0M5gEeuogdjtcb8veg" name="Customer_BusinessRule_GP">
+    <ranges xmi:id="_2yJC0c5gEeuogdjtcb8veg">
+      <expressions xmi:id="_2yJC0s5gEeuogdjtcb8veg">
+        <expression xsi:type="relational:TdExpression" xmi:id="_2yJC085gEeuogdjtcb8veg" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
