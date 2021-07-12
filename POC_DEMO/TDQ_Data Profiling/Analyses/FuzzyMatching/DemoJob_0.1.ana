@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010" xmi:id="__jkhcLxzEeuYz_CSZL8YSw" name="DemoJob" creationDate="2021-05-24T17:09:53.663+0800" defaultContext="Default">
+  <clientDependency href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_7iVvkHNUEeuOLcAiuBiIdw"/>
+  <taggedValue xmi:id="__jkhcbxzEeuYz_CSZL8YSw" tag="PREVIEW_ROW_NUMBER" value="10000"/>
+  <taggedValue xmi:id="__jkhcrxzEeuYz_CSZL8YSw" tag="Status" value="development"/>
+  <taggedValue xmi:id="__jkhc7xzEeuYz_CSZL8YSw" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
+  <taggedValue xmi:id="__jkhdLxzEeuYz_CSZL8YSw" tag="Purpose" value=""/>
+  <taggedValue xmi:id="__jkhdbxzEeuYz_CSZL8YSw" tag="Description" value=""/>
+  <taggedValue xmi:id="__jkhdrxzEeuYz_CSZL8YSw" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_AGb98Lx0EeuYz_CSZL8YSw" tag="TEMP_DATA_DIR" value=""/>
+  <taggedValue xmi:id="_AGb98bx0EeuYz_CSZL8YSw" tag="MAX_BUFFER_SIZE" value="200000"/>
+  <taggedValue xmi:id="_AGb98rx0EeuYz_CSZL8YSw" tag="STORE_ON_DISK" value="false"/>
+  <taggedValue xmi:id="_k0rAcLx0EeuYz_CSZL8YSw" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+  <context xmi:id="__jkhd7xzEeuYz_CSZL8YSw">
+    <connection href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_MLPtcHNTEeuOLcAiuBiIdw"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_Iw6UwnXpEeuunNE1vfspIA"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_Iw6UxnXpEeuunNE1vfspIA"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_Iw6UynXpEeuunNE1vfspIA"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_Iw6UznXpEeuunNE1vfspIA"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_Iw6U0nXpEeuunNE1vfspIA"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_Iw6U1nXpEeuunNE1vfspIA"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_Iw6U2nXpEeuunNE1vfspIA"/>
+  </context>
+  <results xmi:id="__jkheLxzEeuYz_CSZL8YSw">
+    <resultMetadata xmi:id="__jkhebxzEeuYz_CSZL8YSw"/>
+    <indicators xsi:type="dataquality.indicators.columnset:BlockKeyIndicator" xmi:id="__jkherxzEeuYz_CSZL8YSw"/>
+    <indicators xsi:type="dataquality.indicators.columnset:RecordMatchingIndicator" xmi:id="__jkhe7xzEeuYz_CSZL8YSw">
+      <builtInMatchRuleDefinition xmi:id="__jkhfLxzEeuYz_CSZL8YSw">
+        <blockKeys xmi:id="_ICyJcLx0EeuYz_CSZL8YSw" name="ssn" column="ssn">
+          <preAlgorithm xmi:id="_ICyJcbx0EeuYz_CSZL8YSw" algorithmType="NON_ALGO" algorithmParameters=""/>
+          <algorithm xmi:id="_ICyJcrx0EeuYz_CSZL8YSw" algorithmType="exact" algorithmParameters=""/>
+          <postAlgorithm xmi:id="_ICyJc7x0EeuYz_CSZL8YSw" algorithmType="NON_ALGO" algorithmParameters=""/>
+        </blockKeys>
+        <matchRules xmi:id="_Bjd8oLx0EeuYz_CSZL8YSw" name="Match Rule 2" matchInterval="0.7">
+          <matchKeys xmi:id="_InLP8Lx0EeuYz_CSZL8YSw" name="lastname" column="lastname" confidenceWeight="1" handleNull="nullMatchNull" threshold="1.0" tokenizationType="No">
+            <algorithm xmi:id="_InLP8bx0EeuYz_CSZL8YSw" algorithmType="JARO" algorithmParameters=""/>
+          </matchKeys>
+          <matchKeys xmi:id="_I3824Lx0EeuYz_CSZL8YSw" name="firstname" column="firstname" confidenceWeight="1" handleNull="nullMatchNull" threshold="1.0" tokenizationType="No">
+            <algorithm xmi:id="_I3824bx0EeuYz_CSZL8YSw" algorithmType="JARO" algorithmParameters=""/>
+          </matchKeys>
+          <matchKeys xmi:id="_J0zgsLx0EeuYz_CSZL8YSw" name="phone" column="phone" confidenceWeight="1" handleNull="nullMatchNull" threshold="1.0" tokenizationType="No">
+            <algorithm xmi:id="_J0zgsbx0EeuYz_CSZL8YSw" algorithmType="HAMMING" algorithmParameters=""/>
+          </matchKeys>
+        </matchRules>
+      </builtInMatchRuleDefinition>
+    </indicators>
+  </results>
+  <parameters xmi:id="__jkhfbxzEeuYz_CSZL8YSw" analysisType="Match Analysis"/>
+  <contextType xmi:id="_k0qZYLx0EeuYz_CSZL8YSw" confirmationNeeded="false" name="Default"/>
+</dataquality.analysis:Analysis>
