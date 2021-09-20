@@ -23,7 +23,7 @@
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
     <talend.project.name>POC_DEMO</talend.project.name>
-    <talend.product.version>7.3.1.20210120_1008-patch</talend.product.version>
+    <talend.product.version>7.3.1.20210623_0656-patch</talend.product.version>
     <talend.job.finalName>datapreparation_0_1</talend.job.finalName>
     <talend.pigudf.groupid>org.example.poc_demo.pigudf</talend.pigudf.groupid>
     <talend.routine.groupid>org.example.poc_demo.code</talend.routine.groupid>
@@ -100,7 +100,7 @@
     <dependency>
       <groupId>org.talend.daikon</groupId>
       <artifactId>crypto-utils</artifactId>
-      <version>0.31.10</version>
+      <version>0.31.11</version>
     </dependency>
     <dependency>
       <groupId>org.dom4j</groupId>
@@ -120,7 +120,7 @@
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpclient</artifactId>
-      <version>4.5.12</version>
+      <version>4.5.13</version>
     </dependency>
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
@@ -130,17 +130,17 @@
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-annotations</artifactId>
-      <version>2.10.1</version>
+      <version>2.11.4</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-core</artifactId>
-      <version>2.10.1</version>
+      <version>2.11.4</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>2.10.1</version>
+      <version>2.11.4</version>
     </dependency>
     <dependency>
       <groupId>org.talend.components.lib</groupId>
@@ -155,7 +155,7 @@
     <dependency>
       <groupId>net.minidev</groupId>
       <artifactId>json-smart</artifactId>
-      <version>2.2.1</version>
+      <version>2.4.2</version>
     </dependency>
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
@@ -195,7 +195,7 @@
     <dependency>
       <groupId>org.talend</groupId>
       <artifactId>talend-httputil</artifactId>
-      <version>1.0.5</version>
+      <version>1.0.6</version>
     </dependency>
     <dependency>
       <groupId>org.talend.components.lib</groupId>
@@ -242,6 +242,18 @@
                 </configuration>
               </execution>
             </executions>
+            <dependencies>
+              <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-compress</artifactId>
+                <version>1.19</version>
+              </dependency>
+              <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.15</version>
+              </dependency>
+            </dependencies>
           </plugin>
         </plugins>
       </build>
@@ -266,6 +278,13 @@
                 </goals>
               </execution>
             </executions>
+            <dependencies>
+              <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.15</version>
+              </dependency>
+            </dependencies>
           </plugin>
         </plugins>
       </build>
@@ -447,6 +466,13 @@
                 </configuration>
               </execution>
             </executions>
+            <dependencies>
+              <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-compress</artifactId>
+                <version>1.19</version>
+              </dependency>
+            </dependencies>
           </plugin>
         </plugins>
       </build>
@@ -469,7 +495,7 @@
         <dependency>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-starter-security</artifactId>
-          <version>2.1.2.RELEASE</version>
+          <version>2.2.13.RELEASE</version>
         </dependency>
       </dependencies>
     </profile>

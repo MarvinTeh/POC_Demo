@@ -26,7 +26,7 @@
     <provided.lib.path>${current.bundle.resources.dir}/provided-lib</provided.lib.path>
     <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
-    <talend.product.version>7.3.1.20210120_1008-patch</talend.product.version>
+    <talend.product.version>7.3.1.20210623_0656-patch</talend.product.version>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
@@ -90,7 +90,7 @@
     <dependency>
       <groupId>commons-codec</groupId>
       <artifactId>commons-codec</artifactId>
-      <version>1.6</version>
+      <version>1.15</version>
     </dependency>
     <dependency>
       <groupId>commons-collections</groupId>
@@ -101,11 +101,6 @@
       <groupId>commons-httpclient</groupId>
       <artifactId>commons-httpclient</artifactId>
       <version>3.1</version>
-    </dependency>
-    <dependency>
-      <groupId>commons-io</groupId>
-      <artifactId>commons-io</artifactId>
-      <version>2.6</version>
     </dependency>
     <dependency>
       <groupId>commons-lang</groupId>
@@ -130,7 +125,7 @@
     <dependency>
       <groupId>org.talend.daikon</groupId>
       <artifactId>crypto-utils</artifactId>
-      <version>0.31.10</version>
+      <version>0.31.11</version>
     </dependency>
     <dependency>
       <groupId>org.dom4j</groupId>
@@ -194,42 +189,42 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>spring-aop-5.1.18.RELEASE</artifactId>
+      <artifactId>spring-aop-5.2.12.RELEASE</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>spring-beans-5.1.18.RELEASE</artifactId>
+      <artifactId>spring-beans-5.2.12.RELEASE</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>spring-context-5.1.18.RELEASE</artifactId>
+      <artifactId>spring-context-5.2.12.RELEASE</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>spring-core-5.1.18.RELEASE</artifactId>
+      <artifactId>spring-core-5.2.12.RELEASE</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>spring-expression-5.1.18.RELEASE</artifactId>
+      <artifactId>spring-expression-5.2.12.RELEASE</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>spring-tx-5.1.18.RELEASE</artifactId>
+      <artifactId>spring-tx-5.2.12.RELEASE</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>spring-web-5.1.18.RELEASE</artifactId>
+      <artifactId>spring-web-5.2.12.RELEASE</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>spring-webmvc-5.1.18.RELEASE</artifactId>
+      <artifactId>spring-webmvc-5.2.12.RELEASE</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
@@ -305,6 +300,18 @@
                 </configuration>
               </execution>
             </executions>
+            <dependencies>
+              <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-compress</artifactId>
+                <version>1.19</version>
+              </dependency>
+              <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.15</version>
+              </dependency>
+            </dependencies>
           </plugin>
         </plugins>
       </build>

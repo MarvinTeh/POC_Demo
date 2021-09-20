@@ -23,7 +23,7 @@
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
     <talend.project.name>POC_DEMO</talend.project.name>
-    <talend.product.version>7.3.1.20210120_1008-patch</talend.product.version>
+    <talend.product.version>7.3.1.20210623_0656-patch</talend.product.version>
     <talend.job.finalName>sap_process_0_1</talend.job.finalName>
     <talend.pigudf.groupid>org.example.poc_demo.pigudf</talend.pigudf.groupid>
     <talend.routine.groupid>org.example.poc_demo.code</talend.routine.groupid>
@@ -53,11 +53,6 @@
       <version>6.0.0</version>
     </dependency>
     <dependency>
-      <groupId>androidx.annotation</groupId>
-      <artifactId>annotation</artifactId>
-      <version>1.1.0</version>
-    </dependency>
-    <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>antlr-runtime-3.5.2</artifactId>
       <version>6.0.0</version>
@@ -83,6 +78,11 @@
       <version>1.16.1</version>
     </dependency>
     <dependency>
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>com.sap.conn.jco.sapjco</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
       <groupId>commons-codec</groupId>
       <artifactId>commons-codec</artifactId>
       <version>1.14</version>
@@ -105,16 +105,11 @@
     <dependency>
       <groupId>org.talend.daikon</groupId>
       <artifactId>crypto-utils</artifactId>
-      <version>0.31.10</version>
+      <version>0.31.11</version>
     </dependency>
     <dependency>
       <groupId>org.dom4j</groupId>
       <artifactId>dom4j</artifactId>
-      <version>2.1.3</version>
-    </dependency>
-    <dependency>
-      <groupId>com.google.errorprone</groupId>
-      <artifactId>error_prone_annotations</artifactId>
       <version>2.1.3</version>
     </dependency>
     <dependency>
@@ -130,22 +125,17 @@
     <dependency>
       <groupId>com.google.api-client</groupId>
       <artifactId>google-api-client</artifactId>
-      <version>1.25.0</version>
+      <version>1.31.1</version>
     </dependency>
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-bigquery</artifactId>
-      <version>v2-rev454-1.25.0</version>
+      <version>v2-rev20201030-1.31.0</version>
     </dependency>
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-oauth2</artifactId>
-      <version>v2-rev151-1.25.0</version>
-    </dependency>
-    <dependency>
-      <groupId>com.google.apis</groupId>
-      <artifactId>google-api-services-storage</artifactId>
-      <version>v1-rev20191011-1.30.3</version>
+      <version>v2-rev20200213-1.31.0</version>
     </dependency>
     <dependency>
       <groupId>com.google.auth</groupId>
@@ -160,7 +150,7 @@
     <dependency>
       <groupId>com.google.cloud</groupId>
       <artifactId>google-cloud-bigquery</artifactId>
-      <version>1.60.0</version>
+      <version>1.126.3</version>
     </dependency>
     <dependency>
       <groupId>com.google.cloud</groupId>
@@ -173,19 +163,14 @@
       <version>1.32.0</version>
     </dependency>
     <dependency>
-      <groupId>com.google.cloud</groupId>
-      <artifactId>google-cloud-storage</artifactId>
-      <version>1.104.0</version>
-    </dependency>
-    <dependency>
       <groupId>com.google.http-client</groupId>
       <artifactId>google-http-client</artifactId>
-      <version>1.25.0</version>
+      <version>1.38.0</version>
     </dependency>
     <dependency>
       <groupId>com.google.http-client</groupId>
       <artifactId>google-http-client-appengine</artifactId>
-      <version>1.25.0</version>
+      <version>1.38.0</version>
     </dependency>
     <dependency>
       <groupId>com.google.http-client</groupId>
@@ -195,7 +180,7 @@
     <dependency>
       <groupId>com.google.http-client</groupId>
       <artifactId>google-http-client-jackson2</artifactId>
-      <version>1.25.0</version>
+      <version>1.38.0</version>
     </dependency>
     <dependency>
       <groupId>com.google.oauth-client</groupId>
@@ -205,12 +190,7 @@
     <dependency>
       <groupId>io.grpc</groupId>
       <artifactId>grpc-context</artifactId>
-      <version>1.19.0</version>
-    </dependency>
-    <dependency>
-      <groupId>com.google.code.gson</groupId>
-      <artifactId>gson</artifactId>
-      <version>2.8.6</version>
+      <version>1.22.1</version>
     </dependency>
     <dependency>
       <groupId>com.google.guava</groupId>
@@ -220,7 +200,7 @@
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpclient</artifactId>
-      <version>4.5.12</version>
+      <version>4.5.13</version>
     </dependency>
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
@@ -230,17 +210,12 @@
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-core</artifactId>
-      <version>2.10.1</version>
+      <version>2.11.4</version>
     </dependency>
     <dependency>
       <groupId>org.codehaus.jackson</groupId>
       <artifactId>jackson-core-asl</artifactId>
       <version>1.9.13</version>
-    </dependency>
-    <dependency>
-      <groupId>javax.annotation</groupId>
-      <artifactId>javax.annotation-api</artifactId>
-      <version>1.3</version>
     </dependency>
     <dependency>
       <groupId>jaxen</groupId>
@@ -280,7 +255,7 @@
     <dependency>
       <groupId>net.minidev</groupId>
       <artifactId>json-smart</artifactId>
-      <version>2.2.1</version>
+      <version>2.4.2</version>
     </dependency>
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
@@ -315,37 +290,17 @@
     <dependency>
       <groupId>io.opencensus</groupId>
       <artifactId>opencensus-api</artifactId>
-      <version>0.21.0</version>
+      <version>0.24.0</version>
     </dependency>
     <dependency>
       <groupId>io.opencensus</groupId>
       <artifactId>opencensus-contrib-http-util</artifactId>
-      <version>0.21.0</version>
+      <version>0.24.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>org.talend.dataquality.parser</artifactId>
       <version>7.3.1</version>
-    </dependency>
-    <dependency>
-      <groupId>com.google.api.grpc</groupId>
-      <artifactId>proto-google-common-protos</artifactId>
-      <version>1.17.0</version>
-    </dependency>
-    <dependency>
-      <groupId>com.google.api.grpc</groupId>
-      <artifactId>proto-google-iam-v1</artifactId>
-      <version>0.13.0</version>
-    </dependency>
-    <dependency>
-      <groupId>com.google.protobuf</groupId>
-      <artifactId>protobuf-java</artifactId>
-      <version>2.5.0</version>
-    </dependency>
-    <dependency>
-      <groupId>com.google.protobuf</groupId>
-      <artifactId>protobuf-java-util</artifactId>
-      <version>3.11.4</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -366,11 +321,6 @@
       <groupId>org.talend</groupId>
       <artifactId>sap-impl</artifactId>
       <version>8.0.3</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>sapjco3</artifactId>
-      <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
@@ -432,6 +382,18 @@
                 </configuration>
               </execution>
             </executions>
+            <dependencies>
+              <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-compress</artifactId>
+                <version>1.19</version>
+              </dependency>
+              <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.15</version>
+              </dependency>
+            </dependencies>
           </plugin>
         </plugins>
       </build>
@@ -456,6 +418,13 @@
                 </goals>
               </execution>
             </executions>
+            <dependencies>
+              <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.15</version>
+              </dependency>
+            </dependencies>
           </plugin>
         </plugins>
       </build>
@@ -637,6 +606,13 @@
                 </configuration>
               </execution>
             </executions>
+            <dependencies>
+              <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-compress</artifactId>
+                <version>1.19</version>
+              </dependency>
+            </dependencies>
           </plugin>
         </plugins>
       </build>
@@ -659,7 +635,7 @@
         <dependency>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-starter-security</artifactId>
-          <version>2.1.2.RELEASE</version>
+          <version>2.2.13.RELEASE</version>
         </dependency>
       </dependencies>
     </profile>
