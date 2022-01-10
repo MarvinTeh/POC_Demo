@@ -1,0 +1,82 @@
+package routines;
+
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+//download chrome driver80(1) and selenium-server-standalone-3.141.59.jar (2)
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.*;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class SeleniumChromeDriver {
+	//set default driver path
+	private static String chromeDriverPath = "";
+
+	public static String searchPattern(String pattern, String text){
+		Matcher m;
+	    m = Pattern.compile(pattern).matcher(text);
+	    try{
+		    m.find();
+		    return text.substring(m.start(),m.end());
+	    }catch(IllegalStateException e){
+	    	return "";
+	    }
+	 }
+	
+	public static String searchPattern(String pattern, String text, int offsetLeft, int offsetRight){
+		Matcher m;
+	    m = Pattern.compile(pattern).matcher(text);
+    	
+	    try{
+		    m.find();
+		    return text.substring(m.start()+offsetLeft,m.end()+offsetRight);
+	    }catch(IllegalStateException e){
+	    	return "";
+	    }
+	}
+	
+	public static WebDriver getDefaultWebDriver() {
+		
+		//Set file path to Chrome's Driver .exe
+		System.setProperty("webdriver.chrome.driver", chromeDriverPath); 
+				
+		//Set ChromeDriver Options
+	    ChromeOptions options = new ChromeOptions();
+			   
+	    //--headless to prevent browser from popping up
+//	    options.addArguments("--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors"); 
+	    options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors"); 
+
+	    Map<String, Object> prefs = new HashMap<String, Object>();
+
+	    //enable javaScript
+	    prefs.put("profile.managed_default_content_settings.javascript", 1);
+        options.setExperimentalOption("prefs", prefs);
+			    
+		/**ChromeOptions and Desired Capabilities are pretty much the same. ChromeOptions class was introduced in the latest/updated 
+        version of Selenium. It is helpful to make changes in the Chrome browser whereas, DesiredCapabilities is an old concept 
+        (its usage in Java is deprecated.) to configure or make changes in the browser.*/
+        //enable javascript because the wesite uses javascript to populate data on the page        
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setJavascriptEnabled(true);
+			  
+	    options.merge(capabilities); 
+			    
+		//Setup Selenium Driver
+	    System.out.println("Connecting to Driver....");
+		WebDriver driver = new ChromeDriver(options);
+		
+		return driver;
+	}
+	
+	public static void setDriverPath(String path) {
+		chromeDriverPath = path;
+	}
+	
+	public static String getDriverPath() {
+		return chromeDriverPath;
+	}
+}
