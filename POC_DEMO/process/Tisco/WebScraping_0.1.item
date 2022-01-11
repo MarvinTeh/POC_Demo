@@ -52,7 +52,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:4y3QunOqh4xDkLsZSz0GjAcEPGCFJ3ASVOb8H9+Q"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:AsRlBb+v2xLwI763YWJB2jlG4ynv8EwyMJYQT/yR"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -87,7 +87,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:AKWLf27AYT7vEhIsH50sTEcFXQEuT4OJ7mkckJMS"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:G755kK+WeJLc+jNLF9FksE42GJTvNFjh7eGJvr7B"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -424,24 +424,22 @@
   <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="608">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_3"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
-    <elementParameter field="MEMO_JAVA" name="CODE_START" value="WebDriver driver = SeleniumChromeDriver.getDefaultWebDriver();&#13;&#10;&#9;&#9;driver.get(&quot;https://www.toyota.co.th/sales_volume&quot;);&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;WebElement Parameter1 = driver.findElement(By.id(&quot;car_type&quot;));&#13;&#10;&#9;&#9;Parameter1.sendKeys(context.Parameter1);&#10;&#9;&#9;WebElement Parameter2 = driver.findElement(By.id(&quot;month_vol&quot;));&#10;&#9;&#9;Parameter2.sendKeys(context.Parameter2);&#10;&#9;&#9;WebElement Parameter3 = driver.findElement(By.id(&quot;year_vol&quot;));&#10;&#9;&#9;Parameter3.sendKeys(context.Parameter3);&#10;&#9;&#9;WebElement Parameter4 = driver.findElement(By.id(&quot;month_vol2&quot;));&#10;&#9;&#9;Parameter4.sendKeys(context.Parameter4);&#10;&#9;&#9;WebElement Parameter5 = driver.findElement(By.id(&quot;year_vol2&quot;));&#10;&#9;&#9;Parameter5.sendKeys(context.Parameter5);&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;WebElement searchPage = driver.findElement(By.id(&quot;btn_submit&quot;));&#13;&#10;&#9;&#9;searchPage.click();&#13;&#10;&#13;&#10;&#9;&#9;try {&#13;&#10;&#9;&#9;&#9;Thread.sleep(3000);&#13;&#10;&#9;&#9;&#9;//let time for page to load&#13;&#10;&#9;&#9;} catch (InterruptedException e) {&#13;&#10;&#9;&#9;&#9;e.printStackTrace();&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;WebElement MainContent = driver.findElement(By.id(&quot;innerContentHolderS&quot;));&#13;&#10;&#9;&#9;List &lt;WebElement&gt; Tables=MainContent.findElements(By.tagName(&quot;table&quot;));&#13;&#10;&#9;&#9;List &lt;WebElement&gt; CurrTable=Tables.get(0).findElements(By.tagName(&quot;tr&quot;));&#13;&#10;&#9;&#9;if(Tables.size()&gt;0)&#13;&#10;&#9;&#9;{&#13;&#10;&#9;&#9;&#9;List &lt;WebElement&gt; rows=CurrTable.get(4).findElements(By.tagName(&quot;td&quot;));&#13;&#10;// &#9;&#9;&#9;&#9;&#9;end line&#13;&#10;/*&#9;&#9;WebElement temp = driver.findElement(By.className(&quot;list-situation&quot;));&#13;&#10;&#9;&#9;List &lt;WebElement&gt; buttons = temp.findElements(By.tagName(&quot;span&quot;));&#13;&#10;&#9;&#9;List &lt;WebElement&gt; columns, rows, luzon_days = null, luzon_values = null;&#13;&#10;&#9;&#9;for(int i = 0; i &lt; buttons.size(); i++){&#13;&#10;&#9;&#9;&#9;if(buttons.get(i).getText().matches(&quot;ROLLING WEEKLY OUTLOOK&quot;)){&#13;&#10;&#9;&#9;&#9;&#9;buttons.get(i).click();&#13;&#10;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;//get first page&#13;&#10;&#9;&#9;&#9;&#9;try {&#13;&#10;&#9;&#9;&#9;&#9;&#9;Thread.sleep(2000);&#13;&#10;&#9;&#9;&#9;&#9;&#9;//let time for page to load&#13;&#10;&#9;&#9;&#9;&#9;} catch (InterruptedException e) {&#13;&#10;&#9;&#9;&#9;&#9;&#9;e.printStackTrace();&#13;&#10;&#9;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;temp = driver.findElement(By.id(&quot;table-WeeklyLuzon&quot;));&#13;&#10;&#9;&#9;&#9;&#9;rows = temp.findElements(By.tagName(&quot;tr&quot;));&#13;&#10;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;for(int a = 0; a&lt;rows.size(); a++) {&#13;&#10;&#9;&#9;&#9;&#9;&#9;columns = rows.get(a).findElements(By.tagName(&quot;td&quot;));&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;&#9;if(columns.size()&gt;0) {&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;if(columns.get(0).getText().matches(&quot;MW&quot;)) {&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;luzon_days = columns;&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;}else if(columns.get(0).getText().matches(&quot;System Load \\(MW\\)&quot;)){&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;luzon_values = columns;&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;}&#9;&#13;&#10;&#9;&#9;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;&#9;&#9;for (int b = 1; b&lt;luzon_days.size(); b++) {&#9;*/"/>
-    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="row2.value = rows.get(0).getText();&#13;&#10;row2.value2 = rows.get(1).getText();&#13;&#10;row2.value3 = rows.get(2).getText();&#13;&#10;row2.value4 = rows.get(3).getText();&#13;&#10;row2.value5 = rows.get(4).getText();&#13;&#10;row2.value6 = rows.get(5).getText();&#13;&#10;row2.value7 = rows.get(6).getText();&#13;&#10;row2.value8 = rows.get(7).getText();"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_START" value="WebDriver driver = SeleniumChromeDriver.getDefaultWebDriver();&#13;&#10;&#9;&#9;driver.get(&quot;https://www.toyota.co.th/sales_volume&quot;);&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;WebElement Parameter1 = driver.findElement(By.id(&quot;car_type&quot;));&#13;&#10;&#9;&#9;Parameter1.sendKeys(context.Parameter1);&#10;&#9;&#9;WebElement Parameter2 = driver.findElement(By.id(&quot;month_vol&quot;));&#10;&#9;&#9;Parameter2.sendKeys(context.Parameter2);&#10;&#9;&#9;WebElement Parameter3 = driver.findElement(By.id(&quot;year_vol&quot;));&#10;&#9;&#9;Parameter3.sendKeys(context.Parameter3);&#10;&#9;&#9;WebElement Parameter4 = driver.findElement(By.id(&quot;month_vol2&quot;));&#10;&#9;&#9;Parameter4.sendKeys(context.Parameter4);&#10;&#9;&#9;WebElement Parameter5 = driver.findElement(By.id(&quot;year_vol2&quot;));&#10;&#9;&#9;Parameter5.sendKeys(context.Parameter5);&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;WebElement searchPage = driver.findElement(By.id(&quot;btn_submit&quot;));&#13;&#10;&#9;&#9;searchPage.click();&#13;&#10;&#13;&#10;&#9;&#9;try {&#13;&#10;&#9;&#9;&#9;Thread.sleep(3000);&#13;&#10;&#9;&#9;&#9;//let time for page to load&#13;&#10;&#9;&#9;} catch (InterruptedException e) {&#13;&#10;&#9;&#9;&#9;e.printStackTrace();&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;WebElement MainContent = driver.findElement(By.className(&quot;table-responsive&quot;));&#13;&#10;&#9;&#9;List &lt;WebElement&gt; Tables=MainContent.findElements(By.tagName(&quot;table&quot;));&#13;&#10;&#9;&#9;List &lt;WebElement&gt; CurrTable=Tables.get(0).findElements(By.tagName(&quot;tr&quot;));&#13;&#10;&#9;&#9;if(Tables.size()&gt;0)&#13;&#10;&#9;&#9;{&#13;&#10;&#9;&#9;&#9;List &lt;WebElement&gt; rows=CurrTable.get(2).findElements(By.tagName(&quot;td&quot;));&#13;&#10;// &#9;&#9;&#9;&#9;&#9;end line&#13;&#10;/*&#9;&#9;WebElement temp = driver.findElement(By.className(&quot;list-situation&quot;));&#13;&#10;&#9;&#9;List &lt;WebElement&gt; buttons = temp.findElements(By.tagName(&quot;span&quot;));&#13;&#10;&#9;&#9;List &lt;WebElement&gt; columns, rows, luzon_days = null, luzon_values = null;&#13;&#10;&#9;&#9;for(int i = 0; i &lt; buttons.size(); i++){&#13;&#10;&#9;&#9;&#9;if(buttons.get(i).getText().matches(&quot;ROLLING WEEKLY OUTLOOK&quot;)){&#13;&#10;&#9;&#9;&#9;&#9;buttons.get(i).click();&#13;&#10;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;//get first page&#13;&#10;&#9;&#9;&#9;&#9;try {&#13;&#10;&#9;&#9;&#9;&#9;&#9;Thread.sleep(2000);&#13;&#10;&#9;&#9;&#9;&#9;&#9;//let time for page to load&#13;&#10;&#9;&#9;&#9;&#9;} catch (InterruptedException e) {&#13;&#10;&#9;&#9;&#9;&#9;&#9;e.printStackTrace();&#13;&#10;&#9;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;temp = driver.findElement(By.id(&quot;table-WeeklyLuzon&quot;));&#13;&#10;&#9;&#9;&#9;&#9;rows = temp.findElements(By.tagName(&quot;tr&quot;));&#13;&#10;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;for(int a = 0; a&lt;rows.size(); a++) {&#13;&#10;&#9;&#9;&#9;&#9;&#9;columns = rows.get(a).findElements(By.tagName(&quot;td&quot;));&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;&#9;&#9;if(columns.size()&gt;0) {&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;if(columns.get(0).getText().matches(&quot;MW&quot;)) {&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;luzon_days = columns;&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;}else if(columns.get(0).getText().matches(&quot;System Load \\(MW\\)&quot;)){&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;luzon_values = columns;&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;break;&#13;&#10;&#9;&#9;&#9;&#9;&#9;&#9;}&#9;&#13;&#10;&#9;&#9;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;}&#13;&#10;&#9;&#9;&#9;&#9;&#9;for (int b = 1; b&lt;luzon_days.size(); b++) {&#9;*/"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="row2.Brand = rows.get(0).getText();&#13;&#10;row2.Col1_Sale = rows.get(1).getText();&#13;&#10;row2.Col1_Share = rows.get(2).getText();&#13;&#10;row2.Col2_Sale = rows.get(3).getText();&#13;&#10;row2.Col2_Share = rows.get(4).getText();&#13;&#10;row2.Percentage = rows.get(5).getText();&#13;&#10;"/>
     <elementParameter field="MEMO_JAVA" name="CODE_END" value="}&#13;&#10;else&#13;&#10;{&#13;&#10;&#9;&#9;&#9;System.out.println(&quot;Error loading data for specified date range!&quot;);&#13;&#10;}&#13;&#10;&#13;&#10;driver.quit();&#13;&#10;"/>
     <elementParameter field="CHECK" name="Version_V2_0" show="false" value="false"/>
     <elementParameter field="CHECK" name="Version_V3_2" show="false" value="false"/>
     <elementParameter field="CHECK" name="Version_V4.0" show="false" value="true"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import java.util.List;&#13;&#10;import org.openqa.selenium.By;&#13;&#10;import org.openqa.selenium.WebDriver;&#13;&#10;import org.openqa.selenium.WebElement;"/>
-    <elementParameter field="TEXT" name="LABEL" value="PrevDay"/>
+    <elementParameter field="TEXT" name="LABEL" value="Toyota_Page"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaFlex_3">
-      <column comment="" key="false" length="-1" name="value" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="value2" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="value3" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="value4" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="value5" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="value6" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="value7" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="value8" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Brand" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Col1_Sales" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Col1_Share" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Col2_Sales" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Col2_Share" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Percentage" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="608">
@@ -458,35 +456,29 @@
     <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
     <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="value"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Brand"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="value2"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Col1_Sales"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="value3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Col1_Share"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="value4"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Col2_Sales"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="value5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Col2_Share"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="value6"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="value7"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="value8"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Percentage"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_1">
-      <column comment="" key="false" length="-1" name="value" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="value2" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="value3" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="value4" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="value5" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="value6" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="value7" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="value8" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Brand" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Col1_Sales" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Col1_Share" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Col2_Sales" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Col2_Share" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Percentage" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_1" offsetLabelX="50" offsetLabelY="-16" source="tJava_1" target="tJavaFlex_1">
@@ -583,13 +575,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_dedd1a68-4765-42a2-879f-688ff91a9774"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>b7MU6og0lJWVC/I1QDUFK+kQ1EXvg2HizS2nu5ZAQUeR3VnBhEOl2F8gjBoRUfw1UfNOPCJ0Vlnf&#13;
-ykS5M+Fhuw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_165a842e-bebd-4762-999c-ccabd2047ec4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Zh0UEspw7GTsC0ZHCakL9mDhWxikB5juEiE7a4PovM2OI2Xhkl3PnBqd9Bscvdcaq8uT0o4C84G3&#13;
-L/EaRpPefA==</DigestValue></Reference></SignedInfo><SignatureValue>cCvADdKmwIb9efrouYE/XNGm+ruxoAX4DMdpYrTs8NejtXCPzjQ16Yi2brYktv+5DbTnOO4JP1qu&#13;
-uSZp7tdKjSf9pXxYoR3ZQcBNvilR/KTYTM7UOyIYgJpMBAGQb5Ehmm04iwNyb2wh6mkHG6v6Wzw+&#13;
-k2IFhDP0MrGdf60fUpgiaCULk2eLixYfIDASWWSjucal4S50axgy7xgB7wsq80KQK4nJiFIYS+Su&#13;
-rLInDgmI+/Y7Z8gBrHthKhSIqR9c5XodyScLZBwn4bbqTnpwkm3U/xnljj4tZAws4nhBQ07rMjh9&#13;
-mrkoUWy/tf34BwRaMcrOTXLvQ2dB3zT2mVwDyg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a0db3b63-cfce-4b6b-87df-66e8628e71a8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hoRnPHwjide/XmzTtxqzlSjmTycAppAtGsl8aQX5Ljd+BBXo4oxsVxPYoolAjLF1a1HKWDFgaExg&#13;
+iXfuYVKGpg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_bd16d61c-7ba8-4a6d-81da-868d7101c5c7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FEi8CQTlF2yxSaB0euot66SsmnKfCHpqrnZ8EH4RFatzBmIO7Pg5hIxrSrnxcYKC/5wrKpI95H0i&#13;
+OR+eMeEOsw==</DigestValue></Reference></SignedInfo><SignatureValue>OSxiArk8QpbSlo+Fl2hexRhq6wUFHMetFujmcrnDfBffGaCclpFtWdDJBCgSzPFd4kWg8k82q+gY&#13;
+ylaOh3W4FU/yOj9FY4ZPsYBBaJ7fTPn550+KLwxlY6aUkXnLDGuBRYpWtjCVPLU4qZOQrZys4w9a&#13;
+ixxUbOfSA9z2CtRT9x9DwYuzK4ADvJRI0sm3uKX07nVlZVLbippb3cgBF3O3487Yb7kgDXgSFBjK&#13;
+F8eVKWfex7Tq1esW8j3RwbXAaoi4EPZTqxw7du1l5c5qwY4OefrXYXgffWpZ5m88Bd7/U2IrVfo3&#13;
+EdwNbp+TmEuQLl6doofhUBbo9AU+QLW/hgqNdA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -611,4 +603,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_165a842e-bebd-4762-999c-ccabd2047ec4" Target="#_dedd1a68-4765-42a2-879f-688ff91a9774"><Timestamp>2022-01-11 07:47:30</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_bd16d61c-7ba8-4a6d-81da-868d7101c5c7" Target="#_a0db3b63-cfce-4b6b-87df-66e8628e71a8"><Timestamp>2022-01-11 08:01:49</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
