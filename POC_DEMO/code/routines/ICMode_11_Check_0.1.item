@@ -32,23 +32,36 @@ public class ICMode_11_Check {
      * 
      * {example} helloExemple("world") # hello world !.
      */
-    public static String ModeCheck(String SSN) {
+    public static int ModeCheck(String SSN) {
        
         if(SSN.length()!=13)
-        return "Invalid SSN";
+        return 0;
         else
         {
         	int[] ssn_arr= new int[13];
+        	int Total_Sum=0;
+        	int check_digit=0;
         	for(int x=0;x<13;x++)
         	{
         		if(x==13)
         		{
-        			ssn_arr[13]=SSN.substring(12,13);
-        			System.out.println(ssn_arr[13]);
+        			//ssn_arr[x]=Integer.valueOf(SSN.substring(x,(x+1)));
+        			check_digit=Integer.valueOf(SSN.substring(x,(x+1)));
+        			System.out.println(ssn_arr[x]);
+        			break;
         		}
-        		
+        		else
+        		{
+        			//ssn_arr[x]=(Integer.valueOf(SSN.substring(x,(x+1)))*(13-x));
+        			Total_Sum+=(Integer.valueOf(SSN.substring(x,(x+1)))*(13-x));
+        		}
         	}
-        return "";
+        	int ModRes=11-(Total_Sum%11);
+        	if(ModRes>=10)
+        		ModRes-=10;
+        	if(ModRes==check_digit)
+        		return 1;
+        	else return 0;
         }
     }
 }
