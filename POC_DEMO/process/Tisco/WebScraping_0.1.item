@@ -52,7 +52,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:52cnntN6DJ5ILEm1IVUoZb3Ci5PZWz8xlkOZ0VmW"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:fswUxvJStfBS+D9nmv5Wj7nGgC4TlJNElxal40M5"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -87,7 +87,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:QGB0qBD/OqujSsS9fHyKADxZWnsYfjNaELU/HmSk"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:wB29colQtQ25NqkMUZxaIOuOPCycXfxhBSzk3lmo"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -425,7 +425,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_3"/>
     <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
     <elementParameter field="MEMO_JAVA" name="CODE_START" value="WebDriver driver = SeleniumChromeDriver.getDefaultWebDriver();&#13;&#10;&#9;&#9;driver.get(&quot;https://www.toyota.co.th/sales_volume&quot;);&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;WebElement Parameter1 = driver.findElement(By.id(&quot;car_type&quot;));&#13;&#10;&#9;&#9;Parameter1.sendKeys(context.Parameter1);&#10;&#9;&#9;WebElement Parameter2 = driver.findElement(By.id(&quot;month_vol&quot;));&#10;&#9;&#9;Parameter2.sendKeys(context.Parameter2);&#10;&#9;&#9;WebElement Parameter3 = driver.findElement(By.id(&quot;year_vol&quot;));&#10;&#9;&#9;Parameter3.sendKeys(context.Parameter3);&#10;&#9;&#9;WebElement Parameter4 = driver.findElement(By.id(&quot;month_vol_2&quot;));&#10;&#9;&#9;Parameter4.sendKeys(context.Parameter4);&#10;&#9;&#9;WebElement Parameter5 = driver.findElement(By.id(&quot;year_vol_2&quot;));&#10;&#9;&#9;Parameter5.sendKeys(context.Parameter5);&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;WebElement searchPage = driver.findElement(By.id(&quot;btn_submit&quot;));&#13;&#10;&#9;&#9;searchPage.click();&#13;&#10;&#13;&#10;&#9;&#9;try {&#13;&#10;&#9;&#9;&#9;Thread.sleep(4000);&#13;&#10;&#9;&#9;&#9;//let time for page to load&#13;&#10;&#9;&#9;} catch (InterruptedException e) {&#13;&#10;&#9;&#9;&#9;e.printStackTrace();&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;WebElement MainContent = driver.findElement(By.className(&quot;table-responsive&quot;));&#13;&#10;&#9;&#9;List &lt;WebElement&gt; Tables= MainContent.findElements(By.tagName(&quot;table&quot;));&#13;&#10;&#9;&#9;List &lt;WebElement&gt; CurrTable=Tables.get(0).findElements(By.className(&quot;sortable-row&quot;));&#13;&#10;&#9;&#9;&#10;&#9;&#9;System.out.println(CurrTable.get(0).findElements(By.tagName(&quot;th&quot;)).get(0).getText());&#10;&#9;&#9;if(Tables.size()&gt;0)&#13;&#10;&#9;&#9;{&#10;&#9;&#9;&#9;&#13;&#10;&#9;&#9;&#9;for(int i = 0; i &lt; CurrTable.size(); i++){"/>
-    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="&#13;&#10;//row2.Brand = CurrTable.get(i).findElements(By.tagName(&quot;th&quot;)).get(0).getText();&#10;//row2.Col1_Sales = CurrTable.get(i).findElements(By.tagName(&quot;tr&quot;)).get(0).getText();&#13;&#10;//row2.Col1_Share = CurrTable.get(i).findElements(By.tagName(&quot;tr&quot;)).get(1).getText();&#13;&#10;//row2.Col2_Sales = CurrTable.get(i).findElements(By.tagName(&quot;tr&quot;)).get(2).getText();&#13;&#10;//row2.Col2_Share = CurrTable.get(i).findElements(By.tagName(&quot;tr&quot;)).get(3).getText();&#13;&#10;//row2.Percentage = CurrTable.get(i).findElements(By.tagName(&quot;tr&quot;)).get(4).getText();&#13;&#10;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="&#13;&#10;row2.Brand = CurrTable.get(i).findElements(By.tagName(&quot;th&quot;)).get(0).getText();&#10;//row2.Col1_Sales = CurrTable.get(i).findElements(By.tagName(&quot;tr&quot;)).get(0).getText();&#13;&#10;//row2.Col1_Share = CurrTable.get(i).findElements(By.tagName(&quot;tr&quot;)).get(1).getText();&#13;&#10;//row2.Col2_Sales = CurrTable.get(i).findElements(By.tagName(&quot;tr&quot;)).get(2).getText();&#13;&#10;//row2.Col2_Share = CurrTable.get(i).findElements(By.tagName(&quot;tr&quot;)).get(3).getText();&#13;&#10;//row2.Percentage = CurrTable.get(i).findElements(By.tagName(&quot;tr&quot;)).get(4).getText();&#13;&#10;"/>
     <elementParameter field="MEMO_JAVA" name="CODE_END" value="}&#13;&#10;}&#13;&#10;driver.quit();&#13;&#10;"/>
     <elementParameter field="CHECK" name="Version_V2_0" show="false" value="false"/>
     <elementParameter field="CHECK" name="Version_V3_2" show="false" value="false"/>
@@ -575,13 +575,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3c151bbf-5da2-4d88-ba1a-e90f2cbe9407"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/jdu2vmenXBOUchf0DJJtKvqGUMq4LytvhPlkS1eErIg/RSoq+PrTZqR31vSbbQ5/Pn3jIgV5eSN&#13;
-9FP3eRByVw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2f117dab-17d4-4fd0-a065-a329c29d2bce"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6uJrzfWDgxNodz27YHb6e1aJgaPVJzsgiuuN3a/7aWqRqNmzE24S6PwGPzxcU+Fal8sZm+iHgf0b&#13;
-jM2evZST2Q==</DigestValue></Reference></SignedInfo><SignatureValue>pm51z7Z9Ln+wUETy6ikOQ4LijB9FkvSBaQ8PrVGpY8Y/h3uGXsIXPbyTGTKselFQU15io5wOSPch&#13;
-+DUpmFooBxkb/Rv9sW9aic3PC0nxFKqfrIN0uJGiKD2AhvSSa7TSa+Lnz29RAmu6hR+1mZuwbTuD&#13;
-Vf2QZ6XsmiCe/Y7coB7hajS5P3a9/vV6eWJHSz6Lg2i/e3XbW5mOZX8CLIdh7c5QXcg/RTe6xzXf&#13;
-qFZY4pIq8k9c4HaUGrc8Y/zImBsRMWHN0K3E0ea0Z/++IB4oaf7oock3VGEo+qUpl0xz/dWHg8/K&#13;
-7Y+kO1JpkmAtSFqsN/PQA3pqBFGCoJVvTDhXnQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_31c350cb-7afc-4609-8cf1-0493bc78fce0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>O45Dmdzm12fENS5zjE1IbTW3bM5h0Fnh+NeJ4H7yAcurUL8F+jJLW51bX5E6sCn0Hzt9MGRROepf&#13;
+n/N0ddZhEA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_230e8ed0-4547-4dac-8c20-98f128dec6d3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LHTRJIjtSRmAR6km7KY32eeidk7UWkUpK8dXfxOc+ZTsjGC2F2GDwb3PiVdKbHqwcGUtPJR0ekl3&#13;
+SrohS9E3Rw==</DigestValue></Reference></SignedInfo><SignatureValue>AiPG0aS8r5ogvZuohb6qwbfJQo8/89jSwuowPESKigajuDgNv5budKLQDS8hx+WzLoSsTYxWwwBg&#13;
+Lm6WRhXsQusBKLujCV4CmtFC6KwRD9Gqa9TQR51jPGXxBVD4ii8zPxVzuG+Nkl3Sns9Neqco/1PC&#13;
+ILEoWK22o6vazng2Mo/db2hPjG5uOq1+e0uinMAD4u5z1RhjcOhVA5tjTBtEgP8uSHG6inawS8gw&#13;
+NllV2Kw2zwbagbKKvrI4KSZfduwPCYLtz8gJ/iKcxoOCKIoV5BRJ1icNwkbEIs2gi/q/fYmAZ44o&#13;
+RuqswXI6FjseeJrr2jw1oPXgD+kjMiqdSIUE8g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -603,4 +603,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2f117dab-17d4-4fd0-a065-a329c29d2bce" Target="#_3c151bbf-5da2-4d88-ba1a-e90f2cbe9407"><Timestamp>2022-01-11 09:13:36</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_230e8ed0-4547-4dac-8c20-98f128dec6d3" Target="#_31c350cb-7afc-4609-8cf1-0493bc78fce0"><Timestamp>2022-01-11 09:15:46</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
