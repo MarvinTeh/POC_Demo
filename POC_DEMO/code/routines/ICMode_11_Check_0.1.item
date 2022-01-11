@@ -48,7 +48,6 @@ public class ICMode_11_Check {
         			//ssn_arr[x]=Integer.valueOf(SSN.substring(x,(x+1)));
         			check_digit=Integer.valueOf(SSN.substring(x,(x+1)));
         			System.out.println(ssn_arr[x]);
-        			break;
         		}
         		else
         		{
@@ -61,7 +60,8 @@ public class ICMode_11_Check {
         		ModRes-=10;
         	if(ModRes==check_digit)
         		return 1;
-        	else return 0;
+        	else 
+        		return 0;
         }
     }
 }
