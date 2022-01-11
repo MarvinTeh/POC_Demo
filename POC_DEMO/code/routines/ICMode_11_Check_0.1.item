@@ -35,7 +35,7 @@ public class ICMode_11_Check {
     public static int ModeCheck(String SSN) {
        
         if(SSN.length()!=13)
-        return 0;
+        {return 0;}
         else
         {
         	int[] ssn_arr= new int[13];
@@ -43,7 +43,7 @@ public class ICMode_11_Check {
         	int check_digit=0;
         	for(int x=0;x<13;x++)
         	{
-        		if(x==13)
+        		if(x==12)
         		{
         			//ssn_arr[x]=Integer.valueOf(SSN.substring(x,(x+1)));
         			check_digit=Integer.valueOf(SSN.substring(x,(x+1)));
