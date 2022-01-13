@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:fWvnVujkDDIId+8m8TVFY9WINAEPTAQJHuKxVkL8"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:QXuYxjYMNqLc36qopm5CHuwr62BCWwf6RYFxm+9R"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:alzkwCW1NHi6Yc4/sIa/kwhsmvM+FTwaF9vqCtw/"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:BvREawDQgAY8457uHC3sE0SQ4j/QRdo9xdhF3ynI"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -136,7 +136,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;lotus&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;root&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:hpUiuyFg9Zj4RUNJ0eKGPXnGyKGzPIBFSwjE7gFKq4inCnjjKg=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:KNc+pYx1bDtzDiP+4mzL0BSpKWhFJifXVMkEeS9Y+aa3z/MblQ=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;staged_users&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -474,7 +474,7 @@
     <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;tisco_demo&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;root&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:jr+2qbXLznnLcIopYKvI+H1IiTFU30Kj9Op5bg1HpQ4VufKl5A=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:IL+jh/kbQVMZYrWX8X4Zdb0iPtFOaxxsHxw5qGP+602JGOwsrg=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;Customer_Statistic&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -637,7 +637,7 @@
       <column comment="" key="false" length="-1" name="ValidRegex" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="InvalidFormat" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Mode11_M" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="QualityGrade" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="QualityGrade" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
@@ -651,7 +651,7 @@
         <mapperTableEntries expression="row6.R1_M " name="ValidRegex" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="row6.R1_NM " name="InvalidFormat" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="row6.Mode11_M" name="Mode11_M" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="((double)((Integer)globalMap.get(&quot;tHashOutput_2_NB_LINE&quot;))/((Integer)globalMap.get(&quot;tDBInput_1_NB_LINE&quot;)))*100 " name="QualityGrade" nullable="true" type="id_Double"/>
+        <mapperTableEntries expression="(((double)((Integer)globalMap.get(&quot;tHashOutput_2_NB_LINE&quot;))/((Integer)globalMap.get(&quot;tDBInput_1_NB_LINE&quot;)))*100).intValue()" name="QualityGrade" nullable="true" type="id_Integer"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row6" sizeState="INTERMEDIATE">
         <mapperTableEntries name="R1_M" nullable="true" type="id_Integer"/>
@@ -705,7 +705,7 @@
       <column comment="" key="false" length="-1" name="ValidRegex" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="InvalidFormat" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Mode11_M" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="QualityGrade" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="QualityGrade" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="32">
@@ -720,7 +720,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;tisco_demo&quot;"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;root&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:qREhI+fyYAEzEwfyM6xih3eXoVUnHn+sRlsy2W8d1n8zGVQydw=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:bz3G56IE13aPK869cYYkdscAgMGRn1gRX5AyjfYs/5XEraXDXA=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;Customer_Statistic_Summary&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -785,7 +785,7 @@
     <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;tisco_demo&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;root&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:0PIt6A1CB783+q85LomJNQj0MK0iYkmj9HCkEgARWBlDkffMlw=="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:VHOty6Fj6lAELkIzFYewsmHhm8c7KaxVxZqCYMWN6w5R3rLfig=="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;Customer_Statistic_Summary&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -868,7 +868,7 @@
       <column comment="" key="false" length="-1" name="ValidRegex" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="InvalidFormat" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Mode11_M" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="QualityGrade" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="QualityGrade" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="50" name="Date" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -879,7 +879,7 @@
       <column comment="" key="false" length="-1" name="ValidRegex" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="InvalidFormat" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Mode11_M" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="QualityGrade" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="QualityGrade" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -991,13 +991,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_684a1aee-c84c-4530-8886-c04716a23c7f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MycrqVBXkQYJXxCCtb7hcGbtAXzK4WiPUgpxYSwAl4B9jJN+IiOCzrGpH4zGm/v7512/t8QF0qmF&#13;
-g6vu+YCHIQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a78f326c-54ca-4896-813e-0ccc5797a308"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Ex5PqO6tCuyZZS/CxuJm6FybuoiOrXaje9VBzZI7uzBRAVgpf/ip7Uf7j1NUkjFAB3UyXsAjVyBp&#13;
-seU3nNu6fg==</DigestValue></Reference></SignedInfo><SignatureValue>iqcG6LFiCGwU9yrL2eLFjKt77Q2bwpNZFu0IeFPP7VI6HD0b3zXUvCYa87bBH8x820qMJTg6JViq&#13;
-FW6XAanDj/GOmixQKiTmDxNr+Jy/jpvsBCjjad49ts0uSZL+qw2wv0bn70hW1+gVnJC+IT1hyV/W&#13;
-hIcvFBT4x53rLyYOhOxBvsTh5G+CCHV2ASqHpAw0cSJ0Pl1TSiHCutdTxX/WPyJxghibF+I6grFE&#13;
-1m8fpxzyLrA8PsJN5hldA9m0y8zNQ/zJT8zTVO5DfL4BHcVOAKPRoFDoG5L5O0gwzJYdyChL/0Jb&#13;
-GxkIaleRecPRlNGB3Z6JeDYUOPdpAErKP4B6JQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8f34f115-80a9-4d19-9b56-1406fc450bd4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>08NGM8wS4GxAkvgtMPsqfNMkXbIjK6+D+D/jGLsyg1/qCA7VHRhAzO700fPjYVCOON4R7fFnNMzG&#13;
+YvntoHqjWw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d9f3ea27-b5f3-4c9b-954e-1470de48a35c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>kD4PcanDExXJt2AYJKsljx6w7nCgoILEL2zpuRdAJ/q5BJV+YN5zUADh2x6ugSknqsf82ISKNvQU&#13;
+Jxd8go46Uw==</DigestValue></Reference></SignedInfo><SignatureValue>LzKH0pgcfxy9f6jZMgg+eyK2+LFnjCd3GB1tkWK1JjQoxHZ5mjTGNTYqeInZxTfWu/5BRUJrB9sr&#13;
+cl1x07dviOPkWuqpcJcWce2KNxtlxH3XOl1Go88Y/6rYKbPKJWPrO5AVJ92haKEEbNRXGPQJwQqF&#13;
+iKbfpBEHjqaQqPCSBFS9qlnMq9AodInZ/y5o89UFfbTQy4TXxwCUAKRe9WIWEoYa/3Ih8hIydUkp&#13;
+VHQ9AbXL5DoycPUZCVG2Y23HjtKHH7n5BOFLF2V6DgM5zd77/x3vTJioU7nkxdUjRRq7yA0GL5qX&#13;
+1VlZRF4u3nu2dnDI3ZpYGOqMiQ3Hl5l/Im/sZQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1019,4 +1019,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a78f326c-54ca-4896-813e-0ccc5797a308" Target="#_684a1aee-c84c-4530-8886-c04716a23c7f"><Timestamp>2022-01-13 07:42:12</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d9f3ea27-b5f3-4c9b-954e-1470de48a35c" Target="#_8f34f115-80a9-4d19-9b56-1406fc450bd4"><Timestamp>2022-01-13 07:43:21</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
