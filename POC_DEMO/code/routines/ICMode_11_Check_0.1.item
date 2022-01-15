@@ -20,24 +20,10 @@ package routines;
  */
 public class ICMode_11_Check {
 
-    /**
-     * helloExample: not return value, only print "hello" + message.
-     * 
-     * 
-     * {talendTypes} String
-     * 
-     * {Category} User Defined
-     * 
-     * {param} string("world") input: The string need to be printed.
-     * 
-     * {example} helloExemple("world") # hello world !.
-     */
+
     public static int ModeCheck(String SSN) {
        
-        /*if(SSN.length()!=13)
-        {return 0;}
-        else
-        {*/
+        
         	int[] ssn_arr= new int[13];
         	int Total_Sum=0;
         	int check_digit=0;
@@ -45,13 +31,10 @@ public class ICMode_11_Check {
         	{
         		if(x==12)
         		{
-        			//ssn_arr[x]=Integer.valueOf(SSN.substring(x,(x+1)));
         			check_digit=Integer.valueOf(SSN.substring(x,(x+1)));
-        			//System.out.println(check_digit);
         		}
         		else
         		{
-        			//ssn_arr[x]=(Integer.valueOf(SSN.substring(x,(x+1)))*(13-x));
         			Total_Sum+=(Integer.valueOf(SSN.substring(x,(x+1)))*(13-x));
         		}
         	}
@@ -62,6 +45,5 @@ public class ICMode_11_Check {
         		return 1;
         	else 
         		return 0;
-       // }
     }
 }
