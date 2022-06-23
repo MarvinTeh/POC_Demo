@@ -747,6 +747,7 @@
     <elementParameter field="CHECK" name="QUERYOPTION_NOTIMEOUT" value="false"/>
     <elementParameter field="CHECK" name="EXTERNAL_SORT_AGGREGATION" show="false" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="CONVERT_BSON_TO_STRING" value="false"/>
     <metadata connector="FLOW" name="tMongoDBInput_1">
       <column comment="" key="false" length="-1" name="PAYLOAD" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -792,6 +793,7 @@
     <elementParameter field="CHECK" name="SET_KRB5_CONF" show="false" value="false"/>
     <elementParameter field="FILE" name="KRB5_CONF" show="false" value="&quot;/etc/kafka/krb5.conf&quot;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="SET_KEYSTORE" value="true"/>
   </node>
   <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_3"/>
@@ -997,6 +999,7 @@
     <elementParameter field="CHECK" name="QUOTE_NULL_VALUES" show="false" value="true"/>
     <elementParameter field="CHECK" name="ALLOW_EMPTY_STRINGS" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="USE_SCIENTIFIC_NOTATION" value="true"/>
     <metadata connector="FLOW" name="tWriteJSONField_2">
       <column comment="" key="false" length="-1" name="PAYLOAD" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -1424,6 +1427,7 @@
     <elementParameter field="CHECK" name="QUOTE_NULL_VALUES" show="false" value="true"/>
     <elementParameter field="CHECK" name="ALLOW_EMPTY_STRINGS" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="USE_SCIENTIFIC_NOTATION" value="true"/>
     <metadata connector="FLOW" name="tWriteJSONField_1">
       <column comment="" key="false" length="-1" name="PAYLOAD" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -1487,6 +1491,8 @@
     <elementParameter field="CHECK" name="HEADERS" show="false" value="false"/>
     <elementParameter field="TABLE" name="KAFKA_HEADERS_PROPERTIES" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="SET_KEYSTORE" value="true"/>
+    <elementParameter field="CHECK" name="SCHEMA_REGISTRY_SET_KEYSTORE" value="false"/>
     <metadata connector="FLOW" name="tKafkaOutput_1">
       <column defaultValue="" key="false" length="0" name="serializedValue" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_byte[]" usefulColumn="true"/>
     </metadata>
@@ -1649,13 +1655,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8b87cb35-84f6-4a5c-8bb0-80c7b327ed84"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>QiQVAjGgOk7kXoPh/nucMv0Y3fO1wj+quniwPHe+W0MLZJduoiFzGYxBcH0zzmVdBO0FbSLc8DcZ&#13;
-xQozbmPsnQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_10fa7dc5-f016-482c-9339-1d058405fe8f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FpVnZApVBhQXm7RelbOlyVrBeNHz2Nv7ihCcETsLJH3xst3JXHYlXHb8L1ZRqK/VCdRPNcqUb9lk&#13;
-s7sd+8JKfQ==</DigestValue></Reference></SignedInfo><SignatureValue>haphpjR9f+4C2F8xyPU6J3KEhfrfC2o5/MbEq9qJRDcynkgjAwDOt8MbArJIX59EGf+xxugfzKh+&#13;
-LFCAgrokEZWjX8mvYeyN/qfa3Ae6qNq6O71u4SWHw4Muv2AVAs2qpbz/AZUYqxl5VVGXoKFDVs1m&#13;
-OGc5Rq4PewxvWFp/3gertqNMbr3YJNKC+5kBwKoJDu2jCRFzMyva/GGAFbouhHXJN0JzuGtb+vPy&#13;
-vL5Vk+zc2tvj308dGItITVYms5DUGpKJiUUViQRfpkPvfAgakS48/B8S6ht55rW45/H/YGnSH/fX&#13;
-TFVt/BmWgAzEPvqZC/VKkqozc7ca6OsjiuSZ5g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a7bd5a0f-e8ed-427e-b656-db9828d801ae"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>A2uoJsAs3ggwkWrAGUXkx2/PmJc6BJKdxwvnSXAhOI3BfI16jen9u9ngVqoAu1rrL73+tER4++Vn&#13;
+qR7K7uFlbA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fb7e1cc5-1251-411e-8c6e-234f02202e7e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zquXixmhok3iDaslQkI+68XetU9U0ZXd6tghsyQ6a8HQYAWGKcwmqCboOQ50oBgdwEfA+yt0vIbn&#13;
+NucqOeVJ4Q==</DigestValue></Reference></SignedInfo><SignatureValue>PBD2VMh2TqvwnqikxFcl8wbmtSJNK6cwmJ50JwolVR7Cl2xCgKm49Fo2IQwKXyVcQ6ssrUP8yNdL&#13;
+UtlrbLWBmT7Gj5XBXGWLW+E1VXc/U1gMoc7rPR5uS0e67b6eYFbYkVMSxqgyOt76xNh6IsbrXu89&#13;
+Bqpogn+fPC6u8TfEEJI19mmmxhEiWbhB/D4XxWihyFZbC75w6WIRS/VpvE+v69CEMUJA1NAZdFK7&#13;
+Kr4Ng9r03FMhFJuM4Y6blp/qxgeZHkfY3XTF8vhSfm1jWyRr94mULX4jfSBMPEQPlPHwyXL7jWyz&#13;
+DA88EiLH1ejMcPup/nGHJ1Cstz9x+u6oBhZ5qw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1677,4 +1683,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_10fa7dc5-f016-482c-9339-1d058405fe8f" Target="#_8b87cb35-84f6-4a5c-8bb0-80c7b327ed84"><Timestamp>2022-01-18 06:24:03</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fb7e1cc5-1251-411e-8c6e-234f02202e7e" Target="#_a7bd5a0f-e8ed-427e-b656-db9828d801ae"><Timestamp>2022-06-23 10:43:45</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
