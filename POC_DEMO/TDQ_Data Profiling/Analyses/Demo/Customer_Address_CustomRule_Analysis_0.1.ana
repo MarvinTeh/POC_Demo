@@ -47,6 +47,14 @@
         </builtInIndicatorDefinition>
       </indicators>
       <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_GG7v_BHSEeus79wlODPhpw" count="30" computed="true" userCount="26">
+        <parameters xmi:id="_1fu3IPtYEeyLS69YRdEjFw">
+          <indicatorValidDomain xmi:id="_4sUu8PtYEeyLS69YRdEjFw" name="Indicator threshold">
+            <ranges xmi:id="_4sWkIPtYEeyLS69YRdEjFw" name="Percentage Threshold">
+              <lowerValue xsi:type="dataquality.domain:TextValue" xmi:id="_4sWkIftYEeyLS69YRdEjFw" value="1.0"/>
+              <upperValue xsi:type="dataquality.domain:TextValue" xmi:id="_4sWkIvtYEeyLS69YRdEjFw" value="1.0"/>
+            </ranges>
+          </indicatorValidDomain>
+        </parameters>
         <analyzedElement xsi:type="relational:TdTable" href="../../../metadata/connections/Mysql_Staging_Demo_0.1.item#_YsPOcAw9EeutSdGm3mY9oQ"/>
         <indicatorDefinition href="../../../TDQ_Libraries/Rules/SQL/CardType_0.1.rules#_NOM-4J6iEeq8BvVoyFeEWw"/>
         <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_GG7v_RHSEeus79wlODPhpw" body="SELECT COUNT(*) FROM `demo_staging`.`customer_address`   WHERE (CARD_TYPE='CREDIT' OR CARD_TYPE='DEBIT')" language="MySQL"/>
