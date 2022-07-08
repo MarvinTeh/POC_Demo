@@ -50,7 +50,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:R7icI3SJGZpIwp+uHD3Rt9d0ivNpJsgbqjfyr/W1"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:+GM2en7lLGk18sHlgZpvDT8qA2hjFurG430qgZa5"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -85,7 +85,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value=""/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;root&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:MhTtxQcmgJquv5ZnAa7G7gWOTgLYp6koB3XPTUPWcdQGAYeGfw=="/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:pEsfDf/dO7JnSxpFVDelSPMmpAvG+r5w4zcLjDN1kJLe4KLlxQ=="/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;stats&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;logs&quot;"/>
@@ -790,9 +790,9 @@
         <mapperTableEntries expression="row4.device_mobileDeviceInfo " name="device_mobileDeviceInfo" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row4.device_deviceCategory " name="device_deviceCategory" nullable="true" type="id_String"/>
         <mapperTableEntries expression="Integer.parseInt(row4.geoNetwork_cityId) " name="geoNetwork_cityId" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="row4.geoNetwork_cityId==999?&quot;(not set)&quot;:row4.geoNetwork_city " name="geoNetwork_city" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row4.geoNetwork_cityId==999?&quot;(not set)&quot;:row4.geoNetwork_region " name="geoNetwork_region" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row4.geoNetwork_cityId==999?&quot;(not set)&quot;:row4.geoNetwork_country " name="geoNetwork_country" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.geoNetwork_cityId.equals(&quot;999&quot;)?&quot;(not set)&quot;:row4.geoNetwork_city " name="geoNetwork_city" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.geoNetwork_cityId.equals(&quot;999&quot;)?&quot;(not set)&quot;:row4.geoNetwork_region " name="geoNetwork_region" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row4.geoNetwork_cityId.equals(&quot;999&quot;)?&quot;(not set)&quot;:row4.geoNetwork_country " name="geoNetwork_country" nullable="true" type="id_String"/>
       </outputTables>
       <outputTables activateCondensedTool="true" name="Duplicated2" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row4.clientId " name="clientId" nullable="true" type="id_String"/>
@@ -934,11 +934,11 @@
     <elementParameter field="FILE" name="FILENAME" value="&quot;D:/Desktop/Events&amp;Training/Vinda/data/Archive/ga_transaction_&quot;+((String)globalMap.get(&quot;FileDate&quot;))+&quot;.txt&quot;"/>
     <elementParameter field="CHECK" name="APPEND" value="false"/>
     <elementParameter field="CLOSED_LIST" name="AUTH_MODE" value="SERVICEACCOUNT"/>
-    <elementParameter field="PASSWORD" name="ACCESS_TOKEN" show="false" value="enc:system.encryption.key.v1:rO0RajFSF+AKXwyben6ueJanZPaIWbBVLH970LXR"/>
+    <elementParameter field="PASSWORD" name="ACCESS_TOKEN" show="false" value="enc:system.encryption.key.v1:LH0rcN/rmZJ1LxG7AIm48RcdksMY++cq1Tto7kZH"/>
     <elementParameter field="LABEL" name="ACCESS_TOKEN_WARNING" show="false" value="*Note: If the Access Token Expire we won't be able to refresh it!&quot;"/>
     <elementParameter field="FILE" name="SERVICE_ACCOUNT_CREDENTIALS_FILE" value="&quot;D:/Desktop/Events&amp;Training/Vinda/matrixc-quandatics-vinda-0fbe0762405e.json&quot;"/>
     <elementParameter field="TEXT" name="CLIENT_ID" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="CLIENT_SECRET" show="false" value="enc:system.encryption.key.v1:Y4Iyp4bhD5pQp+I1vxlraSeXEs7FbvEMjyZ8SSr5"/>
+    <elementParameter field="PASSWORD" name="CLIENT_SECRET" show="false" value="enc:system.encryption.key.v1:lJ9qj+FRDu7Q53ka2uwxon0f45e08Ln0h3eAiivp"/>
     <elementParameter field="TEXT" name="AUTHORIZATION_CODE" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;matrixc-quandatics-vinda&quot;"/>
     <elementParameter field="TEXT" name="DATASET" value="&quot;Staging&quot;"/>
@@ -948,7 +948,7 @@
     <elementParameter field="CHECK" name="BULK_FILE_ALREADY_EXIST" show="false" value="false"/>
     <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" value="GS_SERVICE_ACCOUNT"/>
     <elementParameter field="FILE" name="GS_SERVICE_ACCOUNT_KEY" value="&quot;D:/Desktop/Events&amp;Training/Vinda/matrixc-quandatics-vinda-0fbe0762405e.json&quot;"/>
-    <elementParameter field="PASSWORD" name="GS_ACCESS_TOKEN" show="false" value="enc:system.encryption.key.v1:FmftlwmAZidBaQuIX/T901moTCDVMYZTmP1NhrmH"/>
+    <elementParameter field="PASSWORD" name="GS_ACCESS_TOKEN" show="false" value="enc:system.encryption.key.v1:kt/4Pydi4zry3Mo2tHrhFtKkcsjA76vdqg5SQ62N"/>
     <elementParameter field="LABEL" name="GS_ACCESS_TOKEN_WARNING" show="false" value="*Note: If the Access Token Expire we won't be able to refresh it!&quot;"/>
     <elementParameter field="TEXT" name="BUCKET_NAME" value="&quot;qdt_staging&quot;"/>
     <elementParameter field="TEXT" name="GS_FILE" value="&quot;gs://qdt_staging/ga_transaction_&quot;+((String)globalMap.get(&quot;FileDate&quot;))+&quot;.txt&quot;"/>
@@ -1408,11 +1408,11 @@
     <elementParameter field="FILE" name="FILENAME" value="&quot;D:/Desktop/Events&amp;Training/Vinda/data/Archive/ga_transaction_reject&quot;+((String)globalMap.get(&quot;FileDate&quot;))+&quot;.txt&quot;"/>
     <elementParameter field="CHECK" name="APPEND" value="false"/>
     <elementParameter field="CLOSED_LIST" name="AUTH_MODE" value="SERVICEACCOUNT"/>
-    <elementParameter field="PASSWORD" name="ACCESS_TOKEN" show="false" value="enc:system.encryption.key.v1:cp4BtBcDYk84YmIzXtRHSL6GfR0Ch3dpSWkYb/f8"/>
+    <elementParameter field="PASSWORD" name="ACCESS_TOKEN" show="false" value="enc:system.encryption.key.v1:Nvz7eIJ9wEM4TF3EHqSxqoXqzLLyIEh0hZswokhC"/>
     <elementParameter field="LABEL" name="ACCESS_TOKEN_WARNING" show="false" value="*Note: If the Access Token Expire we won't be able to refresh it!&quot;"/>
     <elementParameter field="FILE" name="SERVICE_ACCOUNT_CREDENTIALS_FILE" value="&quot;D:/Desktop/Events&amp;Training/Vinda/matrixc-quandatics-vinda-0fbe0762405e.json&quot;"/>
     <elementParameter field="TEXT" name="CLIENT_ID" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="CLIENT_SECRET" show="false" value="enc:system.encryption.key.v1:DZiTJrku65jgu9akur3FN/Dgmufk/0nV81if3OdZ"/>
+    <elementParameter field="PASSWORD" name="CLIENT_SECRET" show="false" value="enc:system.encryption.key.v1:nFiQOUtRA3u/FDdr93zJIOcF+tpTJpOQaSzPvjwd"/>
     <elementParameter field="TEXT" name="AUTHORIZATION_CODE" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;matrixc-quandatics-vinda&quot;"/>
     <elementParameter field="TEXT" name="DATASET" value="&quot;Staging&quot;"/>
@@ -1422,7 +1422,7 @@
     <elementParameter field="CHECK" name="BULK_FILE_ALREADY_EXIST" show="false" value="false"/>
     <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" value="GS_SERVICE_ACCOUNT"/>
     <elementParameter field="FILE" name="GS_SERVICE_ACCOUNT_KEY" value="&quot;D:/Desktop/Events&amp;Training/Vinda/matrixc-quandatics-vinda-0fbe0762405e.json&quot;"/>
-    <elementParameter field="PASSWORD" name="GS_ACCESS_TOKEN" show="false" value="enc:system.encryption.key.v1:dJEkofFDqVzbFUQGeo2locUNs1xMyZDrVoh0HIb+"/>
+    <elementParameter field="PASSWORD" name="GS_ACCESS_TOKEN" show="false" value="enc:system.encryption.key.v1:pbaHOz5Zz9CVKXkUi6Jn8PGCtmNrUahXT5kRCwcu"/>
     <elementParameter field="LABEL" name="GS_ACCESS_TOKEN_WARNING" show="false" value="*Note: If the Access Token Expire we won't be able to refresh it!&quot;"/>
     <elementParameter field="TEXT" name="BUCKET_NAME" value="&quot;qdt_staging&quot;"/>
     <elementParameter field="TEXT" name="GS_FILE" value="&quot;gs://qdt_staging/ga_transaction_reject&quot;+((String)globalMap.get(&quot;FileDate&quot;))+&quot;.txt&quot;"/>
@@ -1777,13 +1777,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e64ffd90-10da-48bb-b695-5391dacc5bc7"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>X9qhJhUPgKhzjnQcrUrNhhz6PKxXxji27Nuf3uPfAB374VdNie1kUN8P66NYs0sCF/yk2AP0Yd6D&#13;
-ZFKSYdZWCw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d9c4d605-d9b0-4e5c-ab12-425e96e5b16a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cXt9ZNrIqqi6+epXfcXMc7SqRMFcLWSn+iUee3NigN2/fvisPqrC8Er+njJ+mEHQGuQIZu4piVS4&#13;
-bTHAjC8CGQ==</DigestValue></Reference></SignedInfo><SignatureValue>n+F9T6BVMyIoVB4LdoyYtFJKbNYxJD0wBN6dPnVP7hoqtmXlGi6XMBqAW+zgMHTzlVVjxIV8zw0d&#13;
-7W7Vvabx9CvLu+MDBqhKOYQIDxrxaSAkn5t5KVEjUpzedYmnOy8VJbQ7bHkZdOlh683tvtbCgHWk&#13;
-5RCt0DAact8sInteRQQkv1rR9lF9OdrA+sVePK1NVs+q6+JH1BXescwjlIGZ9Nx43JhZzQnodQm/&#13;
-TaIQcCfk0YUBD5kQxfufcx+Tceul80tU5cXaHDCW6m7ICIRaGyrPHSWcVuLn4fzNcsD3Do5VguPw&#13;
-bjXk/SMO4oYyRHnrlxXzHwceMfyJgJoAvw2aaA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2a3f9097-341d-4b3d-9799-fbfe8818ad6b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WaVQQKYpgHUzFc2KodIQAUUEaPhBEUgcphkfLZ705UEhSPPdp5Ns3/hu26nHyKQTijWWkgYGH5HH&#13;
+12xhJvd5tQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7cac83d5-cfc0-4cca-bfec-65a2390bad33"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>QTRC7AsYrl7E5yo36+y9CEhsyDvLUSyvrhr2Ru1pB/ZuG/D+xU6imbUn8P2If1wzMOum5PGQ20XF&#13;
+HxaSCgOeiQ==</DigestValue></Reference></SignedInfo><SignatureValue>XVj0O4GSd/ZRfgoZQS5l1rBeQc0nXw66ku3jLDp27t1BdX6QJ5pDzSqPSG9dOjc1NhR869WISP+8&#13;
+UoPDKJg8QcpoiKIGKlVX9n1JCzW9LkJ5TbtILyCnerMS4WC35DOF6Ww8k2lVyzNvPx/jvJxbxrPF&#13;
+ua19TQUBlg9twf2XVxte8bNf9YQdbldCD2xja8MLQ3Ncd2ij/OOTnhOLlB7pweJ2DRd5l/+osaxL&#13;
+z1lWtWj8Ni/xb6YLT92LGKSDKe39XlFZZJRd0ZlegJwe/LnLFVLIEoivweVKIbfUqA/IuhhOrpnw&#13;
+C+l8L8mgLTs729f7Y/3TKsZKw3FghaRbNPjNxA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1805,4 +1805,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d9c4d605-d9b0-4e5c-ab12-425e96e5b16a" Target="#_e64ffd90-10da-48bb-b695-5391dacc5bc7"><Timestamp>2022-07-08 04:57:20</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7cac83d5-cfc0-4cca-bfec-65a2390bad33" Target="#_2a3f9097-341d-4b3d-9799-fbfe8818ad6b"><Timestamp>2022-07-08 04:58:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
