@@ -11,6 +11,7 @@
   <taggedValue xmi:id="_AGb98bx0EeuYz_CSZL8YSw" tag="MAX_BUFFER_SIZE" value="200000"/>
   <taggedValue xmi:id="_AGb98rx0EeuYz_CSZL8YSw" tag="STORE_ON_DISK" value="false"/>
   <taggedValue xmi:id="_k0rAcLx0EeuYz_CSZL8YSw" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+  <taggedValue xmi:id="_7-HhkC52Ee2QQa8yzJRvDg" tag="DRILL_DOWN" value="true"/>
   <context xmi:id="__jkhd7xzEeuYz_CSZL8YSw">
     <connection href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_MLPtcHNTEeuOLcAiuBiIdw"/>
     <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/LocalMysql_Lotus_0.1.item#_Iw6UwnXpEeuunNE1vfspIA"/>
@@ -26,10 +27,10 @@
     <indicators xsi:type="dataquality.indicators.columnset:BlockKeyIndicator" xmi:id="__jkherxzEeuYz_CSZL8YSw"/>
     <indicators xsi:type="dataquality.indicators.columnset:RecordMatchingIndicator" xmi:id="__jkhe7xzEeuYz_CSZL8YSw">
       <builtInMatchRuleDefinition xmi:id="__jkhfLxzEeuYz_CSZL8YSw">
-        <blockKeys xmi:id="_ICyJcLx0EeuYz_CSZL8YSw" name="ssn" column="ssn">
-          <preAlgorithm xmi:id="_ICyJcbx0EeuYz_CSZL8YSw" algorithmType="NON_ALGO" algorithmParameters=""/>
-          <algorithm xmi:id="_ICyJcrx0EeuYz_CSZL8YSw" algorithmType="exact" algorithmParameters=""/>
-          <postAlgorithm xmi:id="_ICyJc7x0EeuYz_CSZL8YSw" algorithmType="NON_ALGO" algorithmParameters=""/>
+        <blockKeys xmi:id="_mjsVcC54Ee2QQa8yzJRvDg" name="ssn" column="ssn">
+          <preAlgorithm xmi:id="_mjsVcS54Ee2QQa8yzJRvDg" algorithmType="NON_ALGO" algorithmParameters=""/>
+          <algorithm xmi:id="_mjsVci54Ee2QQa8yzJRvDg" algorithmType="exact" algorithmParameters=""/>
+          <postAlgorithm xmi:id="_mjsVcy54Ee2QQa8yzJRvDg" algorithmType="NON_ALGO" algorithmParameters=""/>
         </blockKeys>
         <matchRules xmi:id="_Bjd8oLx0EeuYz_CSZL8YSw" name="Match Rule 2" matchInterval="0.7">
           <matchKeys xmi:id="_InLP8Lx0EeuYz_CSZL8YSw" name="lastname" column="lastname" confidenceWeight="1" handleNull="nullMatchNull" threshold="1.0" tokenizationType="No">
@@ -38,10 +39,19 @@
           <matchKeys xmi:id="_I3824Lx0EeuYz_CSZL8YSw" name="firstname" column="firstname" confidenceWeight="1" handleNull="nullMatchNull" threshold="1.0" tokenizationType="No">
             <algorithm xmi:id="_I3824bx0EeuYz_CSZL8YSw" algorithmType="JARO" algorithmParameters=""/>
           </matchKeys>
-          <matchKeys xmi:id="_J0zgsLx0EeuYz_CSZL8YSw" name="phone" column="phone" confidenceWeight="1" handleNull="nullMatchNull" threshold="1.0" tokenizationType="No">
-            <algorithm xmi:id="_J0zgsbx0EeuYz_CSZL8YSw" algorithmType="HAMMING" algorithmParameters=""/>
+          <matchKeys xmi:id="_odSUUC54Ee2QQa8yzJRvDg" name="phone" column="phone" confidenceWeight="1" handleNull="nullMatchNull" threshold="1.0" tokenizationType="No">
+            <algorithm xmi:id="_odSUUS54Ee2QQa8yzJRvDg" algorithmType="EXACT" algorithmParameters=""/>
           </matchKeys>
         </matchRules>
+        <survivorshipKeys xmi:id="_76b7cC52Ee2QQa8yzJRvDg" name="lastname" allowManualResolution="true">
+          <function xmi:id="_76b7cS52Ee2QQa8yzJRvDg" algorithmType="Concatenate" algorithmParameters=","/>
+        </survivorshipKeys>
+        <survivorshipKeys xmi:id="_76b7ci52Ee2QQa8yzJRvDg" name="firstname" allowManualResolution="true">
+          <function xmi:id="_76b7cy52Ee2QQa8yzJRvDg" algorithmType="Concatenate" algorithmParameters=","/>
+        </survivorshipKeys>
+        <survivorshipKeys xmi:id="_76b7dC52Ee2QQa8yzJRvDg" name="phone" allowManualResolution="true">
+          <function xmi:id="_76b7dS52Ee2QQa8yzJRvDg" algorithmType="Concatenate" algorithmParameters=","/>
+        </survivorshipKeys>
       </builtInMatchRuleDefinition>
     </indicators>
   </results>
