@@ -1,0 +1,1787 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+  <context confirmationNeeded="false" name="Default"/>
+  <parameters>
+    <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="32"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:P5CwKAhd5JnFzBUkB9wxcCo2CilXLvmtBzXaFYSx"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Users/MadihahMohdNadzari/workspace/.metadata&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="tJDBCOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
+    <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Qz8vKTu2gkqB2ypnFYspfKpjWJh1KWVvN2GMwIoK"/>
+    <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
+    <routinesParameter id="_2bQMAFBOEe2eosNXEQMaKQ" name="DataOperation"/>
+    <routinesParameter id="_2bjG8FBOEe2eosNXEQMaKQ" name="Mathematical"/>
+    <routinesParameter id="_2bpNkFBOEe2eosNXEQMaKQ" name="Numeric"/>
+    <routinesParameter id="_2butIFBOEe2eosNXEQMaKQ" name="Relational"/>
+    <routinesParameter id="_2aev8FBOEe2eosNXEQMaKQ" name="SQLike"/>
+    <routinesParameter id="_2b0zwFBOEe2eosNXEQMaKQ" name="StringHandling"/>
+    <routinesParameter id="_2b7hcFBOEe2eosNXEQMaKQ" name="TalendDataGenerator"/>
+    <routinesParameter id="_2cBBAFBOEe2eosNXEQMaKQ" name="TalendDate"/>
+    <routinesParameter id="_2cNOQFBOEe2eosNXEQMaKQ" name="TalendStringUtil"/>
+    <routinesParameter id="_2cHHoFBOEe2eosNXEQMaKQ" name="TalendString"/>
+  </parameters>
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_BoJs0FBQEe2eosNXEQMaKQ"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;rm-zf853082e4b35xw66.mysql.kualalumpur.rds.aliyuncs.com&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;Goe&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;goeadmin&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:oPNfM+4jPey35iivsirsp0j76eybAGQzCu2QaFIZhYgFyTemsVI="/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_BoJs0FBQEe2eosNXEQMaKQ - v_pedas_master_trained"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;v_pedas_master_trained&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#10;  `v_pedas_master_trained`.`id`, &#10;  `v_pedas_master_trained`.`Name`, &#10;  `v_pedas_master_trained`.`Age`, &#10;  `v_pedas_master_trained`.`Gender`, &#10;  `v_pedas_master_trained`.`Race`, &#10;  `v_pedas_master_trained`.`Email`, &#10;  `v_pedas_master_trained`.`Postcode`, &#10;  `v_pedas_master_trained`.`City`, &#10;  `v_pedas_master_trained`.`District`, &#10;  `v_pedas_master_trained`.`State`, &#10;  `v_pedas_master_trained`.`Tracked`, &#10;  `v_pedas_master_trained`.`Revisit`, &#10;  `v_pedas_master_trained`.`EDDIE`, &#10;  `v_pedas_master_trained`.`User Role`, &#10;  `v_pedas_master_trained`.`Course Mode`, &#10;  `v_pedas_master_trained`.`Main Programme`, &#10;  `v_pedas_master_trained`.`Sub Program 1`, &#10;  `v_pedas_master_trained`.`New Identity Card No.`, &#10;  `v_pedas_master_trained`.`Age Group`, &#10;  `v_pedas_master_trained`.`Phone Number`, &#10;  `v_pedas_master_trained`.`Home Address`, &#10;  `v_pedas_master_trained`.`Marital Status`, &#10;  `v_pedas_master_trained`.`Special Need Required`, &#10;  `v_pedas_master_trained`.`Portal Registration Start Year`, &#10;  `v_pedas_master_trained`.`Portal Registration Start Date`, &#10;  `v_pedas_master_trained`.`Training Registration Start Year`, &#10;  `v_pedas_master_trained`.`Training Start Date`, &#10;  `v_pedas_master_trained`.`Partner Representative`, &#10;  `v_pedas_master_trained`.`Center Name`, &#10;  `v_pedas_master_trained`.`Date Created Class`, &#10;  `v_pedas_master_trained`.`Centre Name`, &#10;  `v_pedas_master_trained`.`Address Centre Location`, &#10;  `v_pedas_master_trained`.`Class Centre Postcode`, &#10;  `v_pedas_master_trained`.`Center State`, &#10;  `v_pedas_master_trained`.`Trainer Name`, &#10;  `v_pedas_master_trained`.`Month of Class`, &#10;  `v_pedas_master_trained`.`Date of Class`, &#10;  `v_pedas_master_trained`.`Class Completion Date`, &#10;  `v_pedas_master_trained`.`Year of Class Completion`, &#10;  `v_pedas_master_trained`.`Month of Class Completion`, &#10;  `v_pedas_master_trained`.`Class Completion Status`, &#10;  `v_pedas_master_trained`.`Participant_My_Business_Transaction_Start_Year`, &#10;  `v_pedas_master_trained`.`Participant_My_Business_Transaction_Start_Date`, &#10;  `v_pedas_master_trained`.`Education Level`, &#10;  `v_pedas_master_trained`.`Employment Status`, &#10;  `v_pedas_master_trained`.`Have a business before join eU Training (Yes/No)`, &#10;  `v_pedas_master_trained`.`Personal Instagram`, &#10;  `v_pedas_master_trained`.`Personal Facebook`, &#10;  `v_pedas_master_trained`.`Facebook Page`, &#10;  `v_pedas_master_trained`.`Instagram Page`, &#10;  `v_pedas_master_trained`.`Wechat for Business`, &#10;  `v_pedas_master_trained`.`Business Website`, &#10;  `v_pedas_master_trained`.`Type of Website`, &#10;  `v_pedas_master_trained`.`Whatsapp for Business`, &#10;  `v_pedas_master_trained`.`Have an Online Business/ Onboard`, &#10;  `v_pedas_master_trained`.`Marketplace Name`, &#10;  `v_pedas_master_trained`.`Reason Not Running Business`, &#10;  `v_pedas_master_trained`.`Registered SSM`, &#10;  `v_pedas_master_trained`.`Company Name`, &#10;  `v_pedas_master_trained`.`Company Registration No.`, &#10;  `v_pedas_master_trained`.`Type of Business`, &#10;  `v_pedas_master_trained`.`Business Role`, &#10;  `v_pedas_master_trained`.`Business Category`, &#10;  `v_pedas_master_trained`.`Business Subcategory`, &#10;  `v_pedas_master_trained`.`Marketplace Existance`, &#10;  `v_pedas_master_trained`.`Experience in International Export`, &#10;  `v_pedas_master_trained`.`Sales Before eUsahawan (RM)`, &#10;  `v_pedas_master_trained`.`Sales on January 2021 (RM)`, &#10;  `v_pedas_master_trained`.`Sales on February 2021 (RM)`, &#10;  `v_pedas_master_trained`.`Sales on March 2021 (RM)`, &#10;  `v_pedas_master_trained`.`Sales on April 2021 (RM)`, &#10;  `v_pedas_master_trained`.`Sales on May 2021 (RM)`, &#10;  `v_pedas_master_trained`.`Sales on June 2021 (RM)`, &#10;  `v_pedas_master_trained`.`Sales on July 2021 (RM)`, &#10;  `v_pedas_master_trained`.`Sales on August 2021 (RM)`, &#10;  `v_pedas_master_trained`.`Sales on September 2021 (RM)`, &#10;  `v_pedas_master_trained`.`Sales on October 2021 (RM)`, &#10;  `v_pedas_master_trained`.`Sales on November 2021 (RM)`, &#10;  `v_pedas_master_trained`.`Sales on December 2021 (RM)`, &#10;  `v_pedas_master_trained`.`No of Month Generate Sales`, &#10;  `v_pedas_master_trained`.`Average Sales`, &#10;  `v_pedas_master_trained`.`Increment_Perc`, &#10;  `v_pedas_master_trained`.`Status Generating`, &#10;  `v_pedas_master_trained`.`Overall Gamication Point`, &#10;  `v_pedas_master_trained`.`part_last_yr`, &#10;  `v_pedas_master_trained`.`part_last_mth`, &#10;  `v_pedas_master_trained`.`part_last_dt`, &#10;  `v_pedas_master_trained`.`Urban / Rural`, &#10;  `v_pedas_master_trained`.`Date of Tracking`, &#10;  `v_pedas_master_trained`.`Tracker Name`, &#10;  `v_pedas_master_trained`.`Status Responds`, &#10;  `v_pedas_master_trained`.`Reason Not Responded`, &#10;  `v_pedas_master_trained`.`Date of Tracking Revisit`, &#10;  `v_pedas_master_trained`.`Tracker Name Revisit`, &#10;  `v_pedas_master_trained`.`Status Responds Revisit`, &#10;  `v_pedas_master_trained`.`Reason Not Responded Revisit`, &#10;  `v_pedas_master_trained`.`Tracked Revisit`, &#10;  `v_pedas_master_trained`.`Remark Trackers`, &#10;  `v_pedas_master_trained`.`Eligable for Success Story`, &#10;  `v_pedas_master_trained`.`Status`, &#10;  `v_pedas_master_trained`.`Onboarding status`&#10;FROM `v_pedas_master_trained`&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="mysql_id"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&amp;enabledTLSProtocols=TLSv1.2,TLSv1.1,TLSv1&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Name"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Age"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Gender"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Race"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Email"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Postcode"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="City"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="District"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="State"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Tracked"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Revisit"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EDDIE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="User_Role"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Course_Mode"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Main_Programme"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sub_Program_1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="New_Identity_Card_No"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Age_Group"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Phone_Number"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Home_Address"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Marital_Status"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Special_Need_Required"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Portal_Registration_Start_Year"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Portal_Registration_Start_Date"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Training_Registration_Start_Year"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Training_Start_Date"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Partner_Representative"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Center_Name"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Date_Created_Class"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Centre_Name"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Address_Centre_Location"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Class_Centre_Postcode"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Center_State"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Trainer_Name"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Month_of_Class"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Date_of_Class"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Class_Completion_Date"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Year_of_Class_Completion"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Month_of_Class_Completion"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Class_Completion_Status"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Participant_My_Business_Transaction_Start_Year"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Participant_My_Business_Transaction_Start_Date"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Education_Level"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Employment_Status"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Have_a_business_before_join_eU_Training__Yes_No"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Personal_Instagram"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Personal_Facebook"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Facebook_Page"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Instagram_Page"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Wechat_for_Business"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Business_Website"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Type_of_Website"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Whatsapp_for_Business"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Have_an_Online_Business__Onboard"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Marketplace_Name"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Reason_Not_Running_Business"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Registered_SSM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Company_Name"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Company_Registration_No"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Type_of_Business"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Business_Role"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Business_Category"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Business_Subcategory"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Marketplace_Existance"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Experience_in_International_Export"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_Before_eUsahawan__RM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_January_2021__RM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_February_2021__RM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_March_2021__RM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_April_2021__RM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_May_2021__RM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_June_2021__RM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_July_2021__RM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_August_2021__RM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_September_2021__RM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_October_2021__RM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_November_2021__RM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_December_2021__RM"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="No_of_Month_Generate_Sales"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Average_Sales"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Increment_Perc"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Status_Generating"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Overall_Gamication_Point"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="part_last_yr"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="part_last_mth"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="part_last_dt"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Urban___Rural"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Date_of_Tracking"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Tracker_Name"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Status_Responds"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Reason_Not_Responded"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Date_of_Tracking_Revisit"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Tracker_Name_Revisit"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Status_Responds_Revisit"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Reason_Not_Responded_Revisit"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Tracked_Revisit"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Remark_Trackers"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Eligable_for_Success_Story"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Status"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Onboarding_status"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="v_pedas_master_trained" name="tDBInput_1">
+      <column comment="" defaultValue="0" key="false" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Name" nullable="true" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Age" nullable="true" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Gender" nullable="true" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Race" nullable="true" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Email" nullable="true" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Postcode" nullable="true" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="City" nullable="true" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="District" nullable="true" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="State" nullable="true" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Tracked" nullable="true" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Revisit" nullable="true" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="EDDIE" nullable="true" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="User_Role" nullable="true" originalDbColumnName="User Role" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Course_Mode" nullable="true" originalDbColumnName="Course Mode" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Main_Programme" nullable="true" originalDbColumnName="Main Programme" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Sub_Program_1" nullable="true" originalDbColumnName="Sub Program 1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="New_Identity_Card_No" nullable="true" originalDbColumnName="New Identity Card No." pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Age_Group" nullable="true" originalDbColumnName="Age Group" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Phone_Number" nullable="true" originalDbColumnName="Phone Number" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Home_Address" nullable="true" originalDbColumnName="Home Address" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Marital_Status" nullable="true" originalDbColumnName="Marital Status" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Special_Need_Required" nullable="true" originalDbColumnName="Special Need Required" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Portal_Registration_Start_Year" nullable="true" originalDbColumnName="Portal Registration Start Year" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Portal_Registration_Start_Date" nullable="true" originalDbColumnName="Portal Registration Start Date" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Training_Registration_Start_Year" nullable="true" originalDbColumnName="Training Registration Start Year" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Training_Start_Date" nullable="true" originalDbColumnName="Training Start Date" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Partner_Representative" nullable="true" originalDbColumnName="Partner Representative" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Center_Name" nullable="true" originalDbColumnName="Center Name" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Date_Created_Class" nullable="true" originalDbColumnName="Date Created Class" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Centre_Name" nullable="true" originalDbColumnName="Centre Name" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Address_Centre_Location" nullable="true" originalDbColumnName="Address Centre Location" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Class_Centre_Postcode" nullable="true" originalDbColumnName="Class Centre Postcode" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Center_State" nullable="true" originalDbColumnName="Center State" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Trainer_Name" nullable="true" originalDbColumnName="Trainer Name" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Month_of_Class" nullable="true" originalDbColumnName="Month of Class" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Date_of_Class" nullable="true" originalDbColumnName="Date of Class" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Class_Completion_Date" nullable="true" originalDbColumnName="Class Completion Date" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Year_of_Class_Completion" nullable="true" originalDbColumnName="Year of Class Completion" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Month_of_Class_Completion" nullable="true" originalDbColumnName="Month of Class Completion" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Class_Completion_Status" nullable="true" originalDbColumnName="Class Completion Status" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Participant_My_Business_Transaction_Start_Year" nullable="true" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Participant_My_Business_Transaction_Start_Date" nullable="true" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Education_Level" nullable="true" originalDbColumnName="Education Level" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Employment_Status" nullable="true" originalDbColumnName="Employment Status" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Have_a_business_before_join_eU_Training__Yes_No" nullable="true" originalDbColumnName="Have a business before join eU Training (Yes/No)" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Personal_Instagram" nullable="true" originalDbColumnName="Personal Instagram" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Personal_Facebook" nullable="true" originalDbColumnName="Personal Facebook" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Facebook_Page" nullable="true" originalDbColumnName="Facebook Page" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Instagram_Page" nullable="true" originalDbColumnName="Instagram Page" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Wechat_for_Business" nullable="true" originalDbColumnName="Wechat for Business" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Business_Website" nullable="true" originalDbColumnName="Business Website" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Type_of_Website" nullable="true" originalDbColumnName="Type of Website" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Whatsapp_for_Business" nullable="true" originalDbColumnName="Whatsapp for Business" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Have_an_Online_Business__Onboard" nullable="true" originalDbColumnName="Have an Online Business/ Onboard" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Marketplace_Name" nullable="true" originalDbColumnName="Marketplace Name" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Reason_Not_Running_Business" nullable="true" originalDbColumnName="Reason Not Running Business" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Registered_SSM" nullable="true" originalDbColumnName="Registered SSM" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Company_Name" nullable="true" originalDbColumnName="Company Name" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Company_Registration_No" nullable="true" originalDbColumnName="Company Registration No." pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Type_of_Business" nullable="true" originalDbColumnName="Type of Business" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Business_Role" nullable="true" originalDbColumnName="Business Role" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Business_Category" nullable="true" originalDbColumnName="Business Category" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Business_Subcategory" nullable="true" originalDbColumnName="Business Subcategory" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Marketplace_Existance" nullable="true" originalDbColumnName="Marketplace Existance" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Experience_in_International_Export" nullable="true" originalDbColumnName="Experience in International Export" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Sales_Before_eUsahawan__RM" nullable="true" originalDbColumnName="Sales Before eUsahawan (RM)" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Sales_on_January_2021__RM" nullable="true" originalDbColumnName="Sales on January 2021 (RM)" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Sales_on_February_2021__RM" nullable="true" originalDbColumnName="Sales on February 2021 (RM)" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Sales_on_March_2021__RM" nullable="true" originalDbColumnName="Sales on March 2021 (RM)" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Sales_on_April_2021__RM" nullable="true" originalDbColumnName="Sales on April 2021 (RM)" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Sales_on_May_2021__RM" nullable="true" originalDbColumnName="Sales on May 2021 (RM)" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Sales_on_June_2021__RM" nullable="true" originalDbColumnName="Sales on June 2021 (RM)" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Sales_on_July_2021__RM" nullable="true" originalDbColumnName="Sales on July 2021 (RM)" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Sales_on_August_2021__RM" nullable="true" originalDbColumnName="Sales on August 2021 (RM)" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Sales_on_September_2021__RM" nullable="true" originalDbColumnName="Sales on September 2021 (RM)" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Sales_on_October_2021__RM" nullable="true" originalDbColumnName="Sales on October 2021 (RM)" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Sales_on_November_2021__RM" nullable="true" originalDbColumnName="Sales on November 2021 (RM)" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Sales_on_December_2021__RM" nullable="true" originalDbColumnName="Sales on December 2021 (RM)" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="No_of_Month_Generate_Sales" nullable="true" originalDbColumnName="No of Month Generate Sales" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Average_Sales" nullable="true" originalDbColumnName="Average Sales" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Increment_Perc" nullable="true" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Status_Generating" nullable="true" originalDbColumnName="Status Generating" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Overall_Gamication_Point" nullable="true" originalDbColumnName="Overall Gamication Point" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="part_last_yr" nullable="true" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="part_last_mth" nullable="true" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="part_last_dt" nullable="true" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Urban___Rural" nullable="true" originalDbColumnName="Urban / Rural" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Date_of_Tracking" nullable="true" originalDbColumnName="Date of Tracking" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Tracker_Name" nullable="true" originalDbColumnName="Tracker Name" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Status_Responds" nullable="true" originalDbColumnName="Status Responds" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Reason_Not_Responded" nullable="true" originalDbColumnName="Reason Not Responded" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Date_of_Tracking_Revisit" nullable="true" originalDbColumnName="Date of Tracking Revisit" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Tracker_Name_Revisit" nullable="true" originalDbColumnName="Tracker Name Revisit" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Status_Responds_Revisit" nullable="true" originalDbColumnName="Status Responds Revisit" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Reason_Not_Responded_Revisit" nullable="true" originalDbColumnName="Reason Not Responded Revisit" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Tracked_Revisit" nullable="true" originalDbColumnName="Tracked Revisit" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Remark_Trackers" nullable="true" originalDbColumnName="Remark Trackers" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Eligable_for_Success_Story" nullable="true" originalDbColumnName="Eligable for Success Story" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Status" nullable="true" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="Onboarding_status" nullable="true" originalDbColumnName="Onboarding status" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <additionalProperties key="Comment" value="VIEW"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_7a6FoFCKEe228aYtBOBpbA-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="row3" name="row3">
+      <column comment="" defaultValue="0" key="false" length="10" name="id" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Name" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Age" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Gender" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Race" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Email" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Postcode" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="City" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="District" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="State" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Tracked" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Revisit" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="EDDIE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="User_Role" nullable="true" originalDbColumnName="User Role" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Course_Mode" nullable="true" originalDbColumnName="Course Mode" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Main_Programme" nullable="true" originalDbColumnName="Main Programme" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sub_Program_1" nullable="true" originalDbColumnName="Sub Program 1" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="New_Identity_Card_No" nullable="true" originalDbColumnName="New Identity Card No." originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Age_Group" nullable="true" originalDbColumnName="Age Group" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Phone_Number" nullable="true" originalDbColumnName="Phone Number" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Home_Address" nullable="true" originalDbColumnName="Home Address" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Marital_Status" nullable="true" originalDbColumnName="Marital Status" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Special_Need_Required" nullable="true" originalDbColumnName="Special Need Required" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Portal_Registration_Start_Year" nullable="true" originalDbColumnName="Portal Registration Start Year" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Portal_Registration_Start_Date" nullable="true" originalDbColumnName="Portal Registration Start Date" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Training_Registration_Start_Year" nullable="true" originalDbColumnName="Training Registration Start Year" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Training_Start_Date" nullable="true" originalDbColumnName="Training Start Date" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Partner_Representative" nullable="true" originalDbColumnName="Partner Representative" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Center_Name" nullable="true" originalDbColumnName="Center Name" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Date_Created_Class" nullable="true" originalDbColumnName="Date Created Class" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Centre_Name" nullable="true" originalDbColumnName="Centre Name" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Address_Centre_Location" nullable="true" originalDbColumnName="Address Centre Location" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Class_Centre_Postcode" nullable="true" originalDbColumnName="Class Centre Postcode" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Center_State" nullable="true" originalDbColumnName="Center State" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Trainer_Name" nullable="true" originalDbColumnName="Trainer Name" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Month_of_Class" nullable="true" originalDbColumnName="Month of Class" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Date_of_Class" nullable="true" originalDbColumnName="Date of Class" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Class_Completion_Date" nullable="true" originalDbColumnName="Class Completion Date" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Year_of_Class_Completion" nullable="true" originalDbColumnName="Year of Class Completion" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Month_of_Class_Completion" nullable="true" originalDbColumnName="Month of Class Completion" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Class_Completion_Status" nullable="true" originalDbColumnName="Class Completion Status" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Participant_My_Business_Transaction_Start_Year" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Participant_My_Business_Transaction_Start_Date" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Education_Level" nullable="true" originalDbColumnName="Education Level" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Employment_Status" nullable="true" originalDbColumnName="Employment Status" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Have_a_business_before_join_eU_Training__Yes_No" nullable="true" originalDbColumnName="Have a business before join eU Training (Yes/No)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Personal_Instagram" nullable="true" originalDbColumnName="Personal Instagram" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Personal_Facebook" nullable="true" originalDbColumnName="Personal Facebook" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Facebook_Page" nullable="true" originalDbColumnName="Facebook Page" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Instagram_Page" nullable="true" originalDbColumnName="Instagram Page" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Wechat_for_Business" nullable="true" originalDbColumnName="Wechat for Business" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Business_Website" nullable="true" originalDbColumnName="Business Website" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Type_of_Website" nullable="true" originalDbColumnName="Type of Website" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Whatsapp_for_Business" nullable="true" originalDbColumnName="Whatsapp for Business" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Have_an_Online_Business__Onboard" nullable="true" originalDbColumnName="Have an Online Business/ Onboard" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Marketplace_Name" nullable="true" originalDbColumnName="Marketplace Name" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Reason_Not_Running_Business" nullable="true" originalDbColumnName="Reason Not Running Business" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Registered_SSM" nullable="true" originalDbColumnName="Registered SSM" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Company_Name" nullable="true" originalDbColumnName="Company Name" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Company_Registration_No" nullable="true" originalDbColumnName="Company Registration No." originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Type_of_Business" nullable="true" originalDbColumnName="Type of Business" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Business_Role" nullable="true" originalDbColumnName="Business Role" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Business_Category" nullable="true" originalDbColumnName="Business Category" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Business_Subcategory" nullable="true" originalDbColumnName="Business Subcategory" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Marketplace_Existance" nullable="true" originalDbColumnName="Marketplace Existance" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Experience_in_International_Export" nullable="true" originalDbColumnName="Experience in International Export" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_Before_eUsahawan__RM" nullable="true" originalDbColumnName="Sales Before eUsahawan (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_January_2021__RM" nullable="true" originalDbColumnName="Sales on January 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_February_2021__RM" nullable="true" originalDbColumnName="Sales on February 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_March_2021__RM" nullable="true" originalDbColumnName="Sales on March 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_April_2021__RM" nullable="true" originalDbColumnName="Sales on April 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_May_2021__RM" nullable="true" originalDbColumnName="Sales on May 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_June_2021__RM" nullable="true" originalDbColumnName="Sales on June 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_July_2021__RM" nullable="true" originalDbColumnName="Sales on July 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_August_2021__RM" nullable="true" originalDbColumnName="Sales on August 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_September_2021__RM" nullable="true" originalDbColumnName="Sales on September 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_October_2021__RM" nullable="true" originalDbColumnName="Sales on October 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_November_2021__RM" nullable="true" originalDbColumnName="Sales on November 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_December_2021__RM" nullable="true" originalDbColumnName="Sales on December 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="No_of_Month_Generate_Sales" nullable="true" originalDbColumnName="No of Month Generate Sales" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Average_Sales" nullable="true" originalDbColumnName="Average Sales" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Increment_Perc" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Status_Generating" nullable="true" originalDbColumnName="Status Generating" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Overall_Gamication_Point" nullable="true" originalDbColumnName="Overall Gamication Point" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="part_last_yr" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="part_last_mth" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="part_last_dt" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Urban___Rural" nullable="true" originalDbColumnName="Urban / Rural" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Date_of_Tracking" nullable="true" originalDbColumnName="Date of Tracking" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Tracker_Name" nullable="true" originalDbColumnName="Tracker Name" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Status_Responds" nullable="true" originalDbColumnName="Status Responds" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Reason_Not_Responded" nullable="true" originalDbColumnName="Reason Not Responded" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Date_of_Tracking_Revisit" nullable="true" originalDbColumnName="Date of Tracking Revisit" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Tracker_Name_Revisit" nullable="true" originalDbColumnName="Tracker Name Revisit" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Status_Responds_Revisit" nullable="true" originalDbColumnName="Status Responds Revisit" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Reason_Not_Responded_Revisit" nullable="true" originalDbColumnName="Reason Not Responded Revisit" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Tracked_Revisit" nullable="true" originalDbColumnName="Tracked Revisit" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Remark_Trackers" nullable="true" originalDbColumnName="Remark Trackers" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Eligable_for_Success_Story" nullable="true" originalDbColumnName="Eligable for Success Story" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Status" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Onboarding_status" nullable="true" originalDbColumnName="Onboarding status" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="row3" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row1.id " name="id" type="id_Integer"/>
+        <mapperTableEntries expression="row1.Name " name="Name" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Age " name="Age" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Gender " name="Gender" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Race " name="Race" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Email " name="Email" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Postcode " name="Postcode" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.City " name="City" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.District " name="District" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.State " name="State" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Tracked " name="Tracked" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Revisit " name="Revisit" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.EDDIE " name="EDDIE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.User_Role " name="User_Role" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Course_Mode " name="Course_Mode" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Main_Programme " name="Main_Programme" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Sub_Program_1 " name="Sub_Program_1" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.New_Identity_Card_No " name="New_Identity_Card_No" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Age_Group " name="Age_Group" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Phone_Number " name="Phone_Number" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Home_Address " name="Home_Address" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Marital_Status " name="Marital_Status" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Special_Need_Required " name="Special_Need_Required" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Portal_Registration_Start_Year " name="Portal_Registration_Start_Year" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Portal_Registration_Start_Date " name="Portal_Registration_Start_Date" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Training_Registration_Start_Year " name="Training_Registration_Start_Year" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Training_Start_Date " name="Training_Start_Date" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Partner_Representative " name="Partner_Representative" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Center_Name " name="Center_Name" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Date_Created_Class " name="Date_Created_Class" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Centre_Name " name="Centre_Name" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Address_Centre_Location " name="Address_Centre_Location" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Class_Centre_Postcode " name="Class_Centre_Postcode" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Center_State " name="Center_State" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Trainer_Name " name="Trainer_Name" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Month_of_Class " name="Month_of_Class" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Date_of_Class " name="Date_of_Class" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Class_Completion_Date " name="Class_Completion_Date" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Year_of_Class_Completion " name="Year_of_Class_Completion" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Month_of_Class_Completion " name="Month_of_Class_Completion" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Class_Completion_Status " name="Class_Completion_Status" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Participant_My_Business_Transaction_Start_Year " name="Participant_My_Business_Transaction_Start_Year" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Participant_My_Business_Transaction_Start_Date " name="Participant_My_Business_Transaction_Start_Date" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Education_Level " name="Education_Level" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Employment_Status " name="Employment_Status" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Have_a_business_before_join_eU_Training__Yes_No " name="Have_a_business_before_join_eU_Training__Yes_No" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Personal_Instagram " name="Personal_Instagram" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Personal_Facebook " name="Personal_Facebook" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Facebook_Page " name="Facebook_Page" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Instagram_Page " name="Instagram_Page" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Wechat_for_Business " name="Wechat_for_Business" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Business_Website " name="Business_Website" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Type_of_Website " name="Type_of_Website" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Whatsapp_for_Business " name="Whatsapp_for_Business" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Have_an_Online_Business__Onboard " name="Have_an_Online_Business__Onboard" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Marketplace_Name " name="Marketplace_Name" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Reason_Not_Running_Business " name="Reason_Not_Running_Business" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Registered_SSM " name="Registered_SSM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Company_Name " name="Company_Name" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Company_Registration_No " name="Company_Registration_No" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Type_of_Business " name="Type_of_Business" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Business_Role " name="Business_Role" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Business_Category " name="Business_Category" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Business_Subcategory " name="Business_Subcategory" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Marketplace_Existance " name="Marketplace_Existance" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Experience_in_International_Export " name="Experience_in_International_Export" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Sales_Before_eUsahawan__RM " name="Sales_Before_eUsahawan__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Sales_on_January_2021__RM " name="Sales_on_January_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Sales_on_February_2021__RM " name="Sales_on_February_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Sales_on_March_2021__RM " name="Sales_on_March_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Sales_on_April_2021__RM " name="Sales_on_April_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Sales_on_May_2021__RM " name="Sales_on_May_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Sales_on_June_2021__RM " name="Sales_on_June_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Sales_on_July_2021__RM " name="Sales_on_July_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Sales_on_August_2021__RM " name="Sales_on_August_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Sales_on_September_2021__RM " name="Sales_on_September_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Sales_on_October_2021__RM " name="Sales_on_October_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Sales_on_November_2021__RM " name="Sales_on_November_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Sales_on_December_2021__RM " name="Sales_on_December_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.No_of_Month_Generate_Sales " name="No_of_Month_Generate_Sales" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Average_Sales " name="Average_Sales" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Increment_Perc " name="Increment_Perc" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Status_Generating " name="Status_Generating" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Overall_Gamication_Point " name="Overall_Gamication_Point" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.part_last_yr " name="part_last_yr" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.part_last_mth " name="part_last_mth" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.part_last_dt " name="part_last_dt" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Urban___Rural " name="Urban___Rural" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Date_of_Tracking " name="Date_of_Tracking" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Tracker_Name " name="Tracker_Name" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Status_Responds " name="Status_Responds" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Reason_Not_Responded " name="Reason_Not_Responded" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Date_of_Tracking_Revisit " name="Date_of_Tracking_Revisit" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Tracker_Name_Revisit " name="Tracker_Name_Revisit" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Status_Responds_Revisit " name="Status_Responds_Revisit" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Reason_Not_Responded_Revisit " name="Reason_Not_Responded_Revisit" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Tracked_Revisit " name="Tracked_Revisit" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Remark_Trackers " name="Remark_Trackers" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Eligable_for_Success_Story " name="Eligable_for_Success_Story" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Status " name="Status" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.Onboarding_status " name="Onboarding_status" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="id" type="id_Integer"/>
+        <mapperTableEntries name="Name" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Age" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Gender" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Race" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Email" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Postcode" nullable="true" type="id_String"/>
+        <mapperTableEntries name="City" nullable="true" type="id_String"/>
+        <mapperTableEntries name="District" nullable="true" type="id_String"/>
+        <mapperTableEntries name="State" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Tracked" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Revisit" nullable="true" type="id_String"/>
+        <mapperTableEntries name="EDDIE" nullable="true" type="id_String"/>
+        <mapperTableEntries name="User_Role" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Course_Mode" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Main_Programme" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Sub_Program_1" nullable="true" type="id_String"/>
+        <mapperTableEntries name="New_Identity_Card_No" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Age_Group" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Phone_Number" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Home_Address" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Marital_Status" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Special_Need_Required" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Portal_Registration_Start_Year" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Portal_Registration_Start_Date" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Training_Registration_Start_Year" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Training_Start_Date" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Partner_Representative" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Center_Name" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Date_Created_Class" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Centre_Name" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Address_Centre_Location" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Class_Centre_Postcode" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Center_State" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Trainer_Name" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Month_of_Class" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Date_of_Class" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Class_Completion_Date" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Year_of_Class_Completion" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Month_of_Class_Completion" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Class_Completion_Status" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Participant_My_Business_Transaction_Start_Year" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Participant_My_Business_Transaction_Start_Date" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Education_Level" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Employment_Status" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Have_a_business_before_join_eU_Training__Yes_No" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Personal_Instagram" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Personal_Facebook" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Facebook_Page" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Instagram_Page" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Wechat_for_Business" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Business_Website" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Type_of_Website" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Whatsapp_for_Business" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Have_an_Online_Business__Onboard" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Marketplace_Name" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Reason_Not_Running_Business" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Registered_SSM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Company_Name" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Company_Registration_No" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Type_of_Business" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Business_Role" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Business_Category" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Business_Subcategory" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Marketplace_Existance" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Experience_in_International_Export" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Sales_Before_eUsahawan__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Sales_on_January_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Sales_on_February_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Sales_on_March_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Sales_on_April_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Sales_on_May_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Sales_on_June_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Sales_on_July_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Sales_on_August_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Sales_on_September_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Sales_on_October_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Sales_on_November_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Sales_on_December_2021__RM" nullable="true" type="id_String"/>
+        <mapperTableEntries name="No_of_Month_Generate_Sales" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Average_Sales" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Increment_Perc" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Status_Generating" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Overall_Gamication_Point" nullable="true" type="id_String"/>
+        <mapperTableEntries name="part_last_yr" nullable="true" type="id_String"/>
+        <mapperTableEntries name="part_last_mth" nullable="true" type="id_String"/>
+        <mapperTableEntries name="part_last_dt" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Urban___Rural" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Date_of_Tracking" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Tracker_Name" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Status_Responds" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Reason_Not_Responded" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Date_of_Tracking_Revisit" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Tracker_Name_Revisit" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Status_Responds_Revisit" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Reason_Not_Responded_Revisit" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Tracked_Revisit" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Remark_Trackers" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Eligable_for_Success_Story" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Status" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Onboarding_status" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_DqPn4E7FEe2Zn7eXjDUldw"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;rm-zf8udj99u0u1pc41c.mysql.kualalumpur.rds.aliyuncs.com&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;poc_db&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;vendor&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:tZ+LwgsybrzFC26Mro66R7MUbcoMWemW1HcVYoctOej8XAk42oSzF6284xTrng=="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;dl_goe_pedas_master_trained&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="mysql_id"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&amp;enabledTLSProtocols=TLSv1.2,TLSv1.1,TLSv1&quot;"/>
+    <elementParameter field="CHECK" name="EXTENDINSERT" value="true"/>
+    <elementParameter field="LABEL" name="NOTE" value="(Not compatible with reject links)"/>
+    <elementParameter field="TEXT" name="NB_ROWS_PER_INSERT" value="100"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" show="false" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" show="false" value="10000"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Name"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Age"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Gender"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Race"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Email"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Postcode"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="City"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="District"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="State"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Tracked"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Revisit"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EDDIE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="User_Role"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Course_Mode"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Main_Programme"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sub_Program_1"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="New_Identity_Card_No"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Age_Group"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Phone_Number"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Home_Address"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Marital_Status"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Special_Need_Required"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Portal_Registration_Start_Year"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Portal_Registration_Start_Date"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Training_Registration_Start_Year"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Training_Start_Date"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Partner_Representative"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Center_Name"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Date_Created_Class"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Centre_Name"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Address_Centre_Location"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Class_Centre_Postcode"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Center_State"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Trainer_Name"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Month_of_Class"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Date_of_Class"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Class_Completion_Date"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Year_of_Class_Completion"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Month_of_Class_Completion"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Class_Completion_Status"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Participant_My_Business_Transaction_Start_Year"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Participant_My_Business_Transaction_Start_Date"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Education_Level"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Employment_Status"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Have_a_business_before_join_eU_Training__Yes_No"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Personal_Instagram"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Personal_Facebook"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Facebook_Page"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Instagram_Page"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Wechat_for_Business"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Business_Website"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Type_of_Website"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Whatsapp_for_Business"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Have_an_Online_Business__Onboard"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Marketplace_Name"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Reason_Not_Running_Business"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Registered_SSM"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Company_Name"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Company_Registration_No"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Type_of_Business"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Business_Role"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Business_Category"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Business_Subcategory"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Marketplace_Existance"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Experience_in_International_Export"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_Before_eUsahawan__RM"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_January_2021__RM"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_February_2021__RM"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_March_2021__RM"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_April_2021__RM"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_May_2021__RM"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_June_2021__RM"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_July_2021__RM"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_August_2021__RM"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_September_2021__RM"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_October_2021__RM"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_November_2021__RM"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Sales_on_December_2021__RM"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="No_of_Month_Generate_Sales"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Average_Sales"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Increment_Perc"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Status_Generating"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Overall_Gamication_Point"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="part_last_yr"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="part_last_mth"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="part_last_dt"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Urban___Rural"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Date_of_Tracking"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Tracker_Name"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Status_Responds"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Reason_Not_Responded"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Date_of_Tracking_Revisit"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Tracker_Name_Revisit"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Status_Responds_Revisit"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Reason_Not_Responded_Revisit"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Tracked_Revisit"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Remark_Trackers"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Eligable_for_Success_Story"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Status"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Onboarding_status"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="ON_DUPLICATE_KEY_UPDATE" value="false"/>
+    <elementParameter field="TABLE" name="DUPLICATED_KEYS" show="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="mdec_poc_db"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="row3" name="tDBOutput_1">
+      <column comment="" defaultValue="0" key="false" length="10" name="id" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Name" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Age" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Gender" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Race" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Email" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Postcode" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="City" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="District" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="State" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Tracked" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Revisit" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="EDDIE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="User_Role" nullable="true" originalDbColumnName="User Role" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Course_Mode" nullable="true" originalDbColumnName="Course Mode" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Main_Programme" nullable="true" originalDbColumnName="Main Programme" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sub_Program_1" nullable="true" originalDbColumnName="Sub Program 1" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="New_Identity_Card_No" nullable="true" originalDbColumnName="New Identity Card No." originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Age_Group" nullable="true" originalDbColumnName="Age Group" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Phone_Number" nullable="true" originalDbColumnName="Phone Number" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Home_Address" nullable="true" originalDbColumnName="Home Address" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Marital_Status" nullable="true" originalDbColumnName="Marital Status" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Special_Need_Required" nullable="true" originalDbColumnName="Special Need Required" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Portal_Registration_Start_Year" nullable="true" originalDbColumnName="Portal Registration Start Year" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Portal_Registration_Start_Date" nullable="true" originalDbColumnName="Portal Registration Start Date" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Training_Registration_Start_Year" nullable="true" originalDbColumnName="Training Registration Start Year" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Training_Start_Date" nullable="true" originalDbColumnName="Training Start Date" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Partner_Representative" nullable="true" originalDbColumnName="Partner Representative" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Center_Name" nullable="true" originalDbColumnName="Center Name" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Date_Created_Class" nullable="true" originalDbColumnName="Date Created Class" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Centre_Name" nullable="true" originalDbColumnName="Centre Name" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Address_Centre_Location" nullable="true" originalDbColumnName="Address Centre Location" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Class_Centre_Postcode" nullable="true" originalDbColumnName="Class Centre Postcode" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Center_State" nullable="true" originalDbColumnName="Center State" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Trainer_Name" nullable="true" originalDbColumnName="Trainer Name" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Month_of_Class" nullable="true" originalDbColumnName="Month of Class" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Date_of_Class" nullable="true" originalDbColumnName="Date of Class" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Class_Completion_Date" nullable="true" originalDbColumnName="Class Completion Date" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Year_of_Class_Completion" nullable="true" originalDbColumnName="Year of Class Completion" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Month_of_Class_Completion" nullable="true" originalDbColumnName="Month of Class Completion" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Class_Completion_Status" nullable="true" originalDbColumnName="Class Completion Status" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Participant_My_Business_Transaction_Start_Year" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Participant_My_Business_Transaction_Start_Date" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Education_Level" nullable="true" originalDbColumnName="Education Level" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Employment_Status" nullable="true" originalDbColumnName="Employment Status" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Have_a_business_before_join_eU_Training__Yes_No" nullable="true" originalDbColumnName="Have a business before join eU Training (Yes/No)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Personal_Instagram" nullable="true" originalDbColumnName="Personal Instagram" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Personal_Facebook" nullable="true" originalDbColumnName="Personal Facebook" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Facebook_Page" nullable="true" originalDbColumnName="Facebook Page" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Instagram_Page" nullable="true" originalDbColumnName="Instagram Page" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Wechat_for_Business" nullable="true" originalDbColumnName="Wechat for Business" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Business_Website" nullable="true" originalDbColumnName="Business Website" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Type_of_Website" nullable="true" originalDbColumnName="Type of Website" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Whatsapp_for_Business" nullable="true" originalDbColumnName="Whatsapp for Business" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Have_an_Online_Business__Onboard" nullable="true" originalDbColumnName="Have an Online Business/ Onboard" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Marketplace_Name" nullable="true" originalDbColumnName="Marketplace Name" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Reason_Not_Running_Business" nullable="true" originalDbColumnName="Reason Not Running Business" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Registered_SSM" nullable="true" originalDbColumnName="Registered SSM" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Company_Name" nullable="true" originalDbColumnName="Company Name" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Company_Registration_No" nullable="true" originalDbColumnName="Company Registration No." originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Type_of_Business" nullable="true" originalDbColumnName="Type of Business" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Business_Role" nullable="true" originalDbColumnName="Business Role" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Business_Category" nullable="true" originalDbColumnName="Business Category" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Business_Subcategory" nullable="true" originalDbColumnName="Business Subcategory" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Marketplace_Existance" nullable="true" originalDbColumnName="Marketplace Existance" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Experience_in_International_Export" nullable="true" originalDbColumnName="Experience in International Export" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_Before_eUsahawan__RM" nullable="true" originalDbColumnName="Sales Before eUsahawan (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_January_2021__RM" nullable="true" originalDbColumnName="Sales on January 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_February_2021__RM" nullable="true" originalDbColumnName="Sales on February 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_March_2021__RM" nullable="true" originalDbColumnName="Sales on March 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_April_2021__RM" nullable="true" originalDbColumnName="Sales on April 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_May_2021__RM" nullable="true" originalDbColumnName="Sales on May 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_June_2021__RM" nullable="true" originalDbColumnName="Sales on June 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_July_2021__RM" nullable="true" originalDbColumnName="Sales on July 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_August_2021__RM" nullable="true" originalDbColumnName="Sales on August 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_September_2021__RM" nullable="true" originalDbColumnName="Sales on September 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_October_2021__RM" nullable="true" originalDbColumnName="Sales on October 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_November_2021__RM" nullable="true" originalDbColumnName="Sales on November 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_December_2021__RM" nullable="true" originalDbColumnName="Sales on December 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="No_of_Month_Generate_Sales" nullable="true" originalDbColumnName="No of Month Generate Sales" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Average_Sales" nullable="true" originalDbColumnName="Average Sales" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Increment_Perc" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Status_Generating" nullable="true" originalDbColumnName="Status Generating" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Overall_Gamication_Point" nullable="true" originalDbColumnName="Overall Gamication Point" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="part_last_yr" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="part_last_mth" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="part_last_dt" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Urban___Rural" nullable="true" originalDbColumnName="Urban / Rural" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Date_of_Tracking" nullable="true" originalDbColumnName="Date of Tracking" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Tracker_Name" nullable="true" originalDbColumnName="Tracker Name" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Status_Responds" nullable="true" originalDbColumnName="Status Responds" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Reason_Not_Responded" nullable="true" originalDbColumnName="Reason Not Responded" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Date_of_Tracking_Revisit" nullable="true" originalDbColumnName="Date of Tracking Revisit" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Tracker_Name_Revisit" nullable="true" originalDbColumnName="Tracker Name Revisit" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Status_Responds_Revisit" nullable="true" originalDbColumnName="Status Responds Revisit" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Reason_Not_Responded_Revisit" nullable="true" originalDbColumnName="Reason Not Responded Revisit" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Tracked_Revisit" nullable="true" originalDbColumnName="Tracked Revisit" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Remark_Trackers" nullable="true" originalDbColumnName="Remark Trackers" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Eligable_for_Success_Story" nullable="true" originalDbColumnName="Eligable for Success Story" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Status" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Onboarding_status" nullable="true" originalDbColumnName="Onboarding status" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" label="row3" name="REJECT">
+      <column comment="" defaultValue="0" key="false" length="10" name="id" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Name" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Age" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Gender" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Race" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Email" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Postcode" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="City" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="District" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="State" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Tracked" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Revisit" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="EDDIE" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="User_Role" nullable="true" originalDbColumnName="User Role" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Course_Mode" nullable="true" originalDbColumnName="Course Mode" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Main_Programme" nullable="true" originalDbColumnName="Main Programme" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sub_Program_1" nullable="true" originalDbColumnName="Sub Program 1" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="New_Identity_Card_No" nullable="true" originalDbColumnName="New Identity Card No." originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Age_Group" nullable="true" originalDbColumnName="Age Group" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Phone_Number" nullable="true" originalDbColumnName="Phone Number" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Home_Address" nullable="true" originalDbColumnName="Home Address" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Marital_Status" nullable="true" originalDbColumnName="Marital Status" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Special_Need_Required" nullable="true" originalDbColumnName="Special Need Required" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Portal_Registration_Start_Year" nullable="true" originalDbColumnName="Portal Registration Start Year" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Portal_Registration_Start_Date" nullable="true" originalDbColumnName="Portal Registration Start Date" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Training_Registration_Start_Year" nullable="true" originalDbColumnName="Training Registration Start Year" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Training_Start_Date" nullable="true" originalDbColumnName="Training Start Date" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Partner_Representative" nullable="true" originalDbColumnName="Partner Representative" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Center_Name" nullable="true" originalDbColumnName="Center Name" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Date_Created_Class" nullable="true" originalDbColumnName="Date Created Class" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Centre_Name" nullable="true" originalDbColumnName="Centre Name" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Address_Centre_Location" nullable="true" originalDbColumnName="Address Centre Location" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Class_Centre_Postcode" nullable="true" originalDbColumnName="Class Centre Postcode" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Center_State" nullable="true" originalDbColumnName="Center State" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Trainer_Name" nullable="true" originalDbColumnName="Trainer Name" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Month_of_Class" nullable="true" originalDbColumnName="Month of Class" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Date_of_Class" nullable="true" originalDbColumnName="Date of Class" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Class_Completion_Date" nullable="true" originalDbColumnName="Class Completion Date" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Year_of_Class_Completion" nullable="true" originalDbColumnName="Year of Class Completion" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Month_of_Class_Completion" nullable="true" originalDbColumnName="Month of Class Completion" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Class_Completion_Status" nullable="true" originalDbColumnName="Class Completion Status" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Participant_My_Business_Transaction_Start_Year" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Participant_My_Business_Transaction_Start_Date" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Education_Level" nullable="true" originalDbColumnName="Education Level" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Employment_Status" nullable="true" originalDbColumnName="Employment Status" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Have_a_business_before_join_eU_Training__Yes_No" nullable="true" originalDbColumnName="Have a business before join eU Training (Yes/No)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Personal_Instagram" nullable="true" originalDbColumnName="Personal Instagram" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Personal_Facebook" nullable="true" originalDbColumnName="Personal Facebook" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Facebook_Page" nullable="true" originalDbColumnName="Facebook Page" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Instagram_Page" nullable="true" originalDbColumnName="Instagram Page" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Wechat_for_Business" nullable="true" originalDbColumnName="Wechat for Business" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Business_Website" nullable="true" originalDbColumnName="Business Website" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Type_of_Website" nullable="true" originalDbColumnName="Type of Website" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Whatsapp_for_Business" nullable="true" originalDbColumnName="Whatsapp for Business" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Have_an_Online_Business__Onboard" nullable="true" originalDbColumnName="Have an Online Business/ Onboard" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Marketplace_Name" nullable="true" originalDbColumnName="Marketplace Name" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Reason_Not_Running_Business" nullable="true" originalDbColumnName="Reason Not Running Business" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Registered_SSM" nullable="true" originalDbColumnName="Registered SSM" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Company_Name" nullable="true" originalDbColumnName="Company Name" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Company_Registration_No" nullable="true" originalDbColumnName="Company Registration No." originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Type_of_Business" nullable="true" originalDbColumnName="Type of Business" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Business_Role" nullable="true" originalDbColumnName="Business Role" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Business_Category" nullable="true" originalDbColumnName="Business Category" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Business_Subcategory" nullable="true" originalDbColumnName="Business Subcategory" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Marketplace_Existance" nullable="true" originalDbColumnName="Marketplace Existance" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Experience_in_International_Export" nullable="true" originalDbColumnName="Experience in International Export" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_Before_eUsahawan__RM" nullable="true" originalDbColumnName="Sales Before eUsahawan (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_January_2021__RM" nullable="true" originalDbColumnName="Sales on January 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_February_2021__RM" nullable="true" originalDbColumnName="Sales on February 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_March_2021__RM" nullable="true" originalDbColumnName="Sales on March 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_April_2021__RM" nullable="true" originalDbColumnName="Sales on April 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_May_2021__RM" nullable="true" originalDbColumnName="Sales on May 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_June_2021__RM" nullable="true" originalDbColumnName="Sales on June 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_July_2021__RM" nullable="true" originalDbColumnName="Sales on July 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_August_2021__RM" nullable="true" originalDbColumnName="Sales on August 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_September_2021__RM" nullable="true" originalDbColumnName="Sales on September 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_October_2021__RM" nullable="true" originalDbColumnName="Sales on October 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_November_2021__RM" nullable="true" originalDbColumnName="Sales on November 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Sales_on_December_2021__RM" nullable="true" originalDbColumnName="Sales on December 2021 (RM)" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="No_of_Month_Generate_Sales" nullable="true" originalDbColumnName="No of Month Generate Sales" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Average_Sales" nullable="true" originalDbColumnName="Average Sales" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Increment_Perc" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Status_Generating" nullable="true" originalDbColumnName="Status Generating" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Overall_Gamication_Point" nullable="true" originalDbColumnName="Overall Gamication Point" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="part_last_yr" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="part_last_mth" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="part_last_dt" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Urban___Rural" nullable="true" originalDbColumnName="Urban / Rural" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Date_of_Tracking" nullable="true" originalDbColumnName="Date of Tracking" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Tracker_Name" nullable="true" originalDbColumnName="Tracker Name" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Status_Responds" nullable="true" originalDbColumnName="Status Responds" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Reason_Not_Responded" nullable="true" originalDbColumnName="Reason Not Responded" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Date_of_Tracking_Revisit" nullable="true" originalDbColumnName="Date of Tracking Revisit" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Tracker_Name_Revisit" nullable="true" originalDbColumnName="Tracker Name Revisit" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Status_Responds_Revisit" nullable="true" originalDbColumnName="Status Responds Revisit" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Reason_Not_Responded_Revisit" nullable="true" originalDbColumnName="Reason Not Responded Revisit" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Tracked_Revisit" nullable="true" originalDbColumnName="Tracked Revisit" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Remark_Trackers" nullable="true" originalDbColumnName="Remark Trackers" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Eligable_for_Success_Story" nullable="true" originalDbColumnName="Eligable for Success Story" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Status" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="Onboarding_status" nullable="true" originalDbColumnName="Onboarding status" originalLength="-1" pattern="" precision="0" sourceType="TINYTEXT" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="row3" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Participant_My_Business_Transaction_Start_Year"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Participant_My_Business_Transaction_Start_Date"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_67f30249-460e-4ec1-913c-93684a4d01ee"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UL3loklwrJ3djUXf79/TG0YuZZLBwaNZGm1Ndlp9dx8M/oc4HBmJVPH1QoNFq+fVmgPulPZn9HQu&#13;
+/e3vYco9DQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_dcc0df52-b1d0-47a8-92bf-09425d078339"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TRkwzl1ZqIF1rkMFcqzT3/l00mFujNVuVzBH93SgmHp4sr4VaOokp/0RR3X50EM5AxMrppwnjvqO&#13;
+c+h8Uepl1A==</DigestValue></Reference></SignedInfo><SignatureValue>Z+3Vdoc6P2B+st8DPyLGjOYOQskbiuPYeLf5farhhtbp7OGdyuiIA2r0XKsGa2ZlcOPwRsztsaJK&#13;
+L3AU+zgF/yLCD13crSnYtG+79O+r3EPtUBGcq8CNPdt21grEGdMldDvVSTE/WYNijcLbil3uo6b8&#13;
+S5h9oRnWFVxnJa9HgtAZUdtiBU/fe07qG6pHixpZc00U7gQRL4xCRwnQ+Nu6zPzTo4cVbX4EsAxG&#13;
+iOmv28SlzO13yRVT5I0oJaOJ0NKYJWC8VWJFfWkdkXkZGrGjWhU04HMc7/GLFrhuZY7ulNoA05XJ&#13;
+EeFIje/a9zlQrEUIJ5OqI5W5UsBQGyriu0ZC/Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh&#13;
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB&#13;
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2&#13;
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl&#13;
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx&#13;
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B&#13;
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ&#13;
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF&#13;
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG&#13;
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM&#13;
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA&#13;
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw&#13;
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/&#13;
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG&#13;
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13;
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_dcc0df52-b1d0-47a8-92bf-09425d078339" Target="#_67f30249-460e-4ec1-913c-93684a4d01ee"><Timestamp>2022-11-11 06:30:25</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
