@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.rules:MatchRuleDefinition xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.rules="http://dataquality.rules" xmi:id="_3thJMIKjEe2YCoN1_PehlQ" name="DP_Customer">
+  <taggedValue xmi:id="_3thJMYKjEe2YCoN1_PehlQ" tag="Status" value="development"/>
+  <taggedValue xmi:id="_3thJMoKjEe2YCoN1_PehlQ" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
+  <taggedValue xmi:id="_3thJM4KjEe2YCoN1_PehlQ" tag="Purpose"/>
+  <taggedValue xmi:id="_3thJNIKjEe2YCoN1_PehlQ" tag="Description"/>
+  <taggedValue xmi:id="_3thJNYKjEe2YCoN1_PehlQ" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_3thJNoKjEe2YCoN1_PehlQ" tag="Validation_Status" value="true"/>
+  <blockKeys xmi:id="_3thJN4KjEe2YCoN1_PehlQ" name="SSN" column="SSN">
+    <preAlgorithm xmi:id="_3thJOIKjEe2YCoN1_PehlQ" algorithmType="NON_ALGO" algorithmParameters=""/>
+    <algorithm xmi:id="_3thJOYKjEe2YCoN1_PehlQ" algorithmType="exact" algorithmParameters=""/>
+    <postAlgorithm xmi:id="_3thJOoKjEe2YCoN1_PehlQ" algorithmType="NON_ALGO" algorithmParameters=""/>
+  </blockKeys>
+  <matchRules xmi:id="_3thJO4KjEe2YCoN1_PehlQ" name="Match Rule 3" matchInterval="0.75">
+    <matchKeys xmi:id="_3thJPIKjEe2YCoN1_PehlQ" name="PHONE" column="PHONE" confidenceWeight="1" handleNull="nullMatchNull" threshold="0.5" tokenizationType="No">
+      <algorithm xmi:id="_3thJPYKjEe2YCoN1_PehlQ" algorithmType="LEVENSHTEIN" algorithmParameters=""/>
+    </matchKeys>
+    <matchKeys xmi:id="_3thJPoKjEe2YCoN1_PehlQ" name="LASTNAME" column="LASTNAME" confidenceWeight="1" handleNull="nullMatchNull" threshold="0.5" tokenizationType="No">
+      <algorithm xmi:id="_3thJP4KjEe2YCoN1_PehlQ" algorithmType="JARO" algorithmParameters=""/>
+    </matchKeys>
+    <matchKeys xmi:id="_3thJQIKjEe2YCoN1_PehlQ" name="FIRSTNAME" column="FIRSTNAME" confidenceWeight="1" handleNull="nullMatchNull" threshold="0.5" tokenizationType="No">
+      <algorithm xmi:id="_3thJQYKjEe2YCoN1_PehlQ" algorithmType="JARO" algorithmParameters=""/>
+    </matchKeys>
+  </matchRules>
+  <survivorshipKeys xmi:id="_3thJQoKjEe2YCoN1_PehlQ" name="PHONE" allowManualResolution="true">
+    <function xmi:id="_3thJQ4KjEe2YCoN1_PehlQ" algorithmType="Concatenate" algorithmParameters=","/>
+  </survivorshipKeys>
+  <survivorshipKeys xmi:id="_3thJRIKjEe2YCoN1_PehlQ" name="LASTNAME" allowManualResolution="true">
+    <function xmi:id="_3thJRYKjEe2YCoN1_PehlQ" algorithmType="Concatenate" algorithmParameters=","/>
+  </survivorshipKeys>
+  <survivorshipKeys xmi:id="_3thJRoKjEe2YCoN1_PehlQ" name="FIRSTNAME" allowManualResolution="true">
+    <function xmi:id="_3thJR4KjEe2YCoN1_PehlQ" algorithmType="Concatenate" algorithmParameters=","/>
+  </survivorshipKeys>
+</dataquality.rules:MatchRuleDefinition>

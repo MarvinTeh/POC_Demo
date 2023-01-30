@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010" xmi:id="_1PVAwIA4Ee2iSIuFypJhuw" name="DP_Match" creationDate="2022-12-20T15:05:09.707+0800" defaultContext="Default">
+  <taggedValue xmi:id="_1PVAwYA4Ee2iSIuFypJhuw" tag="PREVIEW_ROW_NUMBER" value="10000"/>
+  <taggedValue xmi:id="_1PVAwoA4Ee2iSIuFypJhuw" tag="Status" value="development"/>
+  <taggedValue xmi:id="_1PVAw4A4Ee2iSIuFypJhuw" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
+  <taggedValue xmi:id="_1PVAxIA4Ee2iSIuFypJhuw" tag="Purpose" value=""/>
+  <taggedValue xmi:id="_1PVAxYA4Ee2iSIuFypJhuw" tag="Description" value=""/>
+  <taggedValue xmi:id="_1PVAxoA4Ee2iSIuFypJhuw" tag="Version" value="0.1"/>
+  <taggedValue xmi:id="_1t1hsIA4Ee2iSIuFypJhuw" tag="TEMP_DATA_DIR" value=""/>
+  <taggedValue xmi:id="_1t1hsYA4Ee2iSIuFypJhuw" tag="MAX_BUFFER_SIZE" value="200000"/>
+  <taggedValue xmi:id="_1t1hsoA4Ee2iSIuFypJhuw" tag="STORE_ON_DISK" value="false"/>
+  <taggedValue xmi:id="_1uFZUIA4Ee2iSIuFypJhuw" tag="DRILL_DOWN" value="true"/>
+  <taggedValue xmi:id="_T9RGAYA_Ee2iSIuFypJhuw" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+  <context xmi:id="_1PVAx4A4Ee2iSIuFypJhuw">
+    <connection href="../../metadata/connections/SnowflakeDB_0.1.item#_WTTGEIA7Ee2iSIuFypJhuw"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/SnowflakeDB_0.1.item#_5KP20IA7Ee2iSIuFypJhuw"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/SnowflakeDB_0.1.item#_5KP21IA7Ee2iSIuFypJhuw"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/SnowflakeDB_0.1.item#_5KP22IA7Ee2iSIuFypJhuw"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/SnowflakeDB_0.1.item#_5KP23IA7Ee2iSIuFypJhuw"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/SnowflakeDB_0.1.item#_5KP24IA7Ee2iSIuFypJhuw"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/SnowflakeDB_0.1.item#_5KP25IA7Ee2iSIuFypJhuw"/>
+  </context>
+  <results xmi:id="_1PVAyIA4Ee2iSIuFypJhuw">
+    <resultMetadata xmi:id="_1PVAyYA4Ee2iSIuFypJhuw"/>
+    <indicators xsi:type="dataquality.indicators.columnset:BlockKeyIndicator" xmi:id="_1PVAyoA4Ee2iSIuFypJhuw"/>
+    <indicators xsi:type="dataquality.indicators.columnset:RecordMatchingIndicator" xmi:id="_1PVAy4A4Ee2iSIuFypJhuw">
+      <builtInMatchRuleDefinition xmi:id="_1PVAzIA4Ee2iSIuFypJhuw">
+        <blockKeys xmi:id="_7CcHgIA7Ee2iSIuFypJhuw" name="SSN" column="SSN">
+          <preAlgorithm xmi:id="_7CcHgYA7Ee2iSIuFypJhuw" algorithmType="NON_ALGO" algorithmParameters=""/>
+          <algorithm xmi:id="_7CcHgoA7Ee2iSIuFypJhuw" algorithmType="exact" algorithmParameters=""/>
+          <postAlgorithm xmi:id="_7CcHg4A7Ee2iSIuFypJhuw" algorithmType="NON_ALGO" algorithmParameters=""/>
+        </blockKeys>
+        <matchRules xmi:id="_gu2e8IA7Ee2iSIuFypJhuw" name="Match Rule 3" matchInterval="0.75">
+          <matchKeys xmi:id="_7sjbgIA7Ee2iSIuFypJhuw" name="PHONE" column="PHONE" confidenceWeight="1" handleNull="nullMatchNull" threshold="0.5" tokenizationType="No">
+            <algorithm xmi:id="_7sjbgYA7Ee2iSIuFypJhuw" algorithmType="LEVENSHTEIN" algorithmParameters=""/>
+          </matchKeys>
+          <matchKeys xmi:id="_7wzCUIA7Ee2iSIuFypJhuw" name="LASTNAME" column="LASTNAME" confidenceWeight="1" handleNull="nullMatchNull" threshold="0.5" tokenizationType="No">
+            <algorithm xmi:id="_7wzCUYA7Ee2iSIuFypJhuw" algorithmType="JARO" algorithmParameters=""/>
+          </matchKeys>
+          <matchKeys xmi:id="_703qAIA7Ee2iSIuFypJhuw" name="FIRSTNAME" column="FIRSTNAME" confidenceWeight="1" handleNull="nullMatchNull" threshold="0.5" tokenizationType="No">
+            <algorithm xmi:id="_703qAYA7Ee2iSIuFypJhuw" algorithmType="JARO" algorithmParameters=""/>
+          </matchKeys>
+        </matchRules>
+      </builtInMatchRuleDefinition>
+    </indicators>
+  </results>
+  <parameters xmi:id="_1PVAzYA4Ee2iSIuFypJhuw" analysisType="Match Analysis"/>
+  <contextType xmi:id="_T9RGAIA_Ee2iSIuFypJhuw" confirmationNeeded="false" name="Default"/>
+</dataquality.analysis:Analysis>
